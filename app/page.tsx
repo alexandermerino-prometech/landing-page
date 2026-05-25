@@ -379,7 +379,7 @@ export default function PrometechLandingPage() {
             {[
               {
                 title: "Implementación",
-                image: "/metodologia/implementacion.webp",
+                image: "/metodologia/dimplementacion.webp",
                 description:
                   "Implementamos el sistema dentro de la operación empresarial.",
               },
