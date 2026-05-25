@@ -7,6 +7,25 @@ const montserrat = Montserrat({
   weight: ["700", "800"],
 });
 
+const caracteristicas = [
+  {
+    titulo: "Unifica tus datos dispersos y obsoletos",
+    imagen: "/imagenes/unifica_tus_datos.png", // Tu imagen del día fatídico [cite: 3]
+  },
+  {
+    titulo: "Centraliza toda tu informacion clave para el negocio",
+    imagen: "/imagenes/centraliza_tus_datos.png", // Tu imagen de centralización [cite: 5]
+  },
+  {
+    titulo: "Optimiza tus flujos de trabajo repetitivos",
+    imagen: "/imagenes/optimiza_tus_flujos.png", // Tu imagen de optimización [cite: 7]
+  },
+  {
+    titulo: "Gana visibilidad total de tu negocio en tiempo real",
+    imagen: "/imagenes/gana_visibilidad.png", // Tu imagen de visibilidad [cite: 8]
+  }
+];
+
 export default function PrometechLandingPage() {
   return (
     <div className="min-h-screen bg-[#F7F3EE] text-[#16324F]">
@@ -195,20 +214,22 @@ export default function PrometechLandingPage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            "Excel desordenado",
-            "Información dispersa",
-            "Procesos manuales",
-            "Falta de control operativo",
-          ].map((item) => (
+          {caracteristicas.map((item) => (
             <div
-              key={item}
-              className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 shadow-sm hover:shadow-md transition-all"
+              key={item.titulo}
+              className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#16324F]/5 border border-[#16324F]/10 mb-5" />
+              {/* Contenedor de la imagen */}
+              <div className="w-full h-64 mb-5 overflow-hidden rounded-2xl border border-[#16324F]/10">
+                <img 
+                  src={item.imagen} 
+                  alt={item.titulo} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <h4 className="text-xl font-semibold text-[#16324F]">
-                {item}
+                {item.titulo}
               </h4>
             </div>
           ))}
@@ -297,29 +318,107 @@ export default function PrometechLandingPage() {
             Un enfoque moderno, flexible y orientado a resultados
           </h3>
         </div>
+      
+        <div className="max-w-7xl mx-auto">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {[
-            "Análisis",
-            "Diseño funcional",
-            "Desarrollo",
-            "Implementación",
-            "Mejora continua",
-          ].map((step, index) => (
-            <div
-              key={step}
-              className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 shadow-sm hover:shadow-md transition-all"
-            >
-              <div className="text-[#E76F51] text-sm mb-4">
-                0{index + 1}
+          {/* FILA SUPERIOR */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+
+            {[
+              {
+                title: "Análisis",
+                image: "/metodologia/analisis.png",
+                description:
+                  "Analizamos procesos y detectamos oportunidades de mejora.",
+              },
+
+              {
+                title: "Diseño funcional",
+                image: "/metodologia/diseno.png",
+                description:
+                  "Diseñamos flujos intuitivos y experiencias modernas.",
+              },
+
+              {
+                title: "Desarrollo",
+                image: "/metodologia/desarrollo.webp",
+                description:
+                  "Construimos plataformas escalables y seguras.",
+              },
+            ].map((step, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="w-full h-56 object-cover"
+                />
+
+                <div className="p-6">
+                  <span className="text-sm font-semibold text-[#E76F51]">
+                    0{index + 1}
+                  </span>
+
+                  <h3 className="text-2xl font-bold text-[#16324F] mt-3 mb-3">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-[#4B5563] leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
+            ))}
+          </div>
 
-              <h4 className="text-xl font-semibold text-[#16324F]">
-                {step}
-              </h4>
-            </div>
-          ))}
+          {/* FILA INFERIOR */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+            {[
+              {
+                title: "Implementación",
+                image: "/metodologia/implementacion.webp",
+                description:
+                  "Implementamos el sistema dentro de la operación empresarial.",
+              },
+
+              {
+                title: "Mejora continua",
+                image: "/metodologia/mejora_continua.jpg",
+                description:
+                  "Optimizamos constantemente procesos y rendimiento.",
+              },
+            ].map((step, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="w-full h-56 object-cover"
+                />
+
+                <div className="p-6">
+                  <span className="text-sm font-semibold text-[#E76F51]">
+                    0{index + 4}
+                  </span>
+
+                  <h3 className="text-2xl font-bold text-[#16324F] mt-3 mb-3">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-[#4B5563] leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
       </section>
 
       {/* Beneficios */}
