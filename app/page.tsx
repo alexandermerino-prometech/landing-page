@@ -100,14 +100,20 @@ export default function PrometechLandingPage() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="#contacto"
+                href="mailto:contacto@prometech.com.pe"
                 className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium shadow-md text-white"
               >
                 Agenda una reunión
               </a>
+              <a 
+                href="https://wa.me/51902041529"
+                className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium shadow-md text-white"
+              >
+                Hablar con representante
+              </a>
 
               <a
-                href="#soluciones"
+                href="https://www.youtube.com/@Prometech-Peru"
                 className="border border-[#E4DDD4] hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-all px-6 py-3 rounded-2xl text-[#16324F]"
               >
                 Ver soluciones
@@ -484,6 +490,13 @@ export default function PrometechLandingPage() {
               className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium text-white shadow-md"
             >
               contacto@prometech.com.pe
+            </a>
+
+            <a
+              href="https://wa.me/51902041529"
+              className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium text-white shadow-md"
+            >
+              Whatsapp
             </a>
 
             <a
