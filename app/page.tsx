@@ -98,27 +98,41 @@ export default function PrometechLandingPage() {
               y constructoras.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-4">
+              {/* Botón Primario: Agendar Demo */}
               <a
-                href="mailto:contacto@prometech.com.pe"
-                className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium shadow-md text-white"
+                href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
+                className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-[#16324F]/10 hover:shadow-[#16324F]/20 hover:-translate-y-0.5"
               >
-                Agenda una reunión
-              </a>
-              <a 
-                href="https://wa.me/51902041529"
-                className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium shadow-md text-white"
-              >
-                Hablar con representante
+                {/* Icono de Correo */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                <span>Agendar una reunión</span>
               </a>
 
+              {/* Botón Secundario: WhatsApp */}
+              <a
+                href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-slate-50 border border-slate-200 hover:border-[#16324F] hover:bg-slate-100 text-[#16324F] font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <span>Consultar a un asesor</span>
+              </a>
+
+              {/* Botón Terciario: YouTube */}
               <a
                 href="https://www.youtube.com/@Prometech-Peru"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-[#E4DDD4] hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-all px-6 py-3 rounded-2xl text-[#16324F]"
               >
-                Ver soluciones
+                <span>Ver soluciones</span>
               </a>
             </div>
+  
           </div>
 
           {/* Mockup */}
@@ -493,7 +507,7 @@ export default function PrometechLandingPage() {
             </a>
 
             <a
-              href="https://wa.me/51902041529"
+              href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios."
               className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium text-white shadow-md"
             >
               Whatsapp
