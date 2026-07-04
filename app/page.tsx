@@ -182,80 +182,30 @@ export default function PrometechLandingPage() {
   
           </div>
 
-          {/* Mockup */}
-          <div className="relative">
-            <div className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden">
-              <div className="border-b border-[#E4DDD4] px-5 py-4 flex items-center gap-2 bg-[#F7F3EE]">
+          {/* Dashboard Real del Sistema */}
+          <div className="relative lg:h-[500px] w-full flex items-center justify-center">
+            {/* Elemento decorativo de fondo */}
+            <div className="absolute inset-0 bg-[#E9C46A]/20 rounded-3xl blur-3xl transform rotate-3 scale-95 -z-10" />
+            
+            <div className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden w-full transition-transform duration-500 hover:scale-[1.02]">
+              {/* Barra de ventana de navegador premium */}
+              <div className="border-b border-[#E4DDD4] px-5 py-3.5 flex items-center gap-2 bg-[#F7F3EE]">
                 <div className="w-3 h-3 rounded-full bg-[#E76F51]" />
                 <div className="w-3 h-3 rounded-full bg-[#E9C46A]" />
                 <div className="w-3 h-3 rounded-full bg-[#2D6A4F]" />
+                <span className="text-xs text-[#7C8794] ml-4 font-mono select-none">app.prometech.com.pe/dashboard</span>
               </div>
 
-              <div className="p-6 space-y-6">
-                <div className="grid grid-cols-3 gap-4">
-                  {[
-                    ["Proyectos", "12"],
-                    ["Compras", "248"],
-                    ["Avance", "78%"],
-                  ].map(([label, value]) => (
-                    <div
-                      key={label}
-                      className="bg-[#F7F3EE] rounded-2xl p-4"
-                    >
-                      <p className="text-[#7C8794] text-sm">{label}</p>
-
-                      <h3 className="text-3xl font-bold mt-2 text-[#16324F]">
-                        {value}
-                      </h3>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="bg-[#F7F3EE] rounded-2xl p-5">
-                  <div className="flex justify-between mb-4">
-                    <span className="text-[#5E6B7A]">
-                      Control Operativo
-                    </span>
-
-                    <span className="text-[#E76F51]">
-                      En tiempo real
-                    </span>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="h-3 rounded-full bg-[#E4DDD4] overflow-hidden">
-                      <div className="h-full w-[82%] bg-[#16324F] rounded-full" />
-                    </div>
-
-                    <div className="h-3 rounded-full bg-[#E4DDD4] overflow-hidden">
-                      <div className="h-full w-[65%] bg-[#E76F51] rounded-full" />
-                    </div>
-
-                    <div className="h-3 rounded-full bg-[#E4DDD4] overflow-hidden">
-                      <div className="h-full w-[91%] bg-[#E9C46A] rounded-full" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    ["ERP Modular", "Logística y Compras"],
-                    ["Dashboard", "Gestión de Proyectos"],
-                  ].map(([small, big]) => (
-                    <div
-                      key={small}
-                      className="bg-[#F7F3EE] rounded-2xl p-5"
-                    >
-                      <p className="text-[#7C8794] text-sm mb-2">
-                        {small}
-                      </p>
-
-                      <p className="text-xl font-semibold text-[#16324F]">
-                        {big}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+              {/* Imagen real de tu Dashboard */}
+              <div className="relative w-full aspect-[16/10] bg-slate-100">
+                <Image
+                  src="/dashboard-Prometech.png"
+                  alt="Dashboard de control operativo en tiempo real de Prometech"
+                  fill
+                  sizes="(max-w-1024px) 100vw, 50vw"
+                  priority
+                  className="object-cover object-top"
+                />
               </div>
             </div>
           </div>
