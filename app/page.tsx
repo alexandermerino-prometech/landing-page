@@ -1,7 +1,7 @@
 "use client";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
-import { motion } from "framer-motion"; /
+import { motion, Variants } from "framer-motion";
 
 import { 
   FolderKanban, 
@@ -54,7 +54,7 @@ const pasosFlujo = [
 ];
 
 // Configuración de variantes de animación para Framer Motion
-const contenedorVariantes = {
+const contenedorVariantes: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -64,7 +64,7 @@ const contenedorVariantes = {
   },
 };
 
-const tarjetaVariantes = {
+const tarjetaVariantes: Variants = { 
   hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 
