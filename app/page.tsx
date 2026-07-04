@@ -94,7 +94,7 @@ export default function PrometechLandingPage() {
               Software empresarial moderno y escalable
             </div>
 
-            <h2 className="text-5xl lg:text-6xl lg:text-[44px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
+            <h2 className="text-4xl sm:text-5xl lg:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
               Toma el control <span className="text-[#E76F51]">operativo</span> y financiero de tu negocio
             </h2>
 
