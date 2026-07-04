@@ -21,25 +21,6 @@ const montserrat = Montserrat({
   weight: ["700", "800"],
 });
 
-const caracteristicas = [
-  {
-    titulo: "Unifica tus datos dispersos y obsoletos",
-    imagen: "/imagenes/unifica_tus_datos.png", // Tu imagen del día fatídico [cite: 3]
-  },
-  {
-    titulo: "Centraliza toda tu informacion clave para el negocio",
-    imagen: "/imagenes/centraliza_tus_datos.png", // Tu imagen de centralización [cite: 5]
-  },
-  {
-    titulo: "Optimiza tus flujos de trabajo repetitivos",
-    imagen: "/imagenes/optimiza_tus_flujos.png", // Tu imagen de optimización [cite: 7]
-  },
-  {
-    titulo: "Gana visibilidad total de tu negocio en tiempo real",
-    imagen: "/imagenes/gana_visibilidad.png", // Tu imagen de visibilidad [cite: 8]
-  }
-];
-
 const pasosFlujo = [
   { num: "01", title: "Proyecto", desc: "Alta, definición y kickoff del nuevo proyecto operativo.", icon: FolderKanban, dark: false },
   { num: "02", title: "Planificación", desc: "Estructuración de tiempos, hitos y presupuestos.", icon: CalendarDays, dark: false },
@@ -83,46 +64,21 @@ export default function PrometechLandingPage() {
             <Image
               src="/Logo1.png"
               alt="Logo de Prometech"
-              width={283}
-              height={279}
+              width={40}
+              height={40}
               className="h-10 w-auto"
             />
-
-            <h1
-              className={`${montserrat.className} text-[30px] md:text-[34px] font-black tracking-[-0.04em] text-[#16324F] uppercase`}
-            >
+            <h1 className={`${montserrat.className} text-[26px] md:text-[30px] font-black tracking-[-0.04em] text-[#16324F] uppercase`}>
               PROMETECH
             </h1>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-[#5E6B7A]">
-            <a
-              href="#soluciones"
-              className="hover:text-[#2D6A4F] transition-colors"
-            >
-              Soluciones
-            </a>
-
-            <a
-              href="#metodologia"
-              className="hover:text-[#2D6A4F] transition-colors"
-            >
-              Metodología
-            </a>
-
-            <a
-              href="#beneficios"
-              className="hover:text-[#2D6A4F] transition-colors"
-            >
-              Beneficios
-            </a>
-
-            <a
-              href="#contacto"
-              className="hover:text-[#2D6A4F] transition-colors"
-            >
-              Contacto
-            </a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#5E6B7A]">
+            <a href="#flujo" className="hover:text-[#16324F] transition-colors">Flujo</a>
+            <a href="#soluciones" className="hover:text-[#16324F] transition-colors">Soluciones</a>
+            <a href="#metodologia" className="hover:text-[#16324F] transition-colors">Metodología</a>
+            <a href="#beneficios" className="hover:text-[#16324F] transition-colors">Beneficios</a>
+            <a href="#contacto" className="bg-[#16324F] text-white px-4 py-2 rounded-xl text-xs hover:bg-[#1d436a] transition-all">Contacto</a>
           </nav>
         </div>
       </header>
@@ -134,7 +90,7 @@ export default function PrometechLandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Bloque Izquierdo: Textos y Acciones */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-2 text-sm text-[#16324F] mb-6">
+            <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-1.5 text-xs font-medium text-[#16324F] mb-6 self-start">
               Software empresarial moderno y escalable
             </div>
 
@@ -217,6 +173,8 @@ export default function PrometechLandingPage() {
 
         </div>
       </section>
+
+
 
 
       {/* SECCIÓN ANIMADA CON MOTION SCROLL */}
@@ -414,13 +372,13 @@ export default function PrometechLandingPage() {
                 key={index}
                 className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <Image
-                  src={step.image}
-                  alt={step.title}
-                  width={100}
-                  height={100}
-                  className="w-full h-56 object-cover"
-                />
+                <div className="relative w-full h-48 bg-slate-100">
+                  <Image 
+                    src={step.image} 
+                    alt={step.title} 
+                    fill 
+                    className="object-cover" />
+                </div>
 
                 <div className="p-6">
                   <span className="text-sm font-semibold text-[#E76F51]">
@@ -461,13 +419,13 @@ export default function PrometechLandingPage() {
                 key={index}
                 className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <Image
-                  src={step.image}
-                  alt={step.title}
-                  width={100}
-                  height={100}
-                  className="w-full h-56 object-cover"
-                />
+                <div className="relative w-full h-48 bg-slate-100">
+                  <Image 
+                    src={step.image} 
+                    alt={step.title} 
+                    fill 
+                    className="object-cover" />
+                </div>
 
                 <div className="p-6">
                   <span className="text-sm font-semibold text-[#E76F51]">
