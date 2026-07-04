@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://prometech.com.pe"),
+  metadataBase: new URL("https://www.prometech.com.pe"),
 
   title: {
-    default: "Prometech | Software de Gestión de Compras y Proyectos",
+    default: "Prometech | Software para Gestión de Proyectos, Compras y Logística",
     template: "%s | Prometech",
   },
 
   description:
-    "Software empresarial para la gestión de proyectos, compras, inventario y automatización de procesos. Plataforma moderna en la nube para empresas.",
+    "Prometech es una plataforma empresarial en la nube para gestionar proyectos, compras, logística, inventario y automatizar procesos. Diseñada para empresas que trabajan por proyectos.",
 
   keywords: [
     "software empresarial",
@@ -42,13 +42,42 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Prometech",
+    title: "Prometech | Software ERP para Gestión de Proyectos, Compras y Logística",
     description:
       "Software empresarial para gestión de proyectos, compras e inventario.",
     url: "https://prometech.com.pe",
     siteName: "Prometech",
     locale: "es_PE",
     type: "website",
+    images: [
+      {
+        url: "/Logo1.png",
+        width: 283,
+        height: 279,
+        alt: "Prometech ERP",
+      },
+    ],
+  },
+
+  authors: [
+    {
+      name: "Prometech",
+      url: "https://prometech.com.pe",
+    },
+  ],
+
+  creator: "Prometech",
+  publisher: "Prometech",
+  category: "Software",
+  referrer: "origin-when-cross-origin",
+  applicationName: "Prometech",
+  appleWebApp: {
+    capable: true,
+    title: "Prometech",
+  },
+
+  alternates: {
+      canonical: "https://prometech.com.pe",
   },
 
   robots: {
