@@ -378,7 +378,7 @@ export default function PrometechLandingPage() {
                   alt={step.title}
                   width={100}
                   height={100}
-                  className="h-10 w-auto"
+                  className="w-full h-56 object-cover"
                 />
 
                 <div className="p-6">
