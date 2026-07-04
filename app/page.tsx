@@ -183,33 +183,37 @@ export default function PrometechLandingPage() {
           </div>
 
           {/* Dashboard Real del Sistema */}
-          <div className="relative lg:h-[500px] w-full flex items-center justify-center">
+          <div className="relative w-full flex items-center justify-center max-w-5xl mx-auto">
             {/* Elemento decorativo de fondo */}
-            <div className="absolute inset-0 bg-[#E9C46A]/20 rounded-3xl blur-3xl transform rotate-3 scale-95 -z-10" />
+            <div className="absolute inset-0 bg-[#E9C46A]/10 rounded-3xl blur-3xl transform rotate-2 scale-95 -z-10" />
             
-            <div className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden w-full transition-transform duration-500 hover:scale-[1.02]">
-              {/* Barra de ventana de navegador premium */}
-              <div className="border-b border-[#E4DDD4] px-5 py-3.5 flex items-center gap-2 bg-[#F7F3EE]">
+            <div className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden w-full max-h-[50vh] lg:max-h-[55vh] flex flex-col transition-transform duration-500 hover:scale-[1.01]">
+              
+              {/* Barra superior del navegador */}
+              <div className="border-b border-[#E4DDD4] px-5 py-3 flex items-center gap-2 bg-[#F7F3EE] flex-shrink-0">
                 <div className="w-3 h-3 rounded-full bg-[#E76F51]" />
                 <div className="w-3 h-3 rounded-full bg-[#E9C46A]" />
                 <div className="w-3 h-3 rounded-full bg-[#2D6A4F]" />
-                <span className="text-xs text-[#7C8794] ml-4 font-mono select-none">Dashboard de Prometech</span>
+                <span className="text-xs text-[#7C8794] ml-4 font-mono select-none">
+                  app.prometech.com.pe/dashboard
+                </span>
               </div>
 
-              {/* Imagen real de tu Dashboard */}
-              <div className="relative w-full aspect-[16/10] bg-slate-100">
+              {/* Contenedor inteligente adaptativo a la pantalla */}
+              <div className="relative flex-1 w-full bg-white overflow-hidden min-h-[250px] md:min-h-[350px] lg:min-h-[400px]">
                 <Image
                   src="/dashboard-Prometech.png"
-                  alt="Dashboard de control operativo en tiempo real de Prometech"
+                  alt="Dashboard real de control operativo de Prometech"
                   fill
-                  width={2248}
-                  height={1024}
+                  sizes="(max-w-1024px) 100vw, 50vw"
                   priority
-                  className="object-cover object-top"
+                  className="object-contain object-top p-1"
                 />
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
