@@ -574,12 +574,14 @@ export default function PrometechLandingPage() {
       >
         <div className="rounded-[32px] border border-[#E4DDD4] bg-gradient-to-br from-[#16324F]/5 to-[#E9C46A]/20 p-12 text-center shadow-sm">
           <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-            Moderniza tus operaciones con PROMETECH
+            ¿Listo para dejar atrás Excel?
+
+            Solicita una demostración.
           </h3>
 
           <p className="text-[#5E6B7A] text-lg max-w-2xl mx-auto mb-10">
-            Conversemos sobre cómo optimizar procesos, centralizar información
-            y construir soluciones empresariales escalables.
+            Te mostraremos cómo centralizar proyectos,
+            compras e inventario en una sola plataforma.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
