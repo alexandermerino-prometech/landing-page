@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 
 
 import { 
@@ -15,7 +15,9 @@ import {
   Warehouse, 
   Truck, 
   Receipt, 
-  LayoutDashboard 
+  LayoutDashboard,
+  Menu,
+  X
 } from "lucide-react";
 
 
@@ -85,12 +87,14 @@ export default function PrometechLandingPage() {
 
   const [abiertoId, setAbiertoId] = useState<number | null>(null);
 
+  const [menuMovilAbierto, setMenuMovilAbierto] = useState(false); //
+
   const togglePregunta = (id: number) => {
     setAbiertoId(abiertoId === id ? null : id);
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F]">
+    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] scroll-smooth">
       {/* Navbar */}
       <header className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -107,6 +111,7 @@ export default function PrometechLandingPage() {
             </h1>
           </div>
 
+          {/* Menú de Escritorio */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#5E6B7A]">
             <a href="#flujo" className="hover:text-[#16324F] transition-colors">Flujo</a>
             <a href="#soluciones" className="hover:text-[#16324F] transition-colors">Soluciones</a>
@@ -115,9 +120,36 @@ export default function PrometechLandingPage() {
             <a href="#faq" className="hover:text-[#16324F] transition-colors">FAQ</a>
             <a href="#contacto" className="bg-[#16324F] text-white px-4 py-2 rounded-xl text-xs hover:bg-[#1d436a] transition-all">Contacto</a>
           </nav>
-        </div>
-      </header>
 
+          {/* Botón Menú Móvil */}
+          <button 
+            className="block md:hidden text-[#16324F]" 
+            onClick={() => setMenuMovilAbierto(!menuMovilAbierto)}
+            aria-label="Toggle menu"
+          >
+            {menuMovilAbierto ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Desplegable móvil */}
+        <AnimatePresence>
+          {menuMovilAbierto && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden border-b border-[#E4DDD4] bg-[#F7F3EE] px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-medium text-[#5E6B7A]"
+            >
+              <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Flujo</a>
+              <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Soluciones</a>
+              <a href="#metodologia" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Metodología</a>
+              <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Beneficios</a>
+              <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">FAQ</a>
+              <a href="#contacto" onClick={() => setMenuMovilAbierto(false)} className="bg-[#16324F] text-white text-center px-4 py-2 rounded-xl text-xs">Contacto</a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#16324F]/10 via-[#E9C46A]/10 to-transparent" />
@@ -538,29 +570,36 @@ export default function PrometechLandingPage() {
           {preguntasFrecuentes.map((faq) => {
             const estaAbierto = abiertoId === faq.id;
             return (
-              <div 
-                key={faq.id} 
-                className="border border-[#E4DDD4] bg-[#FFFDF9] rounded-2xl overflow-hidden transition-all duration-300"
-              >
+              <div key={faq.id} className="border border-[#E4DDD4] bg-[#FFFDF9] rounded-2xl overflow-hidden shadow-xs">
                 <button
                   onClick={() => togglePregunta(faq.id)}
+                  aria-expanded={estaAbierto}
                   className="w-full flex items-center justify-between p-6 text-left font-semibold text-lg text-[#16324F] hover:bg-[#F7F3EE]/50 transition-colors"
                 >
                   <span>{faq.pregunta}</span>
-                  <span className={`transform transition-transform duration-300 text-[#E76F51] text-2xl ${estaAbierto ? "rotate-45" : ""}`}>
+                  <motion.span 
+                    animate={{ rotate: estaAbierto ? 45 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-[#E76F51] text-2xl inline-block"
+                  >
                     +
-                  </span>
+                  </motion.span>
                 </button>
                 
-                <div 
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    estaAbierto ? "max-h-[500px] border-t border-[#E4DDD4]/50" : "max-h-0"
-                  }`}
-                >
-                  <p className="p-6 text-[#5E6B7A] leading-relaxed bg-[#FFFDF9]">
-                    {faq.respuesta}
-                  </p>
-                </div>
+                <AnimatePresence initial={false}>
+                  {estaAbierto && (
+                    <motion.div 
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                    >
+                      <p className="p-6 pt-0 text-[#5E6B7A] leading-relaxed border-t border-[#E4DDD4]/50">
+                        {faq.respuesta}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
