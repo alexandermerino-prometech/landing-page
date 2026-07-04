@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import { motion, Variants, AnimatePresence } from "framer-motion";
-import Hero from "@/components/Hero";
+import Hero from "./components/Hero";
 
 
 import { 
