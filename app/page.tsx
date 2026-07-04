@@ -1,6 +1,19 @@
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 
+import { 
+  FolderKanban, 
+  CalendarDays, 
+  ClipboardList, 
+  ShieldCheck, 
+  FileText, 
+  PackageCheck, 
+  Warehouse, 
+  Truck, 
+  Receipt, 
+  LayoutDashboard 
+} from "lucide-react";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["700", "800"],
@@ -23,6 +36,19 @@ const caracteristicas = [
     titulo: "Gana visibilidad total de tu negocio en tiempo real",
     imagen: "/imagenes/gana_visibilidad.png", // Tu imagen de visibilidad [cite: 8]
   }
+];
+
+const pasosFlujo = [
+  { num: "01", title: "Proyecto", desc: "Alta, definición y kickoff del nuevo proyecto operativo.", icon: FolderKanban, dark: false },
+  { num: "02", title: "Planificación", desc: "Estructuración de tiempos, hitos y presupuestos.", icon: CalendarDays, dark: false },
+  { num: "03", title: "Requerimiento", desc: "Solicitud formal de los materiales o servicios necesarios.", icon: ClipboardList, dark: false },
+  { num: "04", title: "Aprobación", desc: "Validación técnica y financiera mediante flujos ágiles.", icon: ShieldCheck, dark: false },
+  { num: "05", title: "Orden de Compra", desc: "Generación automática y envío directo al proveedor.", icon: FileText, dark: false },
+  { num: "06", title: "Recepción", desc: "Control de calidad y entrada física/digital del pedido.", icon: PackageCheck, dark: false },
+  { num: "07", title: "Inventario", desc: "Actualización de stock en tiempo real y almacenamiento.", icon: Warehouse, dark: false },
+  { num: "08", title: "Despacho", desc: "Logística de salida, empaque y distribución final.", icon: Truck, dark: false },
+  { num: "09", title: "Facturación", desc: "Conciliación financiera, cuentas por pagar y cobros.", icon: Receipt, dark: false },
+  { num: "10", title: "Dashboard", desc: "Analítica avanzada, KPIs y reportes automatizados.", icon: LayoutDashboard, dark: true },
 ];
 
 export default function PrometechLandingPage() {
@@ -322,6 +348,49 @@ export default function PrometechLandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* NUEVA SECCIÓN: FLUJO VISUAL INTEGRADO AQUÍ */}
+      <section id="flujo" className="max-w-7xl mx-auto px-6 py-24">
+        <div className="max-w-3xl mb-16">
+          <p className="text-[#E76F51] font-medium mb-4">Trazabilidad End-to-End</p>
+          <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
+            El Flujo de Trabajo Operativo de tu negocio, totalmente conectado
+          </h3>
+          <p className="text-[#5E6B7A] text-lg">
+            Desde la concepción del proyecto hasta la analítica avanzada. Así es como Prometech centraliza cada etapa de tu empresa.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+          {pasosFlujo.map((step, index) => {
+            const IconComponent = step.icon;
+            
+            if (step.dark) {
+              return (
+                <div key={index} className="bg-[#16324F] p-6 rounded-3xl shadow-lg border border-transparent hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group">
+                  <div className="w-12 h-12 bg-[#E9C46A] rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-white transition-all duration-300 animate-pulse">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-wider">Paso {step.num}</span>
+                  <h3 className="text-lg font-bold text-white mt-1">{step.title}</h3>
+                  <p className="text-sm text-slate-300 mt-2">{step.desc}</p>
+                </div>
+              );
+            }
+
+            return (
+              <div key={index} className="bg-[#FFFDF9] p-6 rounded-3xl shadow-xs border border-[#E4DDD4] hover:shadow-md hover:border-[#16324F] transition-all duration-300 flex flex-col items-center text-center group">
+                <div className="w-12 h-12 bg-[#16324F]/5 rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-[#16324F] group-hover:text-white transition-all duration-300">
+                  <IconComponent className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-bold text-[#E76F51] uppercase tracking-wider">Paso {step.num}</span>
+                <h3 className="text-lg font-bold text-[#16324F] mt-1">{step.title}</h3>
+                <p className="text-sm text-[#5E6B7A] mt-2">{step.desc}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
