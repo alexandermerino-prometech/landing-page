@@ -1,7 +1,9 @@
 "use client";
+import { useState } from "react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+
 
 import { 
   FolderKanban, 
@@ -16,10 +18,42 @@ import {
   LayoutDashboard 
 } from "lucide-react";
 
+
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["700", "800"],
 });
+
+// Dentro de tu componente:
+const [abiertoId, setAbiertoId] = useState<number | null>(null);
+
+const togglePregunta = (id: number) => {
+  setAbiertoId(abiertoId === id ? null : id);
+};
+
+const preguntasFrecuentes = [
+  {
+    id: 1,
+    pregunta: "¿Qué es Prometech y a quién está dirigido?",
+    respuesta: "Prometech es un ERP modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y facturación. Está especialmente dirigido a empresas que buscan eliminar el caos operativo y tener un control financiero en tiempo real."
+  },
+  {
+    id: 2,
+    pregunta: "¿Puedo contratar solo los módulos que necesito?",
+    respuesta: "Sí. Nuestra arquitectura es completamente modular. Puedes empezar implementando solo el módulo de Gestión de Proyectos o Compras, y activar los módulos de Inventario o Facturación a medida que tu negocio crezca."
+  },
+  {
+    id: 3,
+    pregunta: "¿Cómo es el proceso de implementación?",
+    respuesta: "Seguimos una metodología ágil: realizamos un análisis de tus procesos actuales, configuramos la plataforma a tu medida, capacitamos a tu equipo y te acompañamos durante el despliegue en producción para asegurar una transición exitosa."
+  },
+  {
+    id: 4,
+    pregunta: "¿Ofrecen soporte técnico post-implementación?",
+    respuesta: "Por supuesto. Contamos con un equipo de soporte dedicado para resolver dudas, asegurar la disponibilidad del sistema y realizar mejoras continuas según las necesidades de tu empresa."
+  }
+];
 
 const pasosFlujo = [
   { num: "01", title: "Proyecto", desc: "Alta, definición y kickoff del nuevo proyecto operativo.", icon: FolderKanban, dark: false },
@@ -78,6 +112,7 @@ export default function PrometechLandingPage() {
             <a href="#soluciones" className="hover:text-[#16324F] transition-colors">Soluciones</a>
             <a href="#metodologia" className="hover:text-[#16324F] transition-colors">Metodología</a>
             <a href="#beneficios" className="hover:text-[#16324F] transition-colors">Beneficios</a>
+            <a href="#faq" className="hover:text-[#16324F] transition-colors">FAQ</a>
             <a href="#contacto" className="bg-[#16324F] text-white px-4 py-2 rounded-xl text-xs hover:bg-[#1d436a] transition-all">Contacto</a>
           </nav>
         </div>
@@ -486,6 +521,49 @@ export default function PrometechLandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Sección FAQ (Preguntas Frecuentes) */}
+      <section id="faq" className="max-w-4xl mx-auto px-6 py-24">
+        <div className="text-center mb-16">
+          <p className="text-[#E76F51] font-medium mb-4">Soporte y Dudas</p>
+          <h3 className="text-4xl font-bold text-[#16324F]">Preguntas Frecuentes</h3>
+          <p className="text-[#5E6B7A] text-lg mt-4">
+            Todo lo que necesitas saber sobre nuestra plataforma y metodología.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {preguntasFrecuentes.map((faq) => {
+            const estaAbierto = abiertoId === faq.id;
+            return (
+              <div 
+                key={faq.id} 
+                className="border border-[#E4DDD4] bg-[#FFFDF9] rounded-2xl overflow-hidden transition-all duration-300"
+              >
+                <button
+                  onClick={() => togglePregunta(faq.id)}
+                  className="w-full flex items-center justify-between p-6 text-left font-semibold text-lg text-[#16324F] hover:bg-[#F7F3EE]/50 transition-colors"
+                >
+                  <span>{faq.pregunta}</span>
+                  <span className={`transform transition-transform duration-300 text-[#E76F51] text-2xl ${estaAbierto ? "rotate-45" : ""}`}>
+                    +
+                  </span>
+                </button>
+                
+                <div 
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    estaAbierto ? "max-h-[500px] border-t border-[#E4DDD4]/50" : "max-h-0"
+                  }`}
+                >
+                  <p className="p-6 text-[#5E6B7A] leading-relaxed bg-[#FFFDF9]">
+                    {faq.respuesta}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
