@@ -134,7 +134,7 @@ export default function PrometechLandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Bloque Izquierdo: Textos y Acciones */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="inline-flex items-center rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-2 text-sm text-[#16324F] mb-6">
+            <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-2 text-sm text-[#16324F] mb-6">
               Software empresarial moderno y escalable
             </div>
 
