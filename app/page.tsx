@@ -262,116 +262,6 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* Problemas */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="max-w-3xl mb-14">
-          <p className="text-[#E76F51] font-medium mb-4">
-            Problemas comunes
-          </p>
-
-          <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-            Muchas empresas aún operan con procesos manuales y herramientas
-            dispersas
-          </h3>
-
-          <p className="text-[#5E6B7A] text-lg">
-            PROMETECH ayuda a centralizar operaciones y mejorar la trazabilidad
-            mediante soluciones empresariales modernas.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {caracteristicas.map((item) => (
-            <div
-              key={item.titulo}
-              className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
-            >
-              {/* Contenedor de la imagen */}
-              <div className="relative w-full h-64 mb-5 overflow-hidden rounded-2xl border border-[#16324F]/10">
-                <Image
-                  src={item.imagen}
-                  alt={`${item.titulo} con el software empresarial de Prometech`}
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-
-              <h4 className="text-xl font-semibold text-[#16324F]">
-                {item.titulo}
-              </h4>
-            </div>
-          ))}
-        </div>
-      </section>
-
-            {/* Soluciones */}
-      <section
-        id="soluciones"
-        className="bg-[#F1ECE5] border-y border-[#E4DDD4]"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <div className="max-w-3xl mb-16">
-            <p className="text-[#E76F51] font-medium mb-4">
-              Nuestras soluciones
-            </p>
-
-            <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-              Software empresarial adaptado a las necesidades de cada operación
-            </h3>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Gestión de Proyectos",
-                items: [
-                  "Seguimiento de avance",
-                  "Control documental",
-                  "Dashboards",
-                  "Reportes",
-                ],
-              },
-              {
-                title: "Logística y Compras",
-                items: [
-                  "Órdenes de compra",
-                  "Flujos de aprobación",
-                  "Seguimiento",
-                  "Trazabilidad",
-                ],
-              },
-              {
-                title: "Automatización",
-                items: [
-                  "Digitalización",
-                  "Integraciones",
-                  "Procesos automáticos",
-                  "Centralización",
-                ],
-              },
-            ].map((solution) => (
-              <div
-                key={solution.title}
-                className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-8 hover:border-[#2D6A4F]/40 hover:shadow-lg transition-all"
-              >
-                <h4 className="text-2xl font-bold mb-6 text-[#16324F]">
-                  {solution.title}
-                </h4>
-
-                <ul className="space-y-4 text-[#5E6B7A]">
-                  {solution.items.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="text-[#E76F51]">•</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* SECCIÓN ANIMADA CON MOTION SCROLL */}
       <section id="flujo" className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
@@ -431,6 +321,95 @@ export default function PrometechLandingPage() {
             );
           })}
         </motion.div>
+      </section>
+
+      {/* NUEVA SECCIÓN DE TARJETAS DE MÓDULOS (Ubicada estratégicamente aquí) */}
+      <section id="soluciones" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="max-w-3xl mb-16">
+            <p className="text-[#E76F51] font-medium mb-4">Arquitectura Modular</p>
+            <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
+              Módulos especializados para el control total de tu empresa
+            </h3>
+            <p className="text-[#5E6B7A] text-lg">
+              Explora las herramientas diseñadas para centralizar tus operaciones. Activa solo lo que necesitas, cuando lo necesitas.
+            </p>
+          </div>
+
+          {/* Grid de Tarjetas Modernas */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                titulo: "Gestión de Proyectos",
+                estado: "Disponible",
+                colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20",
+                iconoEstado: "✅",
+                features: ["Proyectos", "Gantt", "Tareas", "Dashboard"],
+              },
+              {
+                titulo: "Compras y Logística",
+                estado: "Disponible",
+                colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20",
+                iconoEstado: "✅",
+                features: ["Materiales", "Requerimientos", "Órdenes de compra", "Órdenes de servicio"],
+              },
+              {
+                titulo: "Recepción e Inventario",
+                estado: "En desarrollo",
+                colorEstado: "bg-[#E9C46A]/10 text-[#D4A316] border-[#E9C46A]/30",
+                iconoEstado: "🚧",
+                features: ["Recepción", "Control de materiales", "Despacho"],
+              },
+              {
+                titulo: "Facturación Electrónica",
+                estado: "Próximamente",
+                colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20",
+                iconoEstado: "⏳",
+                features: ["Facturas", "Boletas", "Notas de crédito"],
+              },
+              {
+                titulo: "Rentabilidad",
+                estado: "Próximamente",
+                colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20",
+                iconoEstado: "⏳",
+                features: ["Presupuesto", "Esperado vs Real", "KPIs"],
+              },
+            ].map((modulo, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-8 flex flex-col justify-between hover:shadow-xl hover:border-[#16324F]/30 transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-start justify-between gap-4 mb-6">
+                    <h4 className="text-2xl font-bold text-[#16324F] leading-snug">
+                      {modulo.titulo}
+                    </h4>
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${modulo.colorEstado} whitespace-nowrap`}>
+                      <span>{modulo.iconoEstado}</span>
+                      {modulo.estado}
+                    </span>
+                  </div>
+
+                  <ul className="space-y-3.5">
+                    {modulo.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-[#5E6B7A]">
+                        <div className="flex-shrink-0 w-5 h-5 rounded-md bg-[#16324F]/5 flex items-center justify-center text-[#2D6A4F] text-xs font-bold">
+                          ✓
+                        </div>
+                        <span className="text-[16px]">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-8 pt-4 border-t border-[#F7F3EE] flex justify-between items-center text-xs text-[#7C8794]">
+                  <span>Prometech ERP</span>
+                  <span className="font-mono">MOD-{index + 1}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Metodología */}
