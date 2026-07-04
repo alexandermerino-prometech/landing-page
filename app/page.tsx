@@ -131,27 +131,26 @@ export default function PrometechLandingPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#16324F]/10 via-[#E9C46A]/10 to-transparent" />
 
-        <div className="max-w-7xl mx-auto px-6 py-24 lg:py-32 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+          {/* Bloque Izquierdo: Textos y Acciones */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="inline-flex self-start items-center rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-3 py-1 text-xs font-semibold text-[#16324F] mb-4 tracking-wide uppercase">
-              Software empresarial moderno
+            <div className="inline-flex items-center rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-2 text-sm text-[#16324F] mb-6">
+              Software empresarial moderno y escalable
             </div>
 
-            {/* Título Principal Rediseñado (Usando la Opción 1 como ejemplo) */}
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
+            <h2 className="text-5xl lg:text-6xl lg:text-[44px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
               Toma el control <span className="text-[#E76F51]">operativo</span> y financiero de tu negocio
             </h2>
 
-            {/* El "Cómo lo hace" se explica detalladamente aquí abajo */}
-            <p className="text-[#5E6B7A] text-[16px] leading-relaxed mb-6 max-w-xl">
+            <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
               Centraliza tus proyectos, automatiza la gestión de compras y controla la facturación desde una plataforma modular en la nube diseñada para eliminar el caos operativo.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3">
               {/* Botón Primario: Agendar Demo */}
               <a
                 href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
-                className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-[#16324F]/10 hover:shadow-[#16324F]/20 hover:-translate-y-0.5"
+                className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-5 py-3 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/10 hover:-translate-y-0.5"
               >
                 {/* Icono de Correo */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -166,7 +165,7 @@ export default function PrometechLandingPage() {
                 href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-slate-50 border border-slate-200 hover:border-[#16324F] hover:bg-slate-100 text-[#16324F] font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="bg-white border border-slate-200 hover:border-[#16324F] text-[#16324F] text-sm font-medium px-5 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span>Consultar a un asesor</span>
               </a>
@@ -176,7 +175,7 @@ export default function PrometechLandingPage() {
                 href="https://www.youtube.com/@Prometech-Peru"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-[#E4DDD4] hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-all px-6 py-3 rounded-2xl text-[#16324F]"
+                className="border border-[#E4DDD4] hover:border-[#16324F] text-sm text-[#5E6B7A] hover:text-[#16324F] transition-all px-5 py-3 rounded-xl"
               >
                 <span>Ver soluciones</span>
               </a>
@@ -185,7 +184,7 @@ export default function PrometechLandingPage() {
           </div>
 
           {/* Dashboard Real del Sistema */}
-          <div className="relative w-full flex items-center justify-center max-w-5xl mx-auto">
+          <div className="lg:col-span-7 relative w-full flex items-center justify-center">
             {/* Elemento decorativo de fondo */}
             <div className="absolute inset-0 bg-[#E9C46A]/10 rounded-3xl blur-3xl transform rotate-2 scale-95 -z-10" />
             
