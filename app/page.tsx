@@ -373,10 +373,12 @@ export default function PrometechLandingPage() {
                 key={index}
                 className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <img
+                <Image
                   src={step.image}
                   alt={step.title}
-                  className="w-full h-56 object-cover"
+                  width={100}
+                  height={100}
+                  className="h-10 w-auto"
                 />
 
                 <div className="p-6">
@@ -418,9 +420,11 @@ export default function PrometechLandingPage() {
                 key={index}
                 className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <img
+                <Image
                   src={step.image}
                   alt={step.title}
+                  width={100}
+                  height={100}
                   className="w-full h-56 object-cover"
                 />
 
