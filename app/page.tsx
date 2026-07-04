@@ -193,7 +193,7 @@ export default function PrometechLandingPage() {
                 <div className="w-3 h-3 rounded-full bg-[#E76F51]" />
                 <div className="w-3 h-3 rounded-full bg-[#E9C46A]" />
                 <div className="w-3 h-3 rounded-full bg-[#2D6A4F]" />
-                <span className="text-xs text-[#7C8794] ml-4 font-mono select-none">app.prometech.com.pe/dashboard</span>
+                <span className="text-xs text-[#7C8794] ml-4 font-mono select-none">Dashboard de Prometech</span>
               </div>
 
               {/* Imagen real de tu Dashboard */}
@@ -202,7 +202,8 @@ export default function PrometechLandingPage() {
                   src="/dashboard-Prometech.png"
                   alt="Dashboard de control operativo en tiempo real de Prometech"
                   fill
-                  sizes="(max-w-1024px) 100vw, 50vw"
+                  width={2248}
+                  height={1024}
                   priority
                   className="object-cover object-top"
                 />
