@@ -32,9 +32,11 @@ export default function PrometechLandingPage() {
       <header className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img
+            <Image
               src="/Logo1.png"
-              alt="Prometech Logo"
+              alt="Logo de Prometech"
+              width={283}
+              height={279}
               className="h-10 w-auto"
             />
 
