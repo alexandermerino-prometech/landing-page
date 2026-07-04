@@ -25,13 +25,6 @@ const montserrat = Montserrat({
   weight: ["700", "800"],
 });
 
-// Dentro de tu componente:
-const [abiertoId, setAbiertoId] = useState<number | null>(null);
-
-const togglePregunta = (id: number) => {
-  setAbiertoId(abiertoId === id ? null : id);
-};
-
 const preguntasFrecuentes = [
   {
     id: 1,
@@ -89,6 +82,13 @@ const tarjetaVariantes: Variants = {
 };
 
 export default function PrometechLandingPage() {
+
+  const [abiertoId, setAbiertoId] = useState<number | null>(null);
+
+  const togglePregunta = (id: number) => {
+    setAbiertoId(abiertoId === id ? null : id);
+  };
+
   return (
     <div className="min-h-screen bg-[#F7F3EE] text-[#16324F]">
       {/* Navbar */}
