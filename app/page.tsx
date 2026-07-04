@@ -90,13 +90,11 @@ export default function PrometechLandingPage() {
             </div>
 
             <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 text-[#16324F]">
-              Transformamos procesos en soluciones digitales
+              Controla tus proyectos, compras, logística y facturación desde una sola plataforma
             </h2>
 
             <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
-              Desarrollamos software empresarial para optimizar operaciones,
-              centralizar información y mejorar el control operativo de empresas
-              y constructoras.
+              Planifica proyectos, controla requerimientos, gestiona compras, recibe materiales, despacha productos y factura electrónicamente desde una plataforma moderna en la nube.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
