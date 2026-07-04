@@ -1,6 +1,5 @@
-"use client";
-
 import { Montserrat } from "next/font/google";
+import Image from "next/image";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -240,11 +239,13 @@ export default function PrometechLandingPage() {
               className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 shadow-sm hover:shadow-md transition-all flex flex-col"
             >
               {/* Contenedor de la imagen */}
-              <div className="w-full h-64 mb-5 overflow-hidden rounded-2xl border border-[#16324F]/10">
-                <img 
-                  src={item.imagen} 
-                  alt={item.titulo} 
-                  className="w-full h-full object-cover"
+              <div className="relative w-full h-64 mb-5 overflow-hidden rounded-2xl border border-[#16324F]/10">
+                <Image
+                  src={item.imagen}
+                  alt={`${item.titulo} con el software empresarial de Prometech`}
+                  fill
+                  priority
+                  className="object-cover"
                 />
               </div>
 
