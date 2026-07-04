@@ -132,17 +132,19 @@ export default function PrometechLandingPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#16324F]/10 via-[#E9C46A]/10 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-6 py-24 lg:py-32 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="inline-flex items-center rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-2 text-sm text-[#16324F] mb-6">
-              Software empresarial moderno y escalable
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="inline-flex self-start items-center rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-3 py-1 text-xs font-semibold text-[#16324F] mb-4 tracking-wide uppercase">
+              Software empresarial moderno
             </div>
 
-            <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 text-[#16324F]">
-              Controla tus proyectos, compras, logística y facturación desde una sola plataforma
+            {/* Título Principal Rediseñado (Usando la Opción 1 como ejemplo) */}
+            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
+              Toma el control <span className="text-[#E76F51]">operativo</span> y financiero de tu negocio
             </h2>
 
-            <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
-              Planifica proyectos, controla requerimientos, gestiona compras, recibe materiales, despacha productos y factura electrónicamente desde una plataforma moderna en la nube.
+            {/* El "Cómo lo hace" se explica detalladamente aquí abajo */}
+            <p className="text-[#5E6B7A] text-[16px] leading-relaxed mb-6 max-w-xl">
+              Centraliza tus proyectos, automatiza la gestión de compras y controla la facturación desde una plataforma modular en la nube diseñada para eliminar el caos operativo.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
