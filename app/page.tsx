@@ -1,5 +1,7 @@
+"use client";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
+import { motion } from "framer-motion"; /
 
 import { 
   FolderKanban, 
@@ -50,6 +52,26 @@ const pasosFlujo = [
   { num: "09", title: "Facturación", desc: "Conciliación financiera, cuentas por pagar y cobros.", icon: Receipt, dark: false },
   { num: "10", title: "Dashboard", desc: "Analítica avanzada, KPIs y reportes automatizados.", icon: LayoutDashboard, dark: true },
 ];
+
+// Configuración de variantes de animación para Framer Motion
+const contenedorVariantes = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08, // Efecto cascada: retrasa la aparición de cada hijo
+    },
+  },
+};
+
+const tarjetaVariantes = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 100, damping: 15 } 
+  },
+};
 
 export default function PrometechLandingPage() {
   return (
@@ -351,8 +373,8 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* NUEVA SECCIÓN: FLUJO VISUAL INTEGRADO AQUÍ */}
-      <section id="flujo" className="max-w-7xl mx-auto px-6 py-24">
+      /* SECCIÓN ANIMADA CON MOTION SCROLL */
+      <section id="flujo" className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
         <div className="max-w-3xl mb-16">
           <p className="text-[#E76F51] font-medium mb-4">Trazabilidad End-to-End</p>
           <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
@@ -363,35 +385,52 @@ export default function PrometechLandingPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+        {/* El contenedor escucha el scroll de la página utilizando whileInView */}
+        <motion.div 
+          variants={contenedorVariantes}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // La animación se ejecuta una sola vez al entrar al viewport
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative"
+        >
           {pasosFlujo.map((step, index) => {
             const IconComponent = step.icon;
             
             if (step.dark) {
               return (
-                <div key={index} className="bg-[#16324F] p-6 rounded-3xl shadow-lg border border-transparent hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group">
+                <motion.div 
+                  key={index} 
+                  variants={tarjetaVariantes}
+                  whileHover={{ y: -5, scale: 1.02 }} // Microinteracción extra al hacer hover
+                  className="bg-[#16324F] p-6 rounded-3xl shadow-lg border border-transparent flex flex-col items-center text-center group cursor-default"
+                >
                   <div className="w-12 h-12 bg-[#E9C46A] rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-white transition-all duration-300 animate-pulse">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-wider">Paso {step.num}</span>
                   <h3 className="text-lg font-bold text-white mt-1">{step.title}</h3>
                   <p className="text-sm text-slate-300 mt-2">{step.desc}</p>
-                </div>
+                </motion.div>
               );
             }
 
             return (
-              <div key={index} className="bg-[#FFFDF9] p-6 rounded-3xl shadow-xs border border-[#E4DDD4] hover:shadow-md hover:border-[#16324F] transition-all duration-300 flex flex-col items-center text-center group">
+              <motion.div 
+                key={index} 
+                variants={tarjetaVariantes}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-[#FFFDF9] p-6 rounded-3xl shadow-xs border border-[#E4DDD4] hover:border-[#16324F] hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group cursor-default"
+              >
                 <div className="w-12 h-12 bg-[#16324F]/5 rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-[#16324F] group-hover:text-white transition-all duration-300">
                   <IconComponent className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-bold text-[#E76F51] uppercase tracking-wider">Paso {step.num}</span>
                 <h3 className="text-lg font-bold text-[#16324F] mt-1">{step.title}</h3>
                 <p className="text-sm text-[#5E6B7A] mt-2">{step.desc}</p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </section>
 
       {/* Metodología */}
