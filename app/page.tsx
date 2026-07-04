@@ -373,7 +373,7 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      /* SECCIÓN ANIMADA CON MOTION SCROLL */
+      {/* SECCIÓN ANIMADA CON MOTION SCROLL */}
       <section id="flujo" className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
         <div className="max-w-3xl mb-16">
           <p className="text-[#E76F51] font-medium mb-4">Trazabilidad End-to-End</p>
