@@ -131,7 +131,7 @@ export default function PrometechLandingPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#16324F]/10 via-[#E9C46A]/10 to-transparent" />
 
-        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Bloque Izquierdo: Textos y Acciones */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="inline-flex items-center rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-2 text-sm text-[#16324F] mb-6">
@@ -201,7 +201,7 @@ export default function PrometechLandingPage() {
               </div>
 
               {/* Contenedor inteligente adaptativo a la pantalla */}
-              <div className="relative flex-1 w-full bg-white overflow-hidden min-h-[250px] md:min-h-[350px] lg:min-h-[400px]">
+              <div className="relative flex-1 w-full bg-white overflow-hidden aspect-video">
                 <Image
                   src="/dashboard-Prometech.png"
                   alt="Dashboard real de control operativo de Prometech"
