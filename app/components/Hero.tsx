@@ -4,13 +4,12 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#16324F]/10 via-[#E9C46A]/10 to-transparent" />
-
+      <div className="absolute inset-0 bg-gradient-to-br from-[#16324F]/10 via-[#E9C46A]/10 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         {/* Bloque Izquierdo: Textos y Acciones */}
         <div className="lg:col-span-5 flex flex-col justify-center">
           <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-1.5 text-xs font-medium text-[#16324F] mb-6 self-start">
-            Software ERP basado en Proyectos
+            ERP modular para empresas por proyectos
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
@@ -18,8 +17,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
-            Desde el requerimiento de materiales hasta la facturación, centraliza toda la operación de tus proyectos en una plataforma modular 
-            en la nube para mejorar el control, reducir errores y tomar decisiones con información en tiempo real.
+            Desde el requerimiento de materiales hasta la facturación electrónica, integra todo el flujo operativo de tus proyectos en una plataforma modular en la nube para mejorar el control y tomar decisiones con información en tiempo real.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -62,8 +60,7 @@ export default function Hero() {
         <div className="lg:col-span-7 relative w-full flex items-center justify-center">
           <div className="absolute inset-0 bg-[#E9C46A]/10 rounded-3xl blur-3xl transform rotate-2 scale-95 -z-10" />
           
-          <div className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden w-full max-h-[50vh] lg:max-h-[55vh] flex flex-col transition-transform duration-500 hover:scale-[1.01]">
-            <div className="border-b border-[#E4DDD4] px-5 py-3 flex items-center gap-2 bg-[#F7F3EE] flex-shrink-0">
+          <div className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden w-full flex flex-col transition-transform duration-500 hover:scale-[1.01]">  <div className="border-b border-[#E4DDD4] px-5 py-3 flex items-center gap-2 bg-[#F7F3EE] flex-shrink-0">
               <div className="w-3 h-3 rounded-full bg-[#E76F51]" />
               <div className="w-3 h-3 rounded-full bg-[#E9C46A]" />
               <div className="w-3 h-3 rounded-full bg-[#2D6A4F]" />
@@ -77,7 +74,7 @@ export default function Hero() {
                 src="/dashboard-Prometech.png"
                 alt="Plataforma ERP Prometech: Módulos de proyectos, control de inventarios, compras y facturación electrónica"
                 fill
-                sizes="(max-w-1024px) 100vw, 50vw"
+                sizes="(max-w-1024px) 100vw, 60vw"
                 priority
                 className="object-cover object-top"
               />
