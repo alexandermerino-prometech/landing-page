@@ -4,7 +4,7 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import Hero from "./components/Hero";
-
+import ConceptoErp from "./components/ConceptoErp";
 
 import { 
   FolderKanban, 
@@ -18,10 +18,10 @@ import {
   Receipt, 
   LayoutDashboard,
   Menu,
-  X
+  X,
+  Mail,
+  Linkedin
 } from "lucide-react";
-
-
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -64,117 +64,117 @@ const pasosFlujo = [
   { num: "10", title: "Dashboard", desc: "Analítica avanzada, KPIs y reportes automatizados.", icon: LayoutDashboard, dark: true },
 ];
 
-// Configuración de variantes de animación para Framer Motion
 const contenedorVariantes: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08, // Efecto cascada: retrasa la aparición de cada hijo
+      staggerChildren: 0.06,
     },
   },
 };
 
 const tarjetaVariantes: Variants = { 
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 25 },
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { type: "spring", stiffness: 100, damping: 15 } 
+    transition: { type: "spring", stiffness: 100, damping: 16 } 
   },
 };
 
 export default function PrometechLandingPage() {
-
   const [abiertoId, setAbiertoId] = useState<number | null>(null);
-
-  const [menuMovilAbierto, setMenuMovilAbierto] = useState(false); //
+  const [menuMovilAbierto, setMenuMovilAbierto] = useState(false);
 
   const togglePregunta = (id: number) => {
     setAbiertoId(abiertoId === id ? null : id);
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] scroll-smooth">
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur">
+    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] scroll-smooth antialiased">
+      
+      {/* Navbar (Optimizado SEO: Nombre de marca cambiado a párrafo para no competir con el H1) */}
+      <header className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
               src="/Logo1.png"
-              alt="Logo de Prometech"
+              alt="Logo Oficial de la plataforma ERP Prometech"
               width={40}
               height={40}
-              className="h-10 w-auto"
+              className="h-10 w-auto object-contain"
+              priority
             />
-            <h1 className={`${montserrat.className} text-[26px] md:text-[30px] font-black tracking-[-0.04em] text-[#16324F] uppercase`}>
+            <p className={`${montserrat.className} text-[24px] md:text-[26px] font-black tracking-[-0.04em] text-[#16324F] uppercase select-none`}>
               PROMETECH
-            </h1>
+            </p>
           </div>
 
-          {/* Menú de Escritorio */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#5E6B7A]">
-            <a href="#flujo" className="hover:text-[#16324F] transition-colors">Flujo</a>
-            <a href="#soluciones" className="hover:text-[#16324F] transition-colors">Soluciones</a>
-            <a href="#metodologia" className="hover:text-[#16324F] transition-colors">Metodología</a>
-            <a href="#beneficios" className="hover:text-[#16324F] transition-colors">Beneficios</a>
-            <a href="#faq" className="hover:text-[#16324F] transition-colors">FAQ</a>
-            <a href="#contacto" className="bg-[#16324F] text-white px-4 py-2 rounded-xl text-xs hover:bg-[#1d436a] transition-all">Contacto</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5E6B7A]">
+            <a href="#flujo" className="hover:text-[#16324F] transition-colors duration-200">Flujo</a>
+            <a href="#soluciones" className="hover:text-[#16324F] transition-colors duration-200">Soluciones</a>
+            <a href="#metodologia" className="hover:text-[#16324F] transition-colors duration-200">Metodología</a>
+            <a href="#beneficios" className="hover:text-[#16324F] transition-colors duration-200">Beneficios</a>
+            <a href="#faq" className="hover:text-[#16324F] transition-colors duration-200">FAQ</a>
+            <a href="#contacto" className="bg-[#16324F] text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-[#1d436a] hover:-translate-y-0.5 transition-all duration-300 shadow-sm shadow-[#16324F]/10">
+              Solicitar Demo
+            </a>
           </nav>
 
-          {/* Botón Menú Móvil */}
           <button 
-            className="block md:hidden text-[#16324F]" 
+            className="block md:hidden text-[#16324F] p-2 hover:bg-slate-100 rounded-lg transition-colors" 
             onClick={() => setMenuMovilAbierto(!menuMovilAbierto)}
-            aria-label="Toggle menu"
+            aria-label={menuMovilAbierto ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
           >
             {menuMovilAbierto ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Desplegable móvil */}
         <AnimatePresence>
           {menuMovilAbierto && (
             <motion.div 
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-b border-[#E4DDD4] bg-[#F7F3EE] px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-medium text-[#5E6B7A]"
+              className="md:hidden border-b border-[#E4DDD4] bg-[#F7F3EE] px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-semibold text-[#5E6B7A]"
             >
-              <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Flujo</a>
-              <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Soluciones</a>
-              <a href="#metodologia" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Metodología</a>
-              <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">Beneficios</a>
-              <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F]">FAQ</a>
-              <a href="#contacto" onClick={() => setMenuMovilAbierto(false)} className="bg-[#16324F] text-white text-center px-4 py-2 rounded-xl text-xs">Contacto</a>
+              <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Flujo</a>
+              <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Soluciones</a>
+              <a href="#metodologia" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Metodología</a>
+              <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Beneficios</a>
+              <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">FAQ</a>
+              <a href="#contacto" onClick={() => setMenuMovilAbierto(false)} className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md">
+                Contacto Directo
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
       </header>
-      {/* Hero */}
-        <Hero />
 
+      {/* Hero Sección */}
+      <Hero />
 
+      {/* ConeptoErp Sección */}
+      <ConceptoErp />
 
-
-      {/* SECCIÓN ANIMADA CON MOTION SCROLL */}
+      {/* Sección: Flujo de Trabajo (Corregida a H2 para indexación limpia de motores de búsqueda) */}
       <section id="flujo" className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
         <div className="max-w-3xl mb-16">
-          <p className="text-[#E76F51] font-medium mb-4">Trazabilidad End-to-End</p>
-          <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-            El Flujo de Trabajo Operativo de tu negocio, totalmente conectado
-          </h3>
-          <p className="text-[#5E6B7A] text-lg">
-            Desde la concepción del proyecto hasta la analítica avanzada. Así es como Prometech centraliza cada etapa de tu empresa.
+          <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Trazabilidad End-to-End</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
+            El flujo de trabajo operativo de tu negocio, totalmente conectado
+          </h2>
+          <p className="text-[#5E6B7A] text-lg leading-relaxed">
+            Desde la concepción del proyecto hasta la analítica avanzada. Así es como Prometech centraliza cada etapa operativa de tu empresa.
           </p>
         </div>
 
-        {/* El contenedor escucha el scroll de la página utilizando whileInView */}
         <motion.div 
           variants={contenedorVariantes}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }} // La animación se ejecuta una sola vez al entrar al viewport
+          viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative"
         >
           {pasosFlujo.map((step, index) => {
@@ -185,15 +185,15 @@ export default function PrometechLandingPage() {
                 <motion.div 
                   key={index} 
                   variants={tarjetaVariantes}
-                  whileHover={{ y: -5, scale: 1.02 }} // Microinteracción extra al hacer hover
+                  whileHover={{ y: -5, scale: 1.01 }}
                   className="bg-[#16324F] p-6 rounded-3xl shadow-lg border border-transparent flex flex-col items-center text-center group cursor-default"
                 >
-                  <div className="w-12 h-12 bg-[#E9C46A] rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-white transition-all duration-300 animate-pulse">
+                  <div className="w-12 h-12 bg-[#E9C46A] rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-white transition-all duration-300">
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <span className="text-xs font-bold text-[#E9C46A] uppercase tracking-wider">Paso {step.num}</span>
-                  <h3 className="text-lg font-bold text-white mt-1">{step.title}</h3>
-                  <p className="text-sm text-slate-300 mt-2">{step.desc}</p>
+                  <h3 className="text-lg font-bold text-white mt-1.5">{step.title}</h3>
+                  <p className="text-sm text-slate-300 mt-2 leading-relaxed">{step.desc}</p>
                 </motion.div>
               );
             }
@@ -202,103 +202,62 @@ export default function PrometechLandingPage() {
               <motion.div 
                 key={index} 
                 variants={tarjetaVariantes}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-[#FFFDF9] p-6 rounded-3xl shadow-xs border border-[#E4DDD4] hover:border-[#16324F] hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group cursor-default"
+                whileHover={{ y: -5, scale: 1.01 }}
+                className="bg-[#FFFDF9] p-6 rounded-3xl shadow-sm border border-[#E4DDD4] hover:border-[#16324F] hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group cursor-default"
               >
                 <div className="w-12 h-12 bg-[#16324F]/5 rounded-2xl flex items-center justify-center text-[#16324F] mb-4 group-hover:bg-[#16324F] group-hover:text-white transition-all duration-300">
                   <IconComponent className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-bold text-[#E76F51] uppercase tracking-wider">Paso {step.num}</span>
-                <h3 className="text-lg font-bold text-[#16324F] mt-1">{step.title}</h3>
-                <p className="text-sm text-[#5E6B7A] mt-2">{step.desc}</p>
+                <h3 className="text-lg font-bold text-[#16324F] mt-1.5">{step.title}</h3>
+                <p className="text-sm text-[#5E6B7A] mt-2 leading-relaxed">{step.desc}</p>
               </motion.div>
             );
           })}
         </motion.div>
       </section>
 
-      {/* NUEVA SECCIÓN DE TARJETAS DE MÓDULOS (Ubicada estratégicamente aquí) */}
+      {/* Sección: Soluciones Modulares */}
       <section id="soluciones" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="max-w-3xl mb-16">
-            <p className="text-[#E76F51] font-medium mb-4">Arquitectura Modular</p>
-            <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-              Módulos especializados para el control total de tu empresa
-            </h3>
-            <p className="text-[#5E6B7A] text-lg">
-              Explora las herramientas diseñadas para centralizar tus operaciones. Activa solo lo que necesitas, cuando lo necesitas.
+            <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Arquitectura Modular</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
+              Módulos especializados para el control financiero e integral de proyectos
+            </h2>
+            <p className="text-[#5E6B7A] text-lg leading-relaxed">
+              Explora las herramientas modulares diseñadas para mitigar riesgos y eliminar reprocesos. Activa solo lo que tu negocio necesita en cada etapa.
             </p>
           </div>
 
-          {/* Grid de Tarjetas Modernas */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                titulo: "Gestión de Proyectos",
-                estado: "Disponible",
-                colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20",
-                iconoEstado: "✅",
-                features: ["Proyectos", "Gantt", "Tareas", "Dashboard"],
-              },
-              {
-                titulo: "Compras y Logística",
-                estado: "Disponible",
-                colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20",
-                iconoEstado: "✅",
-                features: ["Materiales", "Requerimientos", "Órdenes de compra", "Órdenes de servicio"],
-              },
-              {
-                titulo: "Recepción e Inventario",
-                estado: "En desarrollo",
-                colorEstado: "bg-[#E9C46A]/10 text-[#D4A316] border-[#E9C46A]/30",
-                iconoEstado: "🚧",
-                features: ["Recepción", "Control de materiales", "Despacho"],
-              },
-              {
-                titulo: "Facturación Electrónica",
-                estado: "Próximamente",
-                colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20",
-                iconoEstado: "⏳",
-                features: ["Facturas", "Boletas", "Notas de crédito"],
-              },
-              {
-                titulo: "Rentabilidad",
-                estado: "Próximamente",
-                colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20",
-                iconoEstado: "⏳",
-                features: ["Presupuesto", "Esperado vs Real", "KPIs"],
-              },
+              { titulo: "Gestión de Proyectos", estado: "Disponible", colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20", iconoEstado: "✅", features: ["Estructura Desglosada de Trabajo (EDT)", "Diagramas de Gantt interactivos", "Control de Hitos y Entregables", "Paneles de Control Automatizados"] },
+              { titulo: "Compras y Logística", estado: "Disponible", colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20", iconoEstado: "✅", features: ["Catálogo Centralizado de Materiales", "Solicitudes de Requerimiento digitales", "Órdenes de Compra automatizadas", "Trazabilidad de Órdenes de Servicio"] },
+              { titulo: "Recepción e Inventario", estado: "En desarrollo", colorEstado: "bg-[#E9C46A]/10 text-[#D4A316] border-[#E9C46A]/30", iconoEstado: "🚧", features: ["Validación Física de Recepción", "Kárdex Automatizado por Proyecto", "Logística y Guías de Despacho"] },
+              { titulo: "Facturación Electrónica", estado: "Próximamente", colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20", iconoEstado: "⏳", features: ["Emisión de Facturas y Boletas Sunat", "Notas de Crédito y Débito integradas", "Conciliación Bancaria nativa"] },
+              { titulo: "Rentabilidad Operativa", estado: "Próximamente", colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20", iconoEstado: "⏳", features: ["Presupuestos Estáticos vs Dinámicos", "Análisis Financiero Esperado vs Real", "Alertas Automáticas de Desviación"] },
             ].map((modulo, index) => (
-              <div
-                key={index}
-                className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-8 flex flex-col justify-between hover:shadow-xl hover:border-[#16324F]/30 transition-all duration-300"
-              >
+              <div key={index} className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-8 flex flex-col justify-between hover:shadow-xl hover:border-[#16324F]/30 transition-all duration-300">
                 <div>
                   <div className="flex items-start justify-between gap-4 mb-6">
-                    <h4 className="text-2xl font-bold text-[#16324F] leading-snug">
-                      {modulo.titulo}
-                    </h4>
+                    <h3 className="text-2xl font-bold text-[#16324F] leading-snug tracking-tight">{modulo.titulo}</h3>
                     <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${modulo.colorEstado} whitespace-nowrap`}>
-                      <span>{modulo.iconoEstado}</span>
-                      {modulo.estado}
+                      <span>{modulo.iconoEstado}</span>{modulo.estado}
                     </span>
                   </div>
-
-                  <ul className="space-y-3.5">
+                  <ul className="space-y-3.5" aria-label={`Características del módulo de ${modulo.titulo}`}>
                     {modulo.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-[#5E6B7A]">
-                        <div className="flex-shrink-0 w-5 h-5 rounded-md bg-[#16324F]/5 flex items-center justify-center text-[#2D6A4F] text-xs font-bold">
-                          ✓
-                        </div>
-                        <span className="text-[16px]">{feature}</span>
+                      <li key={idx} className="flex items-start gap-3 text-[#5E6B7A]">
+                        <div className="flex-shrink-0 w-5 h-5 rounded-md bg-[#16324F]/5 flex items-center justify-center text-[#2D6A4F] text-xs font-bold mt-0.5">✓</div>
+                        <span className="text-[15px] leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                <div className="mt-8 pt-4 border-t border-[#F7F3EE] flex justify-between items-center text-xs text-[#7C8794]">
-                  <span>Prometech ERP</span>
-                  <span className="font-mono">MOD-{index + 1}</span>
+                <div className="mt-8 pt-4 border-t border-[#F7F3EE] flex justify-between items-center text-xs text-[#7C8794] font-medium">
+                  <span>Prometech Software</span>
+                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded">MOD-{index + 1}</span>
                 </div>
               </div>
             ))}
@@ -306,161 +265,93 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* Metodología */}
-      <section
-        id="metodologia"
-        className="max-w-7xl mx-auto px-6 py-24"
-      >
+      {/* Sección: Metodología (Optimizada con Atributos Sizes para un LCP óptimo) */}
+      <section id="metodologia" className="max-w-7xl mx-auto px-6 py-24">
         <div className="max-w-3xl mb-16">
-          <p className="text-[#E76F51] font-medium mb-4">
-            Metodología
-          </p>
-
-          <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-            Un enfoque moderno, flexible y orientado a resultados
-          </h3>
+          <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Implementación Ágil</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
+            Un enfoque moderno, flexible y orientado a la maduración digital
+          </h2>
         </div>
       
         <div className="max-w-7xl mx-auto">
-
-          {/* FILA SUPERIOR */}
+          {/* Fila Superior (3 Columnas) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-
             {[
-              {
-                title: "Análisis",
-                image: "/metodologia/analisis.png",
-                description:
-                  "Analizamos procesos y detectamos oportunidades de mejora.",
-              },
-
-              {
-                title: "Diseño funcional",
-                image: "/metodologia/diseno.png",
-                description:
-                  "Diseñamos flujos intuitivos y experiencias modernas.",
-              },
-
-              {
-                title: "Desarrollo",
-                image: "/metodologia/desarrollo.webp",
-                description:
-                  "Construimos plataformas escalables y seguras.",
-              },
+              { title: "Análisis de Procesos", image: "/metodologia/analisis.png", description: "Evaluamos el ecosistema operativo actual de tu negocio y detectamos cuellos de botella." },
+              { title: "Diseño Funcional", image: "/metodologia/diseno.png", description: "Estructuramos flujos de datos automatizados y configuramos vistas de usuario intuitivas." },
+              { title: "Desarrollo y Ajustes", image: "/metodologia/desarrollo.webp", description: "Configuramos los módulos nativos en entornos seguros garantizando la integridad de datos." },
             ].map((step, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
+              <div key={index} className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative w-full h-48 bg-slate-100">
                   <Image 
                     src={step.image} 
-                    alt={step.title} 
+                    alt={`Etapa de ${step.title} en la metodología Prometech`} 
                     fill 
-                    className="object-cover" />
+                    sizes="(max-w-768px) 100vw, (max-w-1200px) 33vw, 400px"
+                    className="object-cover" 
+                  />
                 </div>
-
                 <div className="p-6">
-                  <span className="text-sm font-semibold text-[#E76F51]">
-                    0{index + 1}
-                  </span>
-
-                  <h3 className="text-2xl font-bold text-[#16324F] mt-3 mb-3">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-[#4B5563] leading-relaxed">
-                    {step.description}
-                  </p>
+                  <span className="text-sm font-bold text-[#E76F51] bg-orange-50 px-2 py-1 rounded">Fase 0{index + 1}</span>
+                  <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
+                  <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* FILA INFERIOR */}
+          {/* Fila Inferior (2 Columnas Centradas) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
             {[
-              {
-                title: "Implementación",
-                image: "/metodologia/dimplementacion.webp",
-                description:
-                  "Implementamos el sistema dentro de la operación empresarial.",
-              },
-
-              {
-                title: "Mejora continua",
-                image: "/metodologia/mejora_continua.jpg",
-                description:
-                  "Optimizamos constantemente procesos y rendimiento.",
-              },
+              { title: "Despliegue de Sistema", image: "/metodologia/dimplementacion.webp", description: "Puesta en marcha del software dentro de la operación activa junto a capacitaciones intensivas." },
+              { title: "Mejora Continua", image: "/metodologia/mejora_continua.jpg", description: "Monitoreo constante del sistema, optimización de flujos y adición de mejoras funcionales." },
             ].map((step, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
+              <div key={index} className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative w-full h-48 bg-slate-100">
                   <Image 
                     src={step.image} 
-                    alt={step.title} 
+                    alt={`Etapa de ${step.title} para garantizar el control empresarial`} 
                     fill 
-                    className="object-cover" />
+                    sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 450px"
+                    className="object-cover" 
+                  />
                 </div>
-
                 <div className="p-6">
-                  <span className="text-sm font-semibold text-[#E76F51]">
-                    0{index + 4}
-                  </span>
-
-                  <h3 className="text-2xl font-bold text-[#16324F] mt-3 mb-3">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-[#4B5563] leading-relaxed">
-                    {step.description}
-                  </p>
+                  <span className="text-sm font-bold text-[#E76F51] bg-orange-50 px-2 py-1 rounded">Fase 0{index + 4}</span>
+                  <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
+                  <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
       </section>
 
-      {/* Beneficios */}
-      <section
-        id="beneficios"
-        className="bg-[#F1ECE5] border-y border-[#E4DDD4]"
-      >
+      {/* Sección: Beneficios */}
+      <section id="beneficios" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="max-w-3xl mb-16">
-            <p className="text-[#E76F51] font-medium mb-4">
-              Beneficios
-            </p>
-
-            <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-              Diseñado para mejorar control, eficiencia y escalabilidad
-            </h3>
+            <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Ventajas Competitivas</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
+              Diseñado al detalle para mejorar el control, la eficiencia y tu escalabilidad
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              "Centralización de información",
-              "Reducción de errores manuales",
-              "Mayor control operativo",
-              "Información en tiempo real",
-              "Procesos más eficientes",
-              "Arquitectura modular y escalable",
+              "Centralización absoluta de la información de proyectos",
+              "Reducción drástica de errores y duplicidades manuales",
+              "Mayor rigurosidad en el control presupuestal operativo",
+              "Acceso inmediato a información e indicadores en tiempo real",
+              "Automatización de procesos entre logística y finanzas",
+              "Arquitectura modular adaptable según el ritmo de crecimiento",
             ].map((benefit) => (
-              <div
-                key={benefit}
-                className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-all"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#16324F]/5 border border-[#16324F]/10 flex items-center justify-center text-[#16324F]">
+              <div key={benefit} className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#2D6A4F]/10 border border-[#2D6A4F]/20 flex items-center justify-center text-[#2D6A4F] font-bold">
                   ✓
                 </div>
-
-                <p className="text-lg text-[#16324F]">
+                <p className="text-base font-semibold text-[#16324F] leading-snug">
                   {benefit}
                 </p>
               </div>
@@ -469,13 +360,13 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* Sección FAQ (Preguntas Frecuentes) */}
+      {/* Sección: FAQ */}
       <section id="faq" className="max-w-4xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <p className="text-[#E76F51] font-medium mb-4">Soporte y Dudas</p>
-          <h3 className="text-4xl font-bold text-[#16324F]">Preguntas Frecuentes</h3>
-          <p className="text-[#5E6B7A] text-lg mt-4">
-            Todo lo que necesitas saber sobre nuestra plataforma y metodología.
+          <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Soporte y Dudas Comunes</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#16324F] tracking-tight">Preguntas Frecuentes</h2>
+          <p className="text-[#5E6B7A] text-lg mt-3">
+            Resuelve tus dudas sobre la viabilidad, escalabilidad y despliegue del ERP.
           </p>
         </div>
 
@@ -483,17 +374,17 @@ export default function PrometechLandingPage() {
           {preguntasFrecuentes.map((faq) => {
             const estaAbierto = abiertoId === faq.id;
             return (
-              <div key={faq.id} className="border border-[#E4DDD4] bg-[#FFFDF9] rounded-2xl overflow-hidden shadow-xs">
+              <div key={faq.id} className="border border-[#E4DDD4] bg-[#FFFDF9] rounded-2xl overflow-hidden shadow-sm">
                 <button
                   onClick={() => togglePregunta(faq.id)}
                   aria-expanded={estaAbierto}
-                  className="w-full flex items-center justify-between p-6 text-left font-semibold text-lg text-[#16324F] hover:bg-[#F7F3EE]/50 transition-colors"
+                  className="w-full flex items-center justify-between p-6 text-left font-bold text-base sm:text-lg text-[#16324F] hover:bg-[#F7F3EE]/40 transition-colors duration-200"
                 >
                   <span>{faq.pregunta}</span>
                   <motion.span 
                     animate={{ rotate: estaAbierto ? 45 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="text-[#E76F51] text-2xl inline-block"
+                    transition={{ duration: 0.18 }}
+                    className="text-[#E76F51] text-2xl font-light ml-4 select-none"
                   >
                     +
                   </motion.span>
@@ -505,9 +396,9 @@ export default function PrometechLandingPage() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
                     >
-                      <p className="p-6 pt-0 text-[#5E6B7A] leading-relaxed border-t border-[#E4DDD4]/50">
+                      <p className="p-6 pt-0 text-[#5E6B7A] text-sm sm:text-base leading-relaxed border-t border-[#E4DDD4]/40 bg-slate-50/30">
                         {faq.respuesta}
                       </p>
                     </motion.div>
@@ -519,58 +410,62 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section
-        id="contacto"
-        className="max-w-5xl mx-auto px-6 py-24"
-      >
-        <div className="rounded-[32px] border border-[#E4DDD4] bg-gradient-to-br from-[#16324F]/5 to-[#E9C46A]/20 p-12 text-center shadow-sm">
-          <h3 className="text-4xl font-bold mb-6 text-[#16324F]">
-            ¿Listo para dejar atrás Excel?
+      {/* Sección: Conversión CTA Final */}
+      <section id="contacto" className="max-w-5xl mx-auto px-6 py-12 md:py-24">
+        <div className="rounded-[32px] border border-[#E4DDD4] bg-gradient-to-br from-[#16324F]/5 via-[#E9C46A]/10 to-transparent p-8 md:p-14 text-center shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#E9C46A]/10 rounded-full blur-3xl -z-10 pointer-events-none" />
+          
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight max-w-3xl mx-auto leading-[1.2]">
+            ¿Listo para centralizar tu operación y dejar atrás las hojas de Excel?
+          </h2>
 
-            Solicita una demostración.
-          </h3>
-
-          <p className="text-[#5E6B7A] text-lg max-w-2xl mx-auto mb-10">
-            Te mostraremos cómo centralizar proyectos,
-            compras e inventario en una sola plataforma.
+          <p className="text-[#5E6B7A] text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            Agenda una sesión personalizada y descubre cómo ordenar tus requerimientos, controlar almacenes e impulsar la rentabilidad de tus proyectos.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="mailto:contacto@prometech.com.pe"
-              className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium text-white shadow-md"
+              href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demo%20ERP"
+              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm text-white shadow-md shadow-[#16324F]/10 hover:-translate-y-0.5"
             >
-              contacto@prometech.com.pe
+              <Mail className="w-4 h-4" />
+              <span>contacto@prometech.com.pe</span>
             </a>
 
             <a
-              href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios."
-              className="bg-[#16324F] hover:bg-[#2D6A4F] transition-all px-6 py-3 rounded-2xl font-medium text-white shadow-md"
+              href="https://wa.me/51902041529?text=Hola,%20solicito%20una%20demostración%20del%20software%20Prometech."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-[#2D6A4F] hover:bg-[#37825c] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm text-white shadow-md shadow-[#2D6A4F]/10 hover:-translate-y-0.5"
             >
-              Whatsapp
+              {/* Ícono nativo SVG de WhatsApp para máxima fidelidad visual */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+              <span>Contactar por WhatsApp</span>
             </a>
 
             <a
               href="https://www.linkedin.com/company/prometech-peru"
               target="_blank"
-              className="border border-[#E4DDD4] hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-all px-6 py-3 rounded-2xl text-[#16324F]"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-[#E4DDD4] bg-white hover:border-[#16324F] text-[#16324F] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm hover:-translate-y-0.5"
             >
-              LinkedIn
+              <Linkedin className="w-4 h-4 text-[#0077B5]" />
+              <span>LinkedIn Oficial</span>
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#E4DDD4]">
-        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-[#7C8794] text-sm">
+      <footer className="border-t border-[#E4DDD4] bg-[#F1ECE5]/40">
+        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-[#7C8794] text-xs sm:text-sm font-medium">
           <p>© 2026 PROMETECH. Todos los derechos reservados.</p>
-
           <div className="flex items-center gap-6">
             <span>Lima, Perú</span>
-            <span>Software Empresarial</span>
+            <span className="text-[#16324F]/40">•</span>
+            <span>Software ERP basado en Proyectos</span>
           </div>
         </div>
       </footer>
