@@ -10,21 +10,22 @@ export default function Hero() {
         {/* Bloque Izquierdo: Textos y Acciones */}
         <div className="lg:col-span-5 flex flex-col justify-center">
           <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-1.5 text-xs font-medium text-[#16324F] mb-6 self-start">
-            Software empresarial moderno y escalable
+            Software para empresas que trabajan por proyectos
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
-            Toma el control <span className="text-[#E76F51]">operativo</span> y financiero de tu negocio
-          </h2>
+          <h1 className="text-4xl sm:text-5xl lg:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
+            Controla tus proyectos, compras y logística desde una sola plataforma.
+          </h1>
 
           <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
-            Centraliza tus proyectos, automatiza la gestión de compras y controla la facturación desde una plataforma modular en la nube diseñada para eliminar el caos operativo.
+            Desde el requerimiento de materiales hasta la facturación, centraliza toda la operación de tus proyectos en una plataforma modular 
+            en la nube para mejorar el control, reducir errores y tomar decisiones con información en tiempo real.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
             <a
               href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
-              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-5 py-3 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/10 hover:-translate-y-0.5"
+              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/10 hover:-translate-y-0.5"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="16" x="2" y="4" rx="2"/>
@@ -34,7 +35,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conecer%20más%20sobre%20sus%20servicios."
+              href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white border border-slate-200 hover:border-[#16324F] text-[#16324F] text-sm font-medium px-5 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
@@ -46,9 +47,9 @@ export default function Hero() {
               href="https://www.youtube.com/@Prometech-Peru"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#E4DDD4] hover:border-[#16324F] text-sm text-[#5E6B7A] hover:text-[#16324F] transition-all px-5 py-3 rounded-xl"
+              className="border border-[#E4DDD4] hover:border-[#16324F] text-sm text-[#5E6B7A] hover:text-[#16324F] transition-all px-4 py-3 rounded-xl"
             >
-              <span>Ver soluciones</span>
+              <span>Explorar módulos</span>
             </a>
           </div>
         </div>
