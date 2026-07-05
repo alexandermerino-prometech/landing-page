@@ -19,8 +19,7 @@ import {
   LayoutDashboard,
   Menu,
   X,
-  Mail,
-  Linkedin
+  Mail
 } from "lucide-react";
 
 const montserrat = Montserrat({
@@ -288,7 +287,7 @@ export default function PrometechLandingPage() {
                     src={step.image} 
                     alt={`Etapa de ${step.title} en la metodología Prometech`} 
                     fill 
-                    sizes="(max-w-768px) 100vw, (max-w-1200px) 33vw, 400px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover" 
                   />
                 </div>
@@ -313,7 +312,7 @@ export default function PrometechLandingPage() {
                     src={step.image} 
                     alt={`Etapa de ${step.title} para garantizar el control empresarial`} 
                     fill 
-                    sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 450px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
                     className="object-cover" 
                   />
                 </div>
@@ -451,7 +450,6 @@ export default function PrometechLandingPage() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 border border-[#E4DDD4] bg-white hover:border-[#16324F] text-[#16324F] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm hover:-translate-y-0.5"
             >
-              <Linkedin className="w-4 h-4 text-[#0077B5]" />
               <span>LinkedIn Oficial</span>
             </a>
           </div>
