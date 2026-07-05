@@ -4,7 +4,6 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import Hero from "./components/Hero";
-import Schema from "./components/Schema";
 import ConceptoErp from "./components/ConceptoErp";
 
 import { 
@@ -151,8 +150,6 @@ export default function PrometechLandingPage() {
           )}
         </AnimatePresence>
       </header>
-
-      <Schema />
 
       {/* Hero Sección */}
       <Hero />

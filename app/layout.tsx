@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
+import Schema from "./components/Schema";
 
 
 const geistSans = Geist({
@@ -102,61 +103,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const softwareSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-
-    name: "Prometech ERP",
-
-    applicationCategory: "BusinessApplication",
-
-    operatingSystem: "Web",
-
-    url: "https://prometech.com.pe",
-
-    description:
-      "Software ERP para empresas que trabajan por proyectos. Gestiona proyectos, compras, logística, inventario y facturación electrónica.",
-
-    creator: {
-      "@type": "Organization",
-      name: "Prometech",
-    },
-
-    featureList: [
-      "Gestión de Proyectos",
-      "Compras",
-      "Logística",
-      "Inventario",
-      "Facturación Electrónica",
-      "Dashboard",
-      "Presupuestos"
-    ],
-
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "PEN"
-    }
-  };
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-
-    name: "Prometech",
-
-    url: "https://prometech.com.pe",
-
-    logo: "https://prometech.com.pe/Logo1.png",
-
-    email: "contacto@prometech.com.pe",
-
-    sameAs: [
-      "https://www.linkedin.com/company/prometech-peru",
-      "https://www.youtube.com/@Prometech-Peru"
-    ]
-  };
-
   return (
     <html
       lang="es"
@@ -164,19 +110,7 @@ export default function RootLayout({
     >
       <head>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(softwareSchema),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
+        <Schema />
 
       </head>
 
