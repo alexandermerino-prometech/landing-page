@@ -92,7 +92,7 @@ export default function PrometechLandingPage() {
       {/* Hero Sección */}
       <Hero />
 
-      {/* ConeptoErp Sección */}
+      {/* ConceptoErp Sección */}
       <ConceptoErp />
 
       {/* Sección: Flujo de Trabajo */}
