@@ -10,11 +10,11 @@ export default function Hero() {
         {/* Bloque Izquierdo: Textos y Acciones */}
         <div className="lg:col-span-5 flex flex-col justify-center">
           <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-1.5 text-xs font-medium text-[#16324F] mb-6 self-start">
-            Software para empresas que trabajan por proyectos
+            Software ERP basado en Proyectos
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
-            Controla tus proyectos, compras y logística desde una sola plataforma.
+            Software de gestión de proyectos, compras, logística y facturación electrónica.
           </h1>
 
           <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
@@ -24,32 +24,36 @@ export default function Hero() {
 
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
-              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/10 hover:-translate-y-0.5"
+              href="https://wa.me/51902041529?text=Hola,%20solicito%20una%20demostración%20del%20software%20Prometech."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/20 hover:-translate-y-0.5"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="16" x="2" y="4" rx="2"/>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              {/* Ícono de WhatsApp / Mensaje */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
               </svg>
-              <span>Agendar una reunión</span>
+              <span>Solicitar Demo vía WhatsApp</span>
             </a>
 
             <a
-              href="https://wa.me/51902041529?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white border border-slate-200 hover:border-[#16324F] text-[#16324F] text-sm font-medium px-5 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
+              href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
+              className="bg-white border border-slate-200 hover:border-[#16324F] text-[#16324F] text-sm font-semibold px-5 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
             >
-              <span>Consultar a un asesor</span>
+              <span>Agendar por correo</span>
             </a>
 
             <a
               href="https://www.youtube.com/@Prometech-Peru"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#E4DDD4] hover:border-[#16324F] text-sm text-[#5E6B7A] hover:text-[#16324F] transition-all px-4 py-3 rounded-xl"
+              className="flex items-center gap-1.5 text-sm font-medium text-[#5E6B7A] hover:text-[#16324F] transition-all px-3 py-2 rounded-lg hover:bg-slate-50"
             >
-              <span>Explorar módulos</span>
+              {/* Ícono Oficial de YouTube */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-red-600">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              <span>Ver video de módulos</span>
             </a>
           </div>
         </div>
@@ -64,18 +68,18 @@ export default function Hero() {
               <div className="w-3 h-3 rounded-full bg-[#E9C46A]" />
               <div className="w-3 h-3 rounded-full bg-[#2D6A4F]" />
               <span className="text-xs text-[#7C8794] ml-4 font-mono select-none">
-                app.prometech.com.pe/dashboard
+                https://app.prometech.com.pe
               </span>
             </div>
 
-            <div className="relative flex-1 w-full bg-white overflow-hidden aspect-video">
+            <div className="relative w-full aspect-[16/10] bg-white overflow-hidden">
               <Image
                 src="/dashboard-Prometech.png"
-                alt="Dashboard real de control operativo de Prometech"
+                alt="Plataforma ERP Prometech: Módulos de proyectos, control de inventarios, compras y facturación electrónica"
                 fill
                 sizes="(max-w-1024px) 100vw, 50vw"
                 priority
-                className="object-contain object-top p-1"
+                className="object-cover object-top"
               />
             </div>
           </div>
