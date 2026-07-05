@@ -12,6 +12,15 @@ const montserrat = Montserrat({
   weight: ["700", "800"],
 });
 
+const sections = [
+  "flujo",
+  "soluciones",
+  "metodologia",
+  "beneficios",
+  "faq",
+  "contacto",
+];
+
 
 export default function Navbar() {
     const [menuMovilAbierto, setMenuMovilAbierto] = useState(false);
@@ -19,7 +28,7 @@ export default function Navbar() {
     return (
             <section className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                  <Link href="/">
+                  <Link href="/" className="flex items-center gap-3">
                   
                     <Image
                       src="/Logo1.png"
