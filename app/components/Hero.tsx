@@ -70,14 +70,15 @@ export default function Hero() {
               </span>
             </div>
 
-            <div className="relative w-full aspect-[16/10] bg-white overflow-hidden">
+            <div className="relative w-full bg-white overflow-hidden p-1">
               <Image
                 src="/dashboard-Prometech.png"
                 alt="Plataforma ERP Prometech: Módulos de proyectos, control de inventarios, compras y facturación electrónica"
-                fill
-                sizes="(max-w-1024px) 100vw, 60vw"
+                width={2248} 
+                height={1214}
+                sizes="(max-w-1024px) 100vw, 50vw"
                 priority
-                className="object-cover object-top"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
