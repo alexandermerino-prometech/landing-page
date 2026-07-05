@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Prometech es una plataforma empresarial en la nube para gestionar proyectos, compras, logística, inventario y automatizar procesos. Diseñada para empresas que trabajan por proyectos.",
+    "ERP en la nube para constructoras, empresas de ingeniería, consultoras y empresas de servicios. Gestiona proyectos, compras, logística, inventario y facturación electrónica desde una sola plataforma.",
 
   keywords: [
     "ERP para constructoras",
@@ -69,6 +69,7 @@ export const metadata: Metadata = {
     },
   ],
 
+  themeColor: "#16324F",
   creator: "Prometech",
   publisher: "Prometech",
   category: "Software",
@@ -81,6 +82,12 @@ export const metadata: Metadata = {
 
   alternates: {
       canonical: "https://prometech.com.pe",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   robots: {
@@ -108,11 +115,9 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
+        
+      <Schema />
 
-        <Schema />
-
-      </head>
 
       <body className="min-h-full flex flex-col">
         {children}
