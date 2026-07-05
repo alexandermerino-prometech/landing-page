@@ -26,15 +26,17 @@ export const metadata: Metadata = {
     "Prometech es una plataforma empresarial en la nube para gestionar proyectos, compras, logística, inventario y automatizar procesos. Diseñada para empresas que trabajan por proyectos.",
 
   keywords: [
-    "software empresarial",
-    "software de compras",
-    "gestión de proyectos",
-    "ERP Perú",
-    "software para constructoras",
-    "inventario",
-    "órdenes de compra",
-    "automatización empresarial",
-    "Prometech",
+    "ERP para constructoras",
+    "ERP para empresas de ingeniería",
+    "ERP para consultoras",
+    "ERP para empresas de servicios",
+    "Software para gestión de proyectos",
+    "Software de compras",
+    "Software de logística",
+    "Control de proyectos",
+    "Sistema ERP Perú",
+    "Prometech ERP",
+    "Prometech"
   ],
 
   verification: {
@@ -83,6 +85,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -91,12 +101,88 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+
+    name: "Prometech ERP",
+
+    applicationCategory: "BusinessApplication",
+
+    operatingSystem: "Web",
+
+    url: "https://prometech.com.pe",
+
+    description:
+      "Software ERP para empresas que trabajan por proyectos. Gestiona proyectos, compras, logística, inventario y facturación electrónica.",
+
+    creator: {
+      "@type": "Organization",
+      name: "Prometech",
+    },
+
+    featureList: [
+      "Gestión de Proyectos",
+      "Compras",
+      "Logística",
+      "Inventario",
+      "Facturación Electrónica",
+      "Dashboard",
+      "Presupuestos"
+    ],
+
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "PEN"
+    }
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+
+    name: "Prometech",
+
+    url: "https://prometech.com.pe",
+
+    logo: "https://prometech.com.pe/Logo1.png",
+
+    email: "contacto@prometech.com.pe",
+
+    sameAs: [
+      "https://www.linkedin.com/company/prometech-peru",
+      "https://www.youtube.com/@Prometech-Peru"
+    ]
+  };
+
   return (
     <html
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareSchema),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
+      </head>
+
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
