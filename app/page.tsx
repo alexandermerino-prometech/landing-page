@@ -31,7 +31,7 @@ const preguntasFrecuentes = [
   {
     id: 1,
     pregunta: "¿Qué es Prometech y a quién está dirigido?",
-    respuesta: "Prometech es un ERP modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y facturación. Está especialmente dirigido a empresas que buscan eliminar el caos operativo y tener un control financiero en tiempo real."
+    respuesta: "Prometech es un ERP modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y facturación. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
   },
   {
     id: 2,

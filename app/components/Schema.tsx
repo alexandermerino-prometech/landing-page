@@ -6,23 +6,30 @@ export default function Schema() {
         name: "Prometech",
         url: "https://prometech.com.pe",
         description:
-            "Empresa peruana especializada en software ERP para empresas que trabajan por proyectos.",
+            "Software empresarial en la nube diseñado para empresas que trabajan por proyectos. Permite gestionar proyectos, compras, órdenes de servicio, inventario, recepción de materiales, presupuestos y dashboards desde una única plataforma.",
         logo:{
             "@type":"ImageObject",
-            url:"https://prometech.com.pe/Logo1.png"
+            url:"https://prometech.com.pe/Logo1.png",
+            width:283,
+            height:279
         },
         email: "contacto@prometech.com.pe",
+        telephone: "+51902041529",
         sameAs: [
         "https://www.linkedin.com/company/prometech-peru",
         "https://www.youtube.com/@Prometech-Peru"
         ],
         knowsAbout:[
-            "ERP",
             "Gestión de proyectos",
-            "Compras",
+            "Gestión de compras",
             "Inventario",
-            "Logística",
-            "Facturación electrónica"
+            "Recepción de materiales",
+            "Presupuesto",
+            "Control presupuestal",
+            "Rentabilidad de proyectos",
+            "Automatización de procesos",
+            "Software empresarial",
+            "Logística"
         ],
         foundingLocation:{
             "@type":"Place",
@@ -35,33 +42,47 @@ export default function Schema() {
         contactPoint:{
             "@type":"ContactPoint",
             contactType:"Ventas",
-            email:"contacto@prometech.com.pe"
-        }
+            email:"contacto@prometech.com.pe",
+            availableLanguage: [
+                "es"
+            ]
+        },
+        foundingDate : "2026-04-24"
     };
 
     const software = {
         "@type": "SoftwareApplication",
         "@id":"https://prometech.com.pe/#software",
-        name: "Prometech ERP",
+        name: "Prometech Plataforma Empresarial",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
         url: "https://prometech.com.pe",
+        applicationSuite:"Prometech",
+        applicationSubCategory: "Software Empresarial",
         
         description:
-        "Software ERP para empresas que trabajan por proyectos. Gestiona proyectos, compras, logística, inventario y facturación electrónica.",
+"Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
 
         creator: {
             "@id":"https://prometech.com.pe/#organization"
         },
+        manufacturer: {
+            "@id":"https://prometech.com.pe/#organization"
+        },
+        provider:{
+            "@id":"https://prometech.com.pe/#organization"
+        },
 
         featureList: [
-        "Gestión de Proyectos",
-        "Compras",
-        "Logística",
-        "Inventario",
-        "Facturación Electrónica",
-        "Dashboard",
-        "Presupuestos"
+            "Gestión de proyectos",
+            "Diagrama de Gantt",
+            "Tareas",
+            "Requerimientos de materiales",
+            "Órdenes de compra",
+            "Órdenes de servicio",
+            "Dashboard",
+            "Inventario",
+            "Control presupuestal"
         ],
 
         audience:{
@@ -70,6 +91,11 @@ export default function Schema() {
         },
 
         softwareVersion:"1.0",
+        offers: {
+            "@type": "Offer",
+            priceCurrency: "PEN",
+            availability: "https://schema.org/InStock"
+        }
 
     };
 
@@ -82,14 +108,15 @@ export default function Schema() {
         name: "Prometech",
         url: "https://prometech.com.pe",
         description:
-        "Software ERP para empresas que trabajan por proyectos.",
+"Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
+        inLanguage: "es-PE",
 
     };
 
     const webpage = {
         "@type": "WebPage",
         "@id":"https://prometech.com.pe/#webpage",
-        name: "Prometech ERP",
+        name: "Prometech Plataforma Empresarial",
         url: "https://prometech.com.pe",
         primaryImageOfPage:{
             "@type":"ImageObject",
@@ -102,14 +129,17 @@ export default function Schema() {
             "@id":"https://prometech.com.pe/#software"
         },
         description:
-        "Software para gestión de proyectos, compras, logística e inventario."
+"Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
+        breadcrumb: {
+            "@id":"https://prometech.com.pe/#breadcrumb"
+        }
     };
 
     const service = {
         "@type":"Service",
         "@id":"https://prometech.com.pe/#service",
 
-        serviceType:"Implementación de ERP",
+        serviceType: "Implementación de software empresarial",
 
         provider:{
             "@id":"https://prometech.com.pe/#organization"
@@ -121,7 +151,7 @@ export default function Schema() {
         },
 
         description:
-        "Implementación de software ERP para empresas que trabajan por proyectos."
+"Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal."
     };
 
     const breadcrumb={
@@ -147,7 +177,7 @@ export default function Schema() {
             name: "¿Qué es Prometech y a quién está dirigido?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Prometech es un ERP modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y facturación. Está especialmente dirigido a empresas que buscan eliminar el caos operativo y tener un control financiero en tiempo real."
+                text: "Prometech es un ERP modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y control presupuestal.. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
             }
             },
             {
