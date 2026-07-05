@@ -1,5 +1,6 @@
 // components/Hero.tsx
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -60,7 +61,26 @@ export default function Hero() {
         <div className="lg:col-span-6 relative w-full flex items-center justify-center">
           <div className="absolute inset-0 bg-[#E9C46A]/10 rounded-3xl blur-3xl transform rotate-2 scale-95 -z-10" />
           
-          <div className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden w-full flex flex-col transition-transform duration-500 hover:scale-[1.01]">  
+          <motion.div
+            initial={{
+                opacity:0,
+                scale:0.92,
+                y:30
+            }}
+            whileInView={{
+                opacity:1,
+                scale:1,
+                y:0
+            }}
+            viewport={{
+                once:true
+            }}
+            transition={{
+                duration:0.8,
+                ease:"easeOut"
+            }}
+            className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden"
+          >  
             <div className="border-b border-[#E4DDD4] px-5 py-3 flex items-center gap-2 bg-[#F7F3EE] flex-shrink-0">
               <div className="w-3 h-3 rounded-full bg-[#E76F51]" />
               <div className="w-3 h-3 rounded-full bg-[#E9C46A]" />
@@ -81,7 +101,21 @@ export default function Hero() {
                 className="w-full h-auto object-contain"
               />
             </div>
+
+            <div className="absolute top-5 left-5">
+              <span className="rounded-full
+                              bg-[#2D6A4F]
+                              text-white
+                              px-3
+                              py-1
+                              text-xs
+                              font-semibold">
+
+                  Dashboard en tiempo real
+              </span>
+
           </div>
+          </motion.div>
         </div>
       </div>
     </section>

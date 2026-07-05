@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,6 +25,34 @@ const sections = [
 export default function Navbar() {
     const [menuMovilAbierto, setMenuMovilAbierto] = useState(false);
 
+    const [activeSection, setActiveSection] = useState("flujo");
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+                }
+            });
+            },
+            {
+            threshold: 0.5,
+            }
+        );
+
+        sections.forEach((id) => {
+            const section = document.getElementById(id);
+            if (section) {
+            observer.observe(section);
+            }
+        });
+
+        return () => observer.disconnect();
+
+        }, []);
+
     return (
             <section className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -44,11 +72,16 @@ export default function Navbar() {
                   </Link>
         
                   <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5E6B7A]">
-                    <Link href="#flujo" className="hover:text-[#16324F] transition-colors duration-200">Flujo</Link>
-                    <Link href="#soluciones" className="hover:text-[#16324F] transition-colors duration-200">Soluciones</Link>
-                    <Link href="#metodologia" className="hover:text-[#16324F] transition-colors duration-200">Metodología</Link>
-                    <Link href="#beneficios" className="hover:text-[#16324F] transition-colors duration-200">Beneficios</Link>
-                    <Link href="#faq" className="hover:text-[#16324F] transition-colors duration-200">FAQ</Link>
+                    <Link href="#flujo" className={`transition-colors duration-200 ${
+                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Flujo</Link>
+                    <Link href="#soluciones" className={`transition-colors duration-200 ${
+                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Soluciones</Link>
+                    <Link href="#metodologia" className={`transition-colors duration-200 ${
+                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Metodología</Link>
+                    <Link href="#beneficios" className={`transition-colors duration-200 ${
+                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Beneficios</Link>
+                    <Link href="#faq" className={`transition-colors duration-200 ${
+                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>FAQ</Link>
                     <Link href="#contacto" className="bg-[#16324F] text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-[#1d436a] hover:-translate-y-0.5 transition-all duration-300 shadow-sm shadow-[#16324F]/10">
                       Solicitar Demo
                     </Link>
