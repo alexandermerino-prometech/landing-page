@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://www.prometech.com.pe",
-      lastModified: new Date(),
+      lastModified:"2026-07-05",
       changeFrequency: "weekly",
       priority: 1,
     },

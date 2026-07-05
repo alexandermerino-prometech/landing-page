@@ -15,6 +15,11 @@ export default function Schema() {
         },
         email: "contacto@prometech.com.pe",
         telephone: "+51902041529",
+        address:{
+            "@type":"PostalAddress",
+            addressLocality:"Lima",
+            addressCountry:"PE"
+        },
         sameAs: [
         "https://www.linkedin.com/company/prometech-peru",
         "https://www.youtube.com/@Prometech-Peru"
@@ -43,6 +48,7 @@ export default function Schema() {
             "@type":"ContactPoint",
             contactType:"Ventas",
             email:"contacto@prometech.com.pe",
+            telephone: "+51902041529",
             availableLanguage: [
                 "es"
             ]
@@ -59,6 +65,7 @@ export default function Schema() {
         url: "https://www.prometech.com.pe",
         applicationSuite:"Prometech",
         applicationSubCategory: "Software Empresarial",
+        inLanguage:"es-PE",
         
         description:
 "Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
@@ -93,9 +100,13 @@ export default function Schema() {
         softwareVersion:"1.0",
         offers: {
             "@type": "Offer",
-            priceCurrency: "PEN",
+            priceSpecification:{
+                "@type":"PriceSpecification",
+                priceCurrency:"PEN"
+            },
             availability: "https://schema.org/InStock"
-        }
+        },
+        image:"https://www.prometech.com.pe/dashboard-Prometech.png"
 
     };
 
@@ -149,6 +160,9 @@ export default function Schema() {
             "@type":"Country",
             name:"Perú"
         },
+        isRelatedTo:{
+            "@id":"https://www.prometech.com.pe/#software"
+        },
 
         description:
 "Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal."
@@ -177,7 +191,7 @@ export default function Schema() {
             name: "¿Qué es Prometech y a quién está dirigido?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Prometech es un ERP modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y control presupuestal.. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
+                text: "Prometech es un software empresarial modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y control presupuestal. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
             }
             },
             {
@@ -185,7 +199,7 @@ export default function Schema() {
             name: "¿Puedo contratar solo los módulos que necesito?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sí. Nuestra arquitectura es completamente modular. Puedes empezar implementando solo el módulo de Gestión de Proyectos o Compras, y activar los módulos de Inventario o Facturación a medida que tu negocio crezca."
+                text: "Sí. Puedes comenzar implementando Gestión de Proyectos o Compras y añadir posteriormente módulos como Inventario, Recepción de Materiales o Control Presupuestal conforme tu empresa crezca."
             }
             },
             {
