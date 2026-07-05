@@ -9,5 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://www.prometech.com.pe/sitemap.xml",
+    host: "https://www.prometech.com.pe",
   };
 }

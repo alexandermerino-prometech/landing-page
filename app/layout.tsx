@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Prometech | Software ERP para Gestión de Proyectos, Compras y Logística",
     description:
       "Software empresarial para gestión de proyectos, compras e inventario.",
-    url: "https://prometech.com.pe",
+    url: "https://www.prometech.com.pe",
     siteName: "Prometech",
     locale: "es_PE",
     type: "website",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Prometech",
-      url: "https://prometech.com.pe",
+      url: "https://www.prometech.com.pe",
     },
   ],
 
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-      canonical: "https://prometech.com.pe",
+      canonical: "https://www.prometech.com.pe",
   },
 
   icons: {
