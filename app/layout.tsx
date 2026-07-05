@@ -69,7 +69,6 @@ export const metadata: Metadata = {
     },
   ],
 
-  themeColor: "#16324F",
   creator: "Prometech",
   publisher: "Prometech",
   category: "Software",
@@ -115,11 +114,9 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-        
-      <Schema />
-
 
       <body className="min-h-full flex flex-col">
+        <Schema />
         {children}
       </body>
     </html>

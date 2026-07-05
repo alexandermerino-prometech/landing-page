@@ -100,9 +100,12 @@ export default function Schema() {
         softwareVersion:"1.0",
         offers: {
             "@type": "Offer",
+            price: "0",     
+            priceCurrency: "PEN",
             priceSpecification:{
                 "@type":"PriceSpecification",
-                priceCurrency:"PEN"
+                priceCurrency:"PEN",
+                description: "Desde S/150 al mes"
             },
             availability: "https://schema.org/InStock"
         },
@@ -125,7 +128,7 @@ export default function Schema() {
     };
 
     const webpage = {
-        "@type": "WebPage",
+        "@type": ["WebPage", "FAQPage"],
         "@id":"https://www.prometech.com.pe/#webpage",
         name: "Prometech Plataforma Empresarial",
         url: "https://www.prometech.com.pe",
@@ -143,7 +146,42 @@ export default function Schema() {
 "Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
         breadcrumb: {
             "@id":"https://www.prometech.com.pe/#breadcrumb"
-        }
+        },
+
+        mainEntity: [
+            {
+            "@type": "Question",
+            name: "¿Qué es Prometech y a quién está dirigido?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Prometech es un software empresarial modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y control presupuestal. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
+            }
+            },
+            {
+            "@type": "Question",
+            name: "¿Puedo contratar solo los módulos que necesito?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sí. Puedes comenzar implementando Gestión de Proyectos o Compras y añadir posteriormente módulos como Inventario, Recepción de Materiales o Control Presupuestal conforme tu empresa crezca."
+            }
+            },
+            {
+            "@type": "Question",
+            name: "¿Cómo es el proceso de implementación?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Seguimos una metodología ágil: realizamos un análisis de tus procesos actuales, configuramos la plataforma a tu medida, capacitamos a tu equipo y te acompañamos durante el despliegue en producción para asegurar una transición exitosa."
+            }
+            },
+            {
+            "@type": "Question",
+            name: "¿Ofrecen soporte técnico post-implementación?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Por supuesto. Contamos con un equipo de soporte dedicado para resolver dudas, asegurar la disponibilidad del sistema y realizar mejoras continuas según las necesidades de tu empresa."
+            }
+            },
+        ]
     };
 
     const service = {
@@ -182,46 +220,6 @@ export default function Schema() {
 
     }
 
-    const faq = {
-        "@type": "FAQPage",
-        "@id": "https://www.prometech.com.pe/#faq",
-        mainEntity: [
-            {
-            "@type": "Question",
-            name: "¿Qué es Prometech y a quién está dirigido?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Prometech es un software empresarial modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y control presupuestal. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
-            }
-            },
-            {
-            "@type": "Question",
-            name: "¿Puedo contratar solo los módulos que necesito?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Sí. Puedes comenzar implementando Gestión de Proyectos o Compras y añadir posteriormente módulos como Inventario, Recepción de Materiales o Control Presupuestal conforme tu empresa crezca."
-            }
-            },
-            {
-            "@type": "Question",
-            name: "¿Cómo es el proceso de implementación?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Seguimos una metodología ágil: realizamos un análisis de tus procesos actuales, configuramos la plataforma a tu medida, capacitamos a tu equipo y te acompañamos durante el despliegue en producción para asegurar una transición exitosa."
-            }
-            },
-            {
-            "@type": "Question",
-            name: "¿Ofrecen soporte técnico post-implementación?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Por supuesto. Contamos con un equipo de soporte dedicado para resolver dudas, asegurar la disponibilidad del sistema y realizar mejoras continuas según las necesidades de tu empresa."
-            }
-            },
-        ]
-    };
-
-
     const schema = {
         "@context": "https://schema.org",
         "@graph": [
@@ -230,8 +228,7 @@ export default function Schema() {
             website,
             webpage,
             breadcrumb,
-            service,
-            faq
+            service
         ]
     };
 
