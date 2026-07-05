@@ -2,14 +2,14 @@ export default function Schema() {
 
     const organization = {
         "@type": "Organization",
-        "@id":"https://prometech.com.pe/#organization",
+        "@id":"https://www.prometech.com.pe/#organization",
         name: "Prometech",
-        url: "https://prometech.com.pe",
+        url: "https://www.prometech.com.pe",
         description:
             "Software empresarial en la nube diseñado para empresas que trabajan por proyectos. Permite gestionar proyectos, compras, órdenes de servicio, inventario, recepción de materiales, presupuestos y dashboards desde una única plataforma.",
         logo:{
             "@type":"ImageObject",
-            url:"https://prometech.com.pe/Logo1.png",
+            url:"https://www.prometech.com.pe/Logo1.png",
             width:283,
             height:279
         },
@@ -52,11 +52,11 @@ export default function Schema() {
 
     const software = {
         "@type": "SoftwareApplication",
-        "@id":"https://prometech.com.pe/#software",
+        "@id":"https://www.prometech.com.pe/#software",
         name: "Prometech Plataforma Empresarial",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
-        url: "https://prometech.com.pe",
+        url: "https://www.prometech.com.pe",
         applicationSuite:"Prometech",
         applicationSubCategory: "Software Empresarial",
         
@@ -64,13 +64,13 @@ export default function Schema() {
 "Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
 
         creator: {
-            "@id":"https://prometech.com.pe/#organization"
+            "@id":"https://www.prometech.com.pe/#organization"
         },
         manufacturer: {
-            "@id":"https://prometech.com.pe/#organization"
+            "@id":"https://www.prometech.com.pe/#organization"
         },
         provider:{
-            "@id":"https://prometech.com.pe/#organization"
+            "@id":"https://www.prometech.com.pe/#organization"
         },
 
         featureList: [
@@ -101,12 +101,12 @@ export default function Schema() {
 
     const website = {
         "@type": "WebSite",
-        "@id":"https://prometech.com.pe/#website",
+        "@id":"https://www.prometech.com.pe/#website",
         publisher:{
-            "@id":"https://prometech.com.pe/#organization"
+            "@id":"https://www.prometech.com.pe/#organization"
         },
         name: "Prometech",
-        url: "https://prometech.com.pe",
+        url: "https://www.prometech.com.pe",
         description:
 "Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
         inLanguage: "es-PE",
@@ -115,34 +115,34 @@ export default function Schema() {
 
     const webpage = {
         "@type": "WebPage",
-        "@id":"https://prometech.com.pe/#webpage",
+        "@id":"https://www.prometech.com.pe/#webpage",
         name: "Prometech Plataforma Empresarial",
-        url: "https://prometech.com.pe",
+        url: "https://www.prometech.com.pe",
         primaryImageOfPage:{
             "@type":"ImageObject",
-            url:"https://prometech.com.pe/dashboard-Prometech.png"
+            url:"https://www.prometech.com.pe/dashboard-Prometech.png"
         },
         isPartOf: {
-            "@id":"https://prometech.com.pe/#website"
+            "@id":"https://www.prometech.com.pe/#website"
         },
         about:{
-            "@id":"https://prometech.com.pe/#software"
+            "@id":"https://www.prometech.com.pe/#software"
         },
         description:
 "Software empresarial modular para la gestión de proyectos, compras, inventario, logística y control presupuestal.",
         breadcrumb: {
-            "@id":"https://prometech.com.pe/#breadcrumb"
+            "@id":"https://www.prometech.com.pe/#breadcrumb"
         }
     };
 
     const service = {
         "@type":"Service",
-        "@id":"https://prometech.com.pe/#service",
+        "@id":"https://www.prometech.com.pe/#service",
 
         serviceType: "Implementación de software empresarial",
 
         provider:{
-            "@id":"https://prometech.com.pe/#organization"
+            "@id":"https://www.prometech.com.pe/#organization"
         },
 
         areaServed:{
@@ -155,14 +155,14 @@ export default function Schema() {
     };
 
     const breadcrumb={
-        "@id":"https://prometech.com.pe/#breadcrumb",
+        "@id":"https://www.prometech.com.pe/#breadcrumb",
         "@type":"BreadcrumbList",
         itemListElement:[
             {
                 "@type":"ListItem",
                 position:1,
                 name:"Inicio",
-                item:"https://prometech.com.pe"
+                item:"https://www.prometech.com.pe"
             }
         ]
 
@@ -170,7 +170,7 @@ export default function Schema() {
 
     const faq = {
         "@type": "FAQPage",
-        "@id": "https://prometech.com.pe/#faq",
+        "@id": "https://www.prometech.com.pe/#faq",
         mainEntity: [
             {
             "@type": "Question",
