@@ -99,13 +99,17 @@ export default function ConceptoErp() {
         </div>
 
         {/* ESTRUCTURA DE PESTAÑAS INTERACTIVAS (TABS) */}
-        <div className="mb-12 flex flex-wrap justify-center gap-3">
+        <div role="tablist" className="mb-12 flex flex-wrap justify-center gap-3" aria-label="Sectores empresariales">
           {sectores.map((sec) => {
             const Icon = sec.icon;
             const esActivo = sectorActivo.id === sec.id;
             return (
               <button
                 key={sec.id}
+                role="tab"
+                aria-selected={esActivo}
+                aria-controls={`panel-${sec.id}`}
+                id={`tab-${sec.id}`}
                 onClick={() => setSectorActivoId(sec.id)}
                 className={`flex items-center gap-2.5 px-6 py-3.5 rounded-2xl text-sm font-bold border transition-all duration-300 ${
                   esActivo
@@ -121,10 +125,13 @@ export default function ConceptoErp() {
         </div>
 
         {/* CONTENIDO ESTRATÉGICO DINÁMICO */}
-        <div className="bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm lg:min-h-[500px]">
+        <div className="bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm min-h-[600px] md:min-h-[550px] lg:min-h-[500px]" aria-live="polite">
           <AnimatePresence mode="wait">
             <motion.div
               key={sectorActivo.id}
+              role="tabpanel"
+              id={`panel-${sectorActivo.id}`}
+              aria-labelledby={`tab-${sectorActivo.id}`}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
@@ -153,7 +160,7 @@ export default function ConceptoErp() {
                   <ul className="space-y-4">
                     {sectorActivo.problemas.map((prob) => (
                       <li key={prob} className="flex items-start gap-3 text-sm text-[#16324F]">
-                        <span className="text-[#E76F51] font-bold text-xs bg-red-50 w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-[#E76F51] font-bold text-xs bg-[#E76F51]/10 w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
                           !
                         </span>
                         <span className="leading-relaxed">{prob}</span>
@@ -168,10 +175,10 @@ export default function ConceptoErp() {
                 
                 {/* Cuadro de Dolor: Por qué Excel deja de funcionar */}
                 <div className="bg-white rounded-2xl border border-[#E4DDD4] p-6 md:p-8 hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-3 text-red-600 font-bold text-base mb-3">
+                  <div className="flex items-center gap-3 text-[#E76F51] font-bold text-base mb-3">
                     <TrendingDown className="w-5 h-5" />
                     <div className="flex items-center gap-1.5">
-                      <FileSpreadsheet className="w-4 h-4 text-slate-400" />
+                      <FileSpreadsheet className="w-4 h-4 text-[#7C8794]" />
                       <h4>El gran punto de quiebre de Excel</h4>
                     </div>
                   </div>
@@ -188,7 +195,7 @@ export default function ConceptoErp() {
                     <CheckCircle2 className="w-5 h-5" />
                     <h4>La Solución: El poder de Prometech ERP</h4>
                   </div>
-                  <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed">
                     {sectorActivo.comoAyuda}
                   </p>
                 </div>
