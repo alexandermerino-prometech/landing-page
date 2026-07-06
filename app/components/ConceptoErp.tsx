@@ -92,7 +92,7 @@ export default function ConceptoErp() {
         
         {/* BLOQUE INTRODUCTORIO (SEO Target: Qué es un ERP por proyectos) */}
         <div id="introduccion" className="max-w-5xl mx-auto text-center mb-20">
-            <p className="text-[#E9C46A] font-semibold uppercase text-xs tracking-wider mb-3">Nuestra filosofía</p>
+            <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Nuestra filosofía</p>
 
             <h2 className="mt-6 text-3xl sm:text-5xl font-extrabold text-[#16324F] leading-tight">
               No reinventamos el ERP. Reinventamos la forma de gestionar proyectos.
@@ -182,9 +182,6 @@ export default function ConceptoErp() {
 
         </div>
 
-        <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E76F51] font-semibold">
-          Diferencias
-        </span>
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h3 className="text-2xl font-bold text-[#16324F]">
               Cada industria ejecuta proyectos de manera diferente.
