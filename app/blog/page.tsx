@@ -11,6 +11,35 @@ export default function BlogPage() {
   const posts = getAllPostsMeta();
 
   return (
+  <>
+    <header className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            src="/Logo1.png"
+            alt="Prometech Logo"
+            className="h-10 w-auto"
+          />
+
+          <h1 className="text-3xl font-black tracking-tight text-[#16324F] uppercase">
+            PROMETECH
+          </h1>
+        </Link>
+
+        <nav className="flex gap-8 text-sm">
+          <Link href="/" className="hover:text-[#2D6A4F]">
+            Inicio
+          </Link>
+
+          <Link href="/blog" className="hover:text-[#2D6A4F]">
+            Blog
+          </Link>
+        </nav>
+
+      </div>
+    </header>
+
     <main className="min-h-screen bg-[#F7F3EE] py-24">
       <div className="max-w-5xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
@@ -51,5 +80,6 @@ export default function BlogPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
