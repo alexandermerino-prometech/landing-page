@@ -4,6 +4,7 @@ import {
   Mail,
   MapPin,
   MessageCircle,
+  ChevronRight,
 } from "lucide-react";
 
 import {
@@ -32,21 +33,21 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#E4DDD4] bg-[#F1ECE5]/40">
+    <footer className="border-t border-[#E4DDD4] bg-[#FCFBF8]">
       <div className="max-w-7xl mx-auto px-6 py-12">
 
         {/* Contenido principal */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
 
           {/* Marca */}
           <div>
-            <div className="flex items-center gap-3 mb-5 h-12 w-auto">
+            <div className="flex items-center gap-3 mb-5 h-12">
               <Image
                 src="/Logo1.png"
                 alt="Logo Prometech"
-                width={52}
-                height={52}
-                className="h-10 w-auto"
+                width={56}
+                height={56}
+                className="h-12 w-auto"
               />
 
               <span className="text-2xl font-black tracking-tight text-[#16324F]">
@@ -55,10 +56,26 @@ export default function Footer() {
             </div>
 
             <p className="text-sm leading-7 text-[#5E6B7A]">
-              Software ERP diseñado para empresas que gestionan proyectos.
-                Centraliza compras, costos, inventarios, valorizaciones y facturación
-            en una sola plataforma.
+              Prometech es un ERP especializado para empresas que ejecutan proyectos.
+                Integra presupuestos, compras, inventarios, costos, valorizaciones y
+                facturación en una única plataforma.
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+
+                <span className="rounded-full bg-[#16324F]/5 px-3 py-1 text-xs font-medium text-[#16324F]">
+                    ERP en la nube
+                </span>
+
+                <span className="rounded-full bg-[#16324F]/5 px-3 py-1 text-xs font-medium text-[#16324F]">
+                    Modular
+                </span>
+
+                <span className="rounded-full bg-[#16324F]/5 px-3 py-1 text-xs font-medium text-[#16324F]">
+                    Empresas por proyectos
+                </span>
+
+            </div>
           </div>
 
           {/* Navegación */}
@@ -69,7 +86,42 @@ export default function Footer() {
 
             <ul className="space-y-3 text-sm text-[#5E6B7A]">
 
-              <li>
+                <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
+                <Link
+                  href="#introduccion"
+                  className="hover:text-[#16324F] transition-colors"
+                >
+                  Introducción
+                </Link>
+              </li>
+
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
+                <Link
+                  href="#comparacion"
+                  className="hover:text-[#16324F] transition-colors"
+                >
+                  Comparación
+                </Link>
+              </li>
+
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
+                <Link
+                  href="#contenido"
+                  className="hover:text-[#16324F] transition-colors"
+                >
+                  Contenido
+                </Link>
+              </li>
+
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
                 <Link
                   href="#flujo"
                   className="hover:text-[#16324F] transition-colors"
@@ -78,7 +130,9 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
                 <Link
                   href="#soluciones"
                   className="hover:text-[#16324F] transition-colors"
@@ -87,7 +141,9 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
                 <Link
                   href="#metodologia"
                   className="hover:text-[#16324F] transition-colors"
@@ -96,7 +152,9 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
                 <Link
                   href="#beneficios"
                   className="hover:text-[#16324F] transition-colors"
@@ -105,7 +163,9 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              <li className="flex items-center gap-2">
+
+                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
                 <Link
                   href="#faq"
                   className="hover:text-[#16324F] transition-colors"
@@ -159,9 +219,12 @@ export default function Footer() {
           {/* Redes */}
             <div className="text-center border-l border-[#E4DDD4] pl-10">
 
-                <h3 className="text-3xl font-bold text-[#B8C2CC] mb-8">
+                <h3 className="mb-3 text-lg font-bold text-[#16324F]">
                     Conecta con nosotros
                 </h3>
+                <p className="mb-6 text-sm text-[#7C8794] leading-6">
+                Conoce novedades, casos de éxito y contenido sobre gestión de proyectos.
+                </p>
 
                 <div className="flex flex-wrap justify-center gap-6">
                     {socialLinks.map(({ name, icon: Icon, href }) => (
@@ -172,34 +235,30 @@ export default function Footer() {
                         rel="noopener noreferrer"
                         aria-label={name}
                         className="
-                        group
-                        w-12
-                        h-12
-                        rounded-full
-                        border-2
-                        border-[#2E425A]
-                        bg-[#1A2431]
-                        backdrop-blur-sm
-                        flex
-                        items-center
-                        justify-center
-                        transition-all
-                        duration-300
-                        hover:border-[#E9C46A]
-                        hover:bg-[#1E3A5C]
-                        hover:-translate-y-1
-                        hover:shadow-xl
-                        hover:shadow-[#16324F]/40
+                            group
+                            w-11
+                            h-11
+                            rounded-full
+                            border
+                            border-[#D8D2CA]
+                            bg-white
+                            flex
+                            items-center
+                            justify-center
+                            transition-all
+                            duration-300
+                            hover:bg-[#16324F]
+                            hover:border-[#16324F]
+                            hover:-translate-y-1
                         "
                     >
                         <Icon
-                            className="
-                                text-xl
-                                text-[#B8C2CC]
-                                transition-all
-                                duration-300
-                                group-hover:text-[#E9C46A]
-                            "
+                        className="
+                        text-lg
+                        text-[#5E6B7A]
+                        group-hover:text-white
+                        transition-colors
+                        "
                         />
                     </a>
                     ))}
@@ -209,10 +268,10 @@ export default function Footer() {
 
         {/* Línea inferior */}
 
-        <div className="mt-14 border-t border-[#E4DDD4] pt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 border-t border-[#E4DDD4] pt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 
           <p className="text-sm text-[#7C8794]">
-            © 2026 PROMETECH. Todos los derechos reservados.
+            © 2026 Prometech S.A.C. Todos los derechos reservados.
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-sm">
