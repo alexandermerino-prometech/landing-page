@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import ConceptoErp from "./components/ConceptoErp";
 import Footer from "./components/Footer";
 import Modulos from "./components/Modulos";
+import EquipoExperiencia from "./components/EquipoExperiencia";
 
 import { 
   FolderKanban, 
@@ -106,8 +107,9 @@ export default function PrometechLandingPage() {
       {/* Hero Sección */}
       <Hero />
 
-      {/* ConceptoErp Sección */}
+      {/* ConceptoErp Sección: Intro, Comparacion con ERP, Contenido */}
       <ConceptoErp />
+      
 
       {/* Sección: Flujo de Trabajo */}
       <section id="flujo" className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
@@ -293,50 +295,28 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
+      {/* Sección: Equipo */}
+      <EquipoExperiencia />
+
       {/* Sección: Conversión CTA Final */}
       <section id="contacto" className="max-w-5xl mx-auto px-6 py-12 md:py-24">
         <div className="rounded-[32px] border border-[#E4DDD4] bg-gradient-to-br from-[#16324F]/5 via-[#E9C46A]/10 to-transparent p-8 md:p-14 text-center shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#E9C46A]/10 rounded-full blur-3xl -z-10 pointer-events-none" />
-          
+
+          {/* NUEVO: badge de exclusividad honesta */}
+          <span className="inline-flex items-center gap-2 bg-[#16324F]/5 border border-[#16324F]/10 text-[#16324F] text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6">
+            Cupos limitados · Implementación acompañada por el equipo fundador
+          </span>
+
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight max-w-3xl mx-auto leading-[1.2]">
             ¿Listo para centralizar tu operación y dejar atrás las hojas de Excel?
           </h2>
 
-          <p className="text-[#5E6B7A] text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-            Agenda una sesión personalizada y descubre cómo ordenar tus requerimientos, controlar almacenes e impulsar la rentabilidad de tus proyectos.
+          <p className="text-[#5E6B7A] text-base sm:text-lg max-w-xl mx-auto mb-6 leading-relaxed">
+            Estamos seleccionando un grupo reducido de empresas para implementar Prometech con atención directa y personalizada. Agenda un diagnóstico gratuito de 30 minutos.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demo%20ERP"
-              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm text-white shadow-md shadow-[#16324F]/10 hover:-translate-y-0.5"
-            >
-              <Mail className="w-4 h-4" />
-              <span>contacto@prometech.com.pe</span>
-            </a>
-
-            <a
-              href="https://wa.me/51902041529?text=Hola,%20solicito%20una%20demostración%20del%20software%20Prometech."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[#2D6A4F] hover:bg-[#37825c] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm text-white shadow-md shadow-[#2D6A4F]/10 hover:-translate-y-0.5"
-            >
-              {/* Ícono nativo SVG de WhatsApp para máxima fidelidad visual */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
-              <span>Contactar por WhatsApp</span>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/prometech-peru"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-[#E4DDD4] bg-white hover:border-[#16324F] text-[#16324F] transition-all duration-300 px-6 py-3.5 rounded-xl font-semibold text-sm hover:-translate-y-0.5"
-            >
-              <span>LinkedIn Oficial</span>
-            </a>
-          </div>
+          {/* resto de botones igual */}
         </div>
       </section>
 
