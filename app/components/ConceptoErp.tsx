@@ -26,8 +26,8 @@ const sectores = [
       "Falta de control centralizado en requerimientos de materiales, propiciando compras duplicadas o de emergencia.",
       "Retrasos severos en la aprobación de valorizaciones y gestión manual ineficiente de subcontratistas."
     ],
-    porqueExcel: "Los ERP tradicionales siguen pensando en productos,almacenes y ventas. Las empresas por proyectos necesitan controlar presupuestos, requerimientos, costos, compras, valorizaciones y rentabilidad de cada proyecto en tiempo real.",
-    comoAyuda: "Prometech centraliza los requerimientos vinculándolos directamente a la Estructura Desglosada de Trabajo (EDT). Cada sol gastado se contrasta automáticamente contra la línea base del proyecto, bloqueando sobrecostos antes de que ocurran."
+    retoOperativo: "La rentabilidad de una constructora depende de controlar cada requerimiento, subcontrato, valorización y compra dentro de la obra. Los ERP tradicionales pierden esa trazabilidad porque priorizan procesos comerciales antes que la ejecución del proyecto.",
+    enfoquePrometech: "Prometech centraliza los requerimientos vinculándolos directamente a la Estructura Desglosada de Trabajo (EDT). Cada sol gastado se contrasta automáticamente contra la línea base del proyecto, bloqueando sobrecostos antes de que ocurran."
   },
   {
     id: "ingenieria",
@@ -39,8 +39,8 @@ const sectores = [
       "Falta de trazabilidad en la procura de equipos mecánicos o eléctricos con largos tiempos de entrega.",
       "Desconexión entre los hitos del cronograma contractual y la facturación efectiva al cliente."
     ],
-    porqueExcel: "Excel carece de gobernanza de datos. Un error de fórmula en una macro de control de tiempos (Timesheets) puede distorsionar por completo el cálculo del costo por hora de tus ingenieros senior, destruyendo la rentabilidad del servicio.",
-    comoAyuda: "Permite el registro de tareos y asignación de tiempos directamente por entregable. Cruza de forma automática el avance técnico de la ingeniería con los hitos de facturación, optimizando el flujo de caja operativo."
+    retoOperativo: "Excel carece de gobernanza de datos. Un error de fórmula en una macro de control de tiempos (Timesheets) puede distorsionar por completo el cálculo del costo por hora de tus ingenieros senior, destruyendo la rentabilidad del servicio.",
+    enfoquePrometech: "Permite el registro de tareos y asignación de tiempos directamente por entregable. Cruza de forma automática el avance técnico de la ingeniería con los hitos de facturación, optimizando el flujo de caja operativo."
   },
   {
     id: "consultoras",
@@ -52,8 +52,8 @@ const sectores = [
       "Procesos lentos y manuales para consolidar gastos reembolsables, viáticos y entregables aprobados.",
       "Dificultad para proyectar la disponibilidad de recursos a mediano y largo plazo."
     ],
-    porqueExcel: "Las planillas de cálculo tradicionales crean silos de información aislados. El equipo de operaciones no sabe qué proyectos cerrará el equipo comercial, lo que impide planificar la asignación de personal sin incurrir en tiempos muertos sobre el presupuesto.",
-    comoAyuda: "Ofrece un panel consolidado de asignación de recursos en tiempo real. Clasifica las horas de tus consultores en facturables y no facturables, automatizando la liquidación de viáticos y la facturación directa por hitos alcanzados."
+    retoOperativo: "Las planillas de cálculo tradicionales crean silos de información aislados. El equipo de operaciones no sabe qué proyectos cerrará el equipo comercial, lo que impide planificar la asignación de personal sin incurrir en tiempos muertos sobre el presupuesto.",
+    enfoquePrometech: "Ofrece un panel consolidado de asignación de recursos en tiempo real. Clasifica las horas de tus consultores en facturables y no facturables, automatizando la liquidación de viáticos y la facturación directa por hitos alcanzados."
   },
   {
     id: "servicios",
@@ -65,8 +65,8 @@ const sectores = [
       "Incapacidad de asociar costos de consumibles, herramientas y repuestos a un cliente u orden de trabajo específica.",
       "Falta de estandarización en los flujos de aprobación para cotizaciones adicionales pedidas por el cliente."
     ],
-    porqueExcel: "El papel y los archivos Excel compartidos se pierden o se corrompen. Si un técnico en campo utiliza repuestos de alto valor y lo anota en un archivo local, administración tardará semanas en enterarse, retrasando los ciclos de cobranza operativa.",
-    comoAyuda: "Digitaliza todo el flujo desde la creación de la Orden de Servicio hasta el despacho físico del repuesto en almacén. Sincroniza las liquidaciones de campo con el módulo de facturación electrónica en un solo clic."
+    retoOperativo: "El papel y los archivos Excel compartidos se pierden o se corrompen. Si un técnico en campo utiliza repuestos de alto valor y lo anota en un archivo local, administración tardará semanas en enterarse, retrasando los ciclos de cobranza operativa.",
+    enfoquePrometech: "Digitaliza todo el flujo desde la creación de la Orden de Servicio hasta el despacho físico del repuesto en almacén. Sincroniza las liquidaciones de campo con el módulo de facturación electrónica en un solo clic."
   }
 ];
 
@@ -80,21 +80,34 @@ export default function ConceptoErp() {
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#E9C46A]/5 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#16324F]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
+      <div className="text-center mb-10 max-w-3xl mx-auto">
+        <h3 className="text-2xl font-bold text-[#16324F]">
+            La diferencia no está en los módulos.
+        </h3>
+
+        <p className="mt-4 text-[#5E6B7A] leading-relaxed">
+            La diferencia está en el punto de partida.
+            Un ERP tradicional organiza una empresa alrededor de productos.
+            Prometech organiza toda la operación alrededor de cada proyecto.
+        </p>
+    </div>
       <div className="max-w-7xl mx-auto px-6">
         
         {/* BLOQUE INTRODUCTORIO (SEO Target: Qué es un ERP por proyectos) */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <div className="max-w-5xl mx-auto text-center mb-20">
+        <div className="max-w-5xl mx-auto text-center mb-20">
             <span className="inline-flex rounded-full bg-[#16324F]/5 text-[#16324F] px-4 py-2 text-xs font-semibold uppercase tracking-wider">
               Nuestra filosofía
             </span>
 
             <h2 className="mt-6 text-3xl sm:text-5xl font-extrabold text-[#16324F] leading-tight">
-              Dejamos de pensar en un ERP y empezamos a pensar en cómo realmente opera una empresa por proyectos.
+              No reinventamos el ERP. Reinventamos la forma de gestionar proyectos.
             </h2>
 
             <p className="mt-8 text-lg text-[#5E6B7A] leading-relaxed max-w-3xl mx-auto">
-              Muchas soluciones obligan a adaptar la empresa al software. Nosotros hicimos lo contrario.
+              Durante años el mercado intentó adaptar las empresas por proyectos a ERP diseñados
+              para empresas comerciales.
+
+              Nosotros decidimos construir una plataforma pensada desde el proyecto, no desde el producto.
             </p>
 
             <p className="mt-5 text-base sm:text-lg text-[#5E6B7A] leading-relaxed max-w-4xl mx-auto">
@@ -102,8 +115,54 @@ export default function ConceptoErp() {
               consultoras y empresas de servicios. Cada módulo nace de cómo se planifica,
               compra, ejecuta, controla y factura un proyecto.
             </p>
-          </div>
+          
         </div>
+
+        <div className="flex-1 bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm min-h-[600px] md:min-h-[550px] lg:min-h-[500px]" aria-live="polite">
+
+          <div className="rounded-3xl border border-[#E4DDD4] p-8 bg-white">
+            <h3 className="font-bold text-xl mb-4">
+              ERP tradicional
+            </h3>
+
+            <ul className="space-y-3 text-[#5E6B7A]">
+              El proyecto es una información adicional.
+              <li>• Primero existe la venta.</li>
+              <li>• Luego la compra.</li>
+              <li>• Luego la contabilidad.</li>
+              <li>• Finalmente intentas saber cuánto ganó el proyecto.</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl bg-[#16324F] text-white p-8">
+            <h3 className="font-bold text-xl mb-4">
+              Prometech
+            </h3>
+
+            <ul className="space-y-3 text-white/90">
+            El proyecto es el centro de toda la operación.
+              <li>• Desde el presupuesto.</li>
+              <li>• Hasta el requerimiento.</li>
+              <li>• Compras.</li>
+              <li>• Ejecución</li>
+              <li>• Costos del proyecto</li>
+              <li>• Valorizaciones</li>
+              <li>• Facturación</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h3 className="text-2xl font-bold text-[#16324F]">
+              Cada industria ejecuta proyectos de manera diferente.
+          </h3>
+
+          <p className="mt-4 text-[#5E6B7A]">
+              Por eso Prometech adapta el flujo operativo según el tipo de empresa,
+              manteniendo la misma filosofía de control por proyecto.
+          </p>
+      </div>
 
         {/* ESTRUCTURA DE PESTAÑAS INTERACTIVAS (TABS) */}
         <div role="tablist" className="mb-12 flex flex-wrap justify-center gap-3" aria-label="Sectores empresariales">
@@ -149,7 +208,7 @@ export default function ConceptoErp() {
               <div className="lg:col-span-5 flex flex-col justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#E76F51]/10 text-[#E76F51] mb-4">
-                    Cada sector tiene una operación distinta
+                    ¿Cómo cambia la operación según tu empresa?
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-[#16324F] tracking-tight leading-snug mb-4">
                     Lo que realmente necesita controlar una {sectorActivo.label}
@@ -162,7 +221,7 @@ export default function ConceptoErp() {
                 <div className="bg-[#FFFDF9] rounded-2xl border border-[#E4DDD4] p-6">
                   <div className="flex items-center gap-2 text-[#E76F51] font-bold text-sm mb-4">
                     <AlertTriangle className="w-4 h-4" />
-                    <span>Lo que ocurre cuando todo se controla en Excel</span>
+                    <span>Problemas operativos más frecuentes</span>
                   </div>
                   <ul className="space-y-4">
                     {sectorActivo.problemas.map((prob) => (
@@ -186,11 +245,11 @@ export default function ConceptoErp() {
                     <TrendingDown className="w-5 h-5" />
                     <div className="flex items-center gap-1.5">
                       <FileSpreadsheet className="w-4 h-4 text-[#7C8794]" />
-                      <h4>Por qué un ERP tradicional tampoco resuelve este problema</h4>
+                      <h4>¿Dónde fallan los ERP tradicionales?</h4>
                     </div>
                   </div>
                   <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-                    {sectorActivo.porqueExcel}
+                    {sectorActivo.retoOperativo}
                   </p>
                 </div>
 
@@ -203,7 +262,7 @@ export default function ConceptoErp() {
                     <h4>Cómo lo resuelve Prometech</h4>
                   </div>
                   <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                    {sectorActivo.comoAyuda}
+                    {sectorActivo.enfoquePrometech}
                   </p>
                 </div>
 
@@ -218,9 +277,9 @@ export default function ConceptoErp() {
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <Layers className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">1. Proyecto primero</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">1. Todo gira alrededor del proyecto</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              Cada compra, requerimiento, valorización y factura pertenece a un proyecto específico. Nunca pierdes el contexto de dónde se está generando el costo.
+              Cada compra, requerimiento, orden de servicio, valorización y factura mantiene su relación con el proyecto desde el primer día.
             </p>
           </div>
 
@@ -228,9 +287,9 @@ export default function ConceptoErp() {
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <FileSpreadsheet className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">2. Una sola fuente de información</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">2. Todos trabajan la misma información</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              Ingeniería, logística, almacén, compras y administración trabajan sobre los mismos datos en tiempo real.
+              Ingeniería, logística, compras, almacén, administración y gerencia consultan exactamente los mismos datos en tiempo real.
             </p>
           </div>
 
@@ -238,45 +297,11 @@ export default function ConceptoErp() {
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <LineChart className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">3. Control antes que reportes</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">3. Controlas por todo el tiempo de duración del proyecto</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              No esperas al cierre del mes para descubrir sobrecostos. Detectas desviaciones mientras el proyecto sigue en ejecución.
+              Las desviaciones de costo aparecen cuando todavía puedes corregirlas, no semanas después del cierre contable. Detectas desviaciones mientras el proyecto sigue en ejecución.
             </p>
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-20">
-
-          <div className="rounded-3xl border border-[#E4DDD4] p-8 bg-white">
-            <h3 className="font-bold text-xl mb-4">
-              ERP tradicional
-            </h3>
-
-            <ul className="space-y-3 text-[#5E6B7A]">
-              <li>• Ventas</li>
-              <li>• Clientes</li>
-              <li>• Inventario</li>
-              <li>• Contabilidad</li>
-              <li>• Productos</li>
-            </ul>
-          </div>
-
-          <div className="rounded-3xl bg-[#16324F] text-white p-8">
-            <h3 className="font-bold text-xl mb-4">
-              Prometech
-            </h3>
-
-            <ul className="space-y-3 text-white/90">
-              <li>• Presupuestos</li>
-              <li>• Requerimientos</li>
-              <li>• Compras</li>
-              <li>• Ejecución</li>
-              <li>• Costos del proyecto</li>
-              <li>• Valorizaciones</li>
-              <li>• Facturación</li>
-            </ul>
-          </div>
-
         </div>
 
       </div>
