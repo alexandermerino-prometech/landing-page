@@ -89,89 +89,89 @@ export default function Footer() {
                 <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#introduccion"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Introducción
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#comparacion"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Comparación
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#contenido"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Contenido
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#flujo"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Flujo
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#soluciones"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Soluciones
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#metodologia"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Metodología
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#beneficios"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Beneficios
-                </Link>
+                </a>
               </li>
 
               <li className="flex items-center gap-2">
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <Link
+                <a
                   href="#faq"
                   className="hover:text-[#16324F] transition-colors"
                 >
                   Preguntas frecuentes
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
