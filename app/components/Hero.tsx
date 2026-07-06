@@ -1,4 +1,5 @@
-// components/Hero.tsx
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -79,7 +80,7 @@ export default function Hero() {
                 duration:0.8,
                 ease:"easeOut"
             }}
-            className="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden"
+            className="relative rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] shadow-2xl overflow-hidden"
           >  
             <div className="border-b border-[#E4DDD4] px-5 py-3 flex items-center gap-2 bg-[#F7F3EE] flex-shrink-0">
               <div className="w-3 h-3 rounded-full bg-[#E76F51]" />
@@ -96,25 +97,17 @@ export default function Hero() {
                 alt="Plataforma ERP Prometech: Módulos de proyectos, control de inventarios, compras y facturación electrónica"
                 width={2248} 
                 height={1214}
-                sizes="(max-w-1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
                 className="w-full h-auto object-contain"
               />
             </div>
 
-            <div className="absolute top-5 left-5">
-              <span className="rounded-full
-                              bg-[#2D6A4F]
-                              text-white
-                              px-3
-                              py-1
-                              text-xs
-                              font-semibold">
-
-                  Dashboard en tiempo real
+            <div className="absolute top-5 left-5 z-10">
+              <span className="rounded-full bg-[#2D6A4F] text-white px-3 py-1 text-xs font-semibold">
+                Dashboard en tiempo real
               </span>
-
-          </div>
+            </div>
           </motion.div>
         </div>
       </div>
