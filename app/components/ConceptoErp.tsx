@@ -71,7 +71,8 @@ const sectores = [
 ];
 
 export default function ConceptoErp() {
-  const [sectorActivo, setSectorActivo] = useState(sectores[0]);
+  const [sectorActivoId, setSectorActivoId] = useState(sectores[0].id);
+  const sectorActivo = sectores.find((s) => s.id === sectorActivoId) ?? sectores[0];
 
   return (
     <section className="bg-[#FFFDF9] text-[#16324F] py-24 border-b border-[#E4DDD4] relative overflow-hidden">
@@ -105,7 +106,7 @@ export default function ConceptoErp() {
             return (
               <button
                 key={sec.id}
-                onClick={() => setSectorActivo(sec)}
+                onClick={() => setSectorActivoId(sec.id)}
                 className={`flex items-center gap-2.5 px-6 py-3.5 rounded-2xl text-sm font-bold border transition-all duration-300 ${
                   esActivo
                     ? "bg-[#16324F] text-white border-transparent shadow-md shadow-[#16324F]/10 scale-[1.02]"
@@ -120,7 +121,7 @@ export default function ConceptoErp() {
         </div>
 
         {/* CONTENIDO ESTRATÉGICO DINÁMICO */}
-        <div className="bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm min-h-[500px]">
+        <div className="bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm lg:min-h-[500px]"">
           <AnimatePresence mode="wait">
             <motion.div
               key={sectorActivo.id}
@@ -150,8 +151,8 @@ export default function ConceptoErp() {
                     <span>Problemas Operativos Comunes</span>
                   </div>
                   <ul className="space-y-4">
-                    {sectorActivo.problemas.map((prob, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-[#16324F]">
+                    {sectorActivo.problemas.map((prob) => (
+                      <li key={prob} className="flex items-start gap-3 text-sm text-[#16324F]">
                         <span className="text-[#E76F51] font-bold text-xs bg-red-50 w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
                           !
                         </span>
