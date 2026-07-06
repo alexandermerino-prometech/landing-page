@@ -291,15 +291,19 @@ export default function ConceptoErp() {
                 
                 {/* Cuadro de Dolor: Por qué Excel deja de funcionar */}
                 <div className="bg-white rounded-2xl border border-[#E4DDD4] p-6 md:p-8 hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-3 text-[#E76F51] font-bold text-base mb-3">
-                    <TrendingDown className="w-5 h-5" />
-                    <p className="text-xs uppercase tracking-widest text-[#E76F51] font-semibold mb-2">
-                        Limitación principal
-                    </p>
-                    <div className="flex items-center gap-1.5">
-                      <FileSpreadsheet className="w-4 h-4 text-[#7C8794]" />
-                      
-                      <h4>¿Dónde fallan los ERP tradicionales?</h4>
+                  <div className="mb-5">
+
+                    <div className="flex items-center gap-2 mb-2">
+                        <TrendingDown className="w-5 h-5 text-[#E76F51]" />
+                        <span className="uppercase tracking-widest text-xs font-semibold text-[#E76F51]">
+                            Limitación principal
+                        </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <FileSpreadsheet className="w-5 h-5 text-[#7C8794]" />
+                        <h4 className="text-xl font-bold text-[#16324F]">
+                            ¿Dónde fallan los ERP tradicionales?
+                        </h4>
                     </div>
                   </div>
                   <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
@@ -309,21 +313,26 @@ export default function ConceptoErp() {
 
                 {/* Cuadro de Valor: Cómo un ERP resuelve el caos */}
                 <div className="bg-gradient-to-br from-[#16324F] to-[#1d436a] text-white rounded-2xl p-6 md:p-8 shadow-lg relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#E9C46A]/5 rounded-full blur-2xl group-hover:bg-[#E9C46A]/10 transition-all duration-500" />
-                  
-                  <div className="flex items-center gap-3 text-[#E9C46A] font-bold text-base mb-3">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <h4>Cómo lo resuelve Prometech</h4>
-                  </div>
-                  <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                    {sectorActivo.enfoquePrometech}
-                  </p>
-                </div>
+                  <div className="mb-5">
 
+                    <div className="flex items-center gap-2 mb-2">
+
+                        <CheckCircle2 className="w-5 h-5 text-[#E9C46A]" />
+                        <span className="uppercase tracking-widest text-xs font-semibold text-[#E9C46A]">
+                            Nuestra propuesta
+                        </span>
+                    </div>
+                    <h4 className="text-xl font-bold">
+                        Cómo lo resuelve Prometech
+                    </h4>
+                </div>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
+
+        <div className="h-px bg-[#E4DDD4]" />
 
         {/* TRES PILARES GLOBALES (SEO Target: Ventajas de un ERP frente a hojas de cálculo) */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-[#E4DDD4]/60 pt-16">
