@@ -103,7 +103,7 @@ export default function Hero() {
               />
             </div>
 
-            <div className="absolute top-5 left-5 z-10">
+            <div className="absolute top-5 right-5 z-10">
               <span className="rounded-full bg-[#2D6A4F] text-white px-3 py-1 text-xs font-semibold">
                 Dashboard en tiempo real
               </span>
