@@ -6,6 +6,42 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+import {
+  FaFacebookF,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTiktok,
+} from "react-icons/fa";
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    icon: FaFacebookF,
+    href: "https://facebook.com/",
+  },
+  {
+    name: "YouTube",
+    icon: FaYoutube,
+    href: "https://youtube.com/",
+  },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    href: "https://instagram.com/",
+  },
+  {
+    name: "LinkedIn",
+    icon: FaLinkedinIn,
+    href: "https://linkedin.com/",
+  },
+  {
+    name: "TikTok",
+    icon: FaTiktok,
+    href: "https://tiktok.com/",
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-[#E4DDD4] bg-[#F1ECE5]/40">
@@ -133,34 +169,54 @@ export default function Footer() {
           </div>
 
           {/* Redes */}
-          <div>
-            <h3 className="mb-5 text-lg font-bold text-[#16324F]">
-              Síguenos
-            </h3>
+            <div className="text-center">
 
-            <div className="flex flex-col gap-3">
+                <h3 className="text-3xl font-bold text-white mb-8">
+                    Síguenos
+                </h3>
 
-              <a
-                href="https://www.linkedin.com/company/prometech-peru"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-xl border border-[#E4DDD4] bg-white px-4 py-3 text-sm font-medium text-[#16324F] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#16324F]"
-              >
-
-                LinkedIn
-              </a>
-
-              <a
-                href="https://www.youtube.com/@Prometech-Peru"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-xl border border-[#E4DDD4] bg-white px-4 py-3 text-sm font-medium text-[#16324F] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#16324F]"
-              >
-                ▶ YouTube
-              </a>
-
+                <div className="flex flex-wrap justify-center gap-6">
+                    {socialLinks.map(({ name, icon: Icon, href }) => (
+                    <a
+                        key={name}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={name}
+                        className="
+                        group
+                        w-16
+                        h-16
+                        rounded-full
+                        border-2
+                        border-white/10
+                        bg-white/5
+                        backdrop-blur-sm
+                        flex
+                        items-center
+                        justify-center
+                        transition-all
+                        duration-300
+                        hover:bg-[#16324F]
+                        hover:border-[#E9C46A]
+                        hover:-translate-y-1
+                        hover:shadow-xl
+                        hover:shadow-[#16324F]/40
+                        "
+                    >
+                        <Icon
+                        className="
+                            text-3xl
+                            text-white
+                            transition-colors
+                            duration-300
+                            group-hover:text-[#E9C46A]
+                        "
+                        />
+                    </a>
+                    ))}
+                </div>
             </div>
-          </div>
         </div>
 
         {/* Línea inferior */}

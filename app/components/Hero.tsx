@@ -3,6 +3,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import {
+  Mail
+} from "lucide-react";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -41,6 +45,7 @@ export default function Hero() {
               href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
               className="bg-white border border-[#E4DDD4] hover:border-[#16324F] text-[#16324F] text-sm font-semibold px-5 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
             >
+              <Mail className="w-4 h-4" />
               <span>Agendar por correo</span>
             </a>
 
