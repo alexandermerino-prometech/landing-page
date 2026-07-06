@@ -133,6 +133,9 @@ export default function ConceptoErp() {
 
         <div id="comparacion" className="mb-24 grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-stretch bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-10 shadow-sm">
           <div className="rounded-3xl border border-[#E4DDD4] p-8 bg-white">
+            <span className="text-xs uppercase tracking-widest text-[#7C8794]">
+            Modelo tradicional
+            </span>
             <h3 className="font-bold text-xl mb-4">
               ERP tradicional
             </h3>
@@ -141,12 +144,18 @@ export default function ConceptoErp() {
               <li className="flex gap-3">
                   <span className="text-red-500 font-bold">✕</span>
                   <div>
-                      <p className="font-semibold text-[#16324F]">
-                          La venta inicia el proceso
-                      </p>
-                      <p className="text-sm text-[#5E6B7A]">
-                          El proyecto aparece como información adicional.
-                      </p>
+                      <li>
+                      Venta inicia el proceso
+                      </li>
+                      <li>
+                      Información distribuida entre áreas
+                      </li>
+                      <li>
+                      Los costos aparecen al cierre
+                      </li>
+                      <li>
+                      El proyecto es un dato adicional
+                      </li>
                   </div>
               </li>
             </ul>
@@ -159,6 +168,9 @@ export default function ConceptoErp() {
           </div>
 
           <div className="rounded-3xl bg-[#16324F] text-white p-8">
+            <span className="text-xs uppercase tracking-widest text-[#E9C46A]">
+            Nuestra propuesta
+            </span>
             <h3 className="font-bold text-xl mb-4">
               Prometech
             </h3>
@@ -166,12 +178,18 @@ export default function ConceptoErp() {
             <li className="flex gap-3">
               <span className="text-[#E9C46A] font-bold">✓</span>
               <div>
-                <p className="font-semibold">
-                  El proyecto inicia el proceso
-                </p>
-                <p className="text-white/75 text-sm">
-                  Todo gira alrededor del presupuesto y ejecución.
-                </p>
+                <li>
+                Proyecto inicia el proceso
+                </li>
+                <li>
+                Todos trabajan sobre la misma información
+                </li>
+                <li>
+                Costos en tiempo real
+                </li>
+                <li>
+                Cada documento pertenece al proyecto
+                </li>
               </div>
 
               <ul className="mt-6 space-y-3">
@@ -366,7 +384,17 @@ export default function ConceptoErp() {
             </p>
           </div>
         </div>
+        <div className="max-w-3xl mx-auto text-center mb-14">
 
+          <span className="uppercase tracking-widest text-xs text-[#E9C46A] font-semibold">
+              Resultado
+          </span>
+
+          <h3 className="mt-4 text-3xl font-bold text-[#16324F]">
+              Una plataforma diseñada para controlar proyectos, no solo procesos administrativos.
+          </h3>
+
+        </div>
       </div>
     </section>
   );
