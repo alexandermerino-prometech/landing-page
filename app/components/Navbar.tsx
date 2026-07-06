@@ -30,13 +30,16 @@ export default function Navbar() {
         e.preventDefault();
 
         setActiveSection("");
+        setMenuMovilAbierto(false);
 
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
 
-        setMenuMovilAbierto(false);
+        // Elimina el #flujo, #faq, etc.
+        window.history.replaceState(null, "", window.location.pathname);
+
     };
 
     useEffect(() => {
