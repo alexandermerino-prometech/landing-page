@@ -19,10 +19,25 @@ const sections = [
 ];
 
 
+
+
 export default function Navbar() {
     const [menuMovilAbierto, setMenuMovilAbierto] = useState(false);
 
     const [activeSection, setActiveSection] = useState("introduccion");
+
+    const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+
+        setActiveSection("");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+
+        setMenuMovilAbierto(false);
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -88,7 +103,11 @@ export default function Navbar() {
     return (
             <header id="navbar-header" className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                  <Link href="/" className="flex items-center gap-3">
+                  <Link
+                    href="/"
+                    onClick={handleLogoClick}
+                    className="flex items-center gap-3"
+                    >
                   
                     <Image
                       src="/Logo1.png"

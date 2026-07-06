@@ -100,12 +100,13 @@ export default function Schema() {
         softwareVersion:"1.0",
         offers: {
             "@type": "Offer",
-            price: "0",     
+            price: "150",     
             priceCurrency: "PEN",
             priceSpecification:{
-                "@type":"PriceSpecification",
-                priceCurrency:"PEN",
-                description: "Desde S/150 al mes"
+                "@type":"UnitPriceSpecification",
+                price: "150",
+                priceCurrency: "PEN",
+                unitText: "MES",
             },
             availability: "https://schema.org/InStock"
         },
