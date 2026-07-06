@@ -20,53 +20,60 @@ const sectores = [
     id: "constructoras",
     label: "Constructoras",
     icon: Building2,
-    subtitulo: "Control estricto de valorizaciones, subcontratos y mano de obra a pie de obra.",
+    subtitulo: "Controla cada costo, compra y valorización de la obra desde un solo lugar.",
     problemas: [
-      "Desviaciones críticas entre el presupuesto meta asignado y el costo real ejecutado en campo.",
-      "Falta de control centralizado en requerimientos de materiales, propiciando compras duplicadas o de emergencia.",
-      "Retrasos severos en la aprobación de valorizaciones y gestión manual ineficiente de subcontratistas."
+      "No sabes cuánto está costando realmente una obra hasta que ya es demasiado tarde.",
+      "Los requerimientos y compras pierden trazabilidad entre obra, almacén y administración.",
+      "Las valorizaciones y subcontratos consumen tiempo por procesos manuales."
     ],
     retoOperativo: "La rentabilidad de una constructora depende de controlar cada requerimiento, subcontrato, valorización y compra dentro de la obra. Los ERP tradicionales pierden esa trazabilidad porque priorizan procesos comerciales antes que la ejecución del proyecto.",
-    enfoquePrometech: "Prometech centraliza los requerimientos vinculándolos directamente a la Estructura Desglosada de Trabajo (EDT). Cada sol gastado se contrasta automáticamente contra la línea base del proyecto, bloqueando sobrecostos antes de que ocurran."
+    enfoquePrometech:
+      "Cada requerimiento, compra y valorización queda vinculado al proyecto y a su presupuesto. Así detectas desviaciones mientras la obra sigue en ejecución, no cuando termina."
   },
   {
     id: "ingenieria",
     label: "Empresas de Ingeniería",
     icon: Cpu,
-    subtitulo: "Sincronización de hitos de diseño, procura de equipos críticos y horas hombre.",
+    subtitulo: "Gestiona horas, entregables y rentabilidad sin perder trazabilidad.",
     problemas: [
       "Dificultad extrema para medir la rentabilidad real basada en las horas hombre asignadas a entregables de diseño.",
       "Falta de trazabilidad en la procura de equipos mecánicos o eléctricos con largos tiempos de entrega.",
       "Desconexión entre los hitos del cronograma contractual y la facturación efectiva al cliente."
     ],
-    retoOperativo: "Excel carece de gobernanza de datos. Un error de fórmula en una macro de control de tiempos (Timesheets) puede distorsionar por completo el cálculo del costo por hora de tus ingenieros senior, destruyendo la rentabilidad del servicio.",
-    enfoquePrometech: "Permite el registro de tareas y asignación de tiempos directamente por entregable. Cruza de forma automática el avance técnico de la ingeniería con los hitos de facturación, optimizando el flujo de caja operativo."
+    retoOperativo:
+      "Los ERP tradicionales registran horas trabajadas, pero no las relacionan de forma natural con entregables, hitos del proyecto y rentabilidad. Esto dificulta conocer el costo real de cada fase de ingeniería mientras el proyecto está en ejecución.",
+    enfoquePrometech:
+      "Relaciona horas trabajadas, entregables e hitos de facturación para conocer la rentabilidad real de cada proyecto."
   },
   {
     id: "consultoras",
     label: "Consultoras",
     icon: Briefcase,
-    subtitulo: "Maximización de la tasa de utilización y predictibilidad de flujos de consultores.",
+    subtitulo: "Conoce en qué proyecto trabaja cada consultor y cuánto está generando.",
     problemas: [
       "Subutilización de consultores especializados debido a la falta de visibilidad del pipeline comercial y proyectos activos.",
       "Procesos lentos y manuales para consolidar gastos reembolsables, viáticos y entregables aprobados.",
       "Dificultad para proyectar la disponibilidad de recursos a mediano y largo plazo."
     ],
-    retoOperativo: "Las planillas de cálculo tradicionales crean silos de información aislados. El equipo de operaciones no sabe qué proyectos cerrará el equipo comercial, lo que impide planificar la asignación de personal sin incurrir en tiempos muertos sobre el presupuesto.",
-    enfoquePrometech: "Ofrece un panel consolidado de asignación de recursos en tiempo real. Clasifica las horas de tus consultores en facturables y no facturables, automatizando la liquidación de viáticos y la facturación directa por hitos alcanzados."
+    retoOperativo:
+      "Los ERP tradicionales gestionan recursos como personal administrativo. Una consultora necesita conocer la disponibilidad, utilización y rentabilidad de cada consultor según los proyectos en curso.",
+    enfoquePrometech:
+"Visualiza la disponibilidad de consultores, controla la utilización de recursos y mide la rentabilidad de cada servicio desde un solo lugar."
   },
   {
     id: "servicios",
     label: "Empresas de Servicios",
     icon: Wrench,
-    subtitulo: "Gestión de contratos de mantenimiento, órdenes de servicio y cuadrillas técnicas.",
+    subtitulo: "Conecta las operaciones de campo con almacén, compras y facturación.",
     problemas: [
       "Pérdida de ingresos por servicios ejecutados en campo que no se reportan a tiempo ni se llegan a facturar.",
       "Incapacidad de asociar costos de consumibles, herramientas y repuestos a un cliente u orden de trabajo específica.",
       "Falta de estandarización en los flujos de aprobación para cotizaciones adicionales pedidas por el cliente."
     ],
-    retoOperativo: "El papel y los archivos Excel compartidos se pierden o se corrompen. Si un técnico en campo utiliza repuestos de alto valor y lo anota en un archivo local, administración tardará semanas en enterarse, retrasando los ciclos de cobranza operativa.",
-    enfoquePrometech: "Digitaliza todo el flujo desde la creación de la Orden de Servicio hasta el despacho físico del repuesto en almacén. Sincroniza las liquidaciones de campo con el módulo de facturación electrónica en un solo clic."
+    retoOperativo:
+      "Los ERP tradicionales administran órdenes de trabajo, pero no integran de forma natural la ejecución en campo, el consumo de repuestos, las horas del personal y la facturación asociada al servicio.",
+    enfoquePrometech:
+      "Conecta órdenes de servicio, personal de campo, repuestos y facturación para mantener toda la operación sincronizada."
   }
 ];
 
@@ -286,11 +293,12 @@ export default function ConceptoErp() {
                 <div className="bg-white rounded-2xl border border-[#E4DDD4] p-6 md:p-8 hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 text-[#E76F51] font-bold text-base mb-3">
                     <TrendingDown className="w-5 h-5" />
+                    <p className="text-xs uppercase tracking-widest text-[#E76F51] font-semibold mb-2">
+                        Limitación principal
+                    </p>
                     <div className="flex items-center gap-1.5">
                       <FileSpreadsheet className="w-4 h-4 text-[#7C8794]" />
-                      <p className="text-xs uppercase tracking-widest text-[#E76F51] font-semibold mb-2">
-                        Limitación principal
-                      </p>
+                      
                       <h4>¿Dónde fallan los ERP tradicionales?</h4>
                     </div>
                   </div>
