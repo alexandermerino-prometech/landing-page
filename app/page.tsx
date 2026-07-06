@@ -219,28 +219,63 @@ export default function PrometechLandingPage() {
       <section id="beneficios" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="max-w-3xl mb-16">
-            <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Ventajas Competitivas</p>
+            <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Impacto Operativo</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
-              Diseñado al detalle para mejorar el control, la eficiencia y tu escalabilidad
+              El cambio real que notarás en tu operación
             </h2>
+            <p className="text-[#5E6B7A] text-lg leading-relaxed">
+              No son promesas genéricas. Así cambia el día a día operativo cuando cada área trabaja sobre la misma información.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              "Centralización absoluta de la información de proyectos",
-              "Reducción drástica de errores y duplicidades manuales",
-              "Mayor rigurosidad en el control presupuestal operativo",
-              "Acceso inmediato a información e indicadores en tiempo real",
-              "Automatización de procesos entre logística y finanzas",
-              "Arquitectura modular adaptable según el ritmo de crecimiento",
-            ].map((benefit) => (
-              <div key={benefit} className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-all duration-200">
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#2D6A4F]/10 border border-[#2D6A4F]/20 flex items-center justify-center text-[#2D6A4F] font-bold">
-                  ✓
+              {
+                area: "Aprobación de requerimientos",
+                antes: "Días esperando validación entre campo, administración y compras",
+                despues: "Horas, con flujos de aprobación automatizados",
+              },
+              {
+                area: "Control de sobrecostos",
+                antes: "Se detectan al cierre del proyecto, cuando ya no hay margen de corrección",
+                despues: "Se detectan en tiempo real, contrastando cada gasto contra el presupuesto",
+              },
+              {
+                area: "Trazabilidad de compras",
+                antes: "Hojas de cálculo dispersas entre distintas áreas y responsables",
+                despues: "Un solo historial: requerimiento, orden, recepción y factura conectados",
+              },
+              {
+                area: "Reportes de rentabilidad",
+                antes: "Se arman manualmente y llegan semanas después de cerrado el mes",
+                despues: "Disponibles en cualquier momento, actualizados con cada movimiento",
+              },
+            ].map((item) => (
+              <div
+                key={item.area}
+                className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-200"
+              >
+                <h3 className="text-base font-bold text-[#16324F] mb-5">{item.area}</h3>
+
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="text-[#E76F51] font-bold text-xs bg-[#E76F51]/10 w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                    ✕
+                  </span>
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#7C8794]">Antes</span>
+                    <p className="text-sm text-[#5E6B7A] leading-relaxed">{item.antes}</p>
+                  </div>
                 </div>
-                <p className="text-base font-semibold text-[#16324F] leading-snug">
-                  {benefit}
-                </p>
+
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-md bg-[#2D6A4F]/10 flex items-center justify-center text-[#2D6A4F] text-xs font-bold mt-0.5" aria-hidden="true">
+                    ✓
+                  </span>
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#2D6A4F]">Con Prometech</span>
+                    <p className="text-sm text-[#16324F] font-medium leading-relaxed">{item.despues}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
