@@ -44,10 +44,14 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 /* =========================
@@ -302,10 +306,6 @@ body {
     right: 0;
     border-right-color: var(--primary);
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 section {

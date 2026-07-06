@@ -1,9 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata,Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 import Schema from "./components/Schema";
+import Navbar from "./components/Navbar";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#16324F", // el azul de tu marca
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -117,7 +123,8 @@ export default function RootLayout({
 
       <body className="min-h-full flex flex-col">
         <Schema />
-        {children}
+        <Navbar />
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
