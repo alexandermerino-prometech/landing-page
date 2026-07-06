@@ -151,18 +151,26 @@ export default function Schema() {
         mainEntity: [
             {
             "@type": "Question",
-            name: "¿Qué es Prometech y a quién está dirigido?",
+            name: "¿Qué hace diferente a Prometech de un ERP tradicional?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Prometech es un software empresarial modular en la nube diseñado para centralizar la gestión de proyectos, compras, inventario y control presupuestal. Está especialmente dirigido a empresas que buscan centralizar la información y automatizar los procesos operativos de la empresa."
+                text: "La mayoría de ERP fueron diseñados para empresas comerciales. Prometech fue creado desde la realidad de las empresas que ejecutan proyectos, donde cada presupuesto, requerimiento, compra, valorización y costo debe mantenerse vinculado al proyecto durante todo su ciclo de vida."
             }
             },
             {
             "@type": "Question",
-            name: "¿Puedo contratar solo los módulos que necesito?",
+            name: "¿Qué tipo de empresas pueden utilizar Prometech?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sí. Puedes comenzar implementando Gestión de Proyectos o Compras y añadir posteriormente módulos como Inventario, Recepción de Materiales o Control Presupuestal conforme tu empresa crezca."
+                text: "Prometech está dirigido a constructoras, empresas de ingeniería, consultoras y empresas de servicios que necesitan controlar la operación completa de sus proyectos desde una sola plataforma."
+            }
+            },
+            {
+            "@type": "Question",
+            name: "¿Prometech se adapta a nuestros procesos?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sí. Antes de la implementación analizamos cómo opera tu empresa y configuramos la plataforma para reflejar tus flujos de trabajo, aprobaciones y controles. El objetivo es que el sistema se adapte a tu operación, no que tu operación tenga que adaptarse al sistema."
             }
             },
             {
@@ -170,15 +178,23 @@ export default function Schema() {
             name: "¿Cómo es el proceso de implementación?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Seguimos una metodología ágil: realizamos un análisis de tus procesos actuales, configuramos la plataforma a tu medida, capacitamos a tu equipo y te acompañamos durante el despliegue en producción para asegurar una transición exitosa."
+                text: "Trabajamos por etapas: analizamos tus procesos actuales, configuramos la plataforma, migramos la información necesaria, capacitamos a tu equipo y acompañamos la puesta en marcha para asegurar una adopción exitosa."
             }
             },
             {
             "@type": "Question",
-            name: "¿Ofrecen soporte técnico post-implementación?",
+            name: "¿Qué beneficios puedo esperar al implementar Prometech?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Por supuesto. Contamos con un equipo de soporte dedicado para resolver dudas, asegurar la disponibilidad del sistema y realizar mejoras continuas según las necesidades de tu empresa."
+                text: "Obtendrás mayor trazabilidad sobre cada proyecto, control de costos en tiempo real, integración entre las distintas áreas de la empresa y una visión completa de la rentabilidad sin depender de procesos manuales."
+            }
+            },
+            {
+            "@type": "Question",
+            name: "¿Ofrecen soporte después de la implementación?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sí. Nuestro equipo brinda soporte continuo, capacitación y mejoras evolutivas para que la plataforma acompañe el crecimiento y las necesidades de tu empresa."
             }
             },
         ]
