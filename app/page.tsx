@@ -233,7 +233,7 @@ export default function PrometechLandingPage() {
               { title: "Desarrollo y Ajustes", image: "/metodologia/desarrollo.webp", description: "Configuramos los módulos nativos en entornos seguros garantizando la integridad de datos." },
             ].map((step, index) => (
               <div key={index} className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative w-full h-48 bg-slate-100">
+                <div className="relative w-full h-48 bg-[#F1ECE5]">
                   <Image 
                     src={step.image} 
                     alt={`Etapa de ${step.title} en la metodología Prometech`} 
@@ -243,7 +243,7 @@ export default function PrometechLandingPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <span className="text-sm font-bold font-mono text-[#E76F51] bg-orange-50 px-2 py-1 rounded">Fase 0{index + 1}</span>
+                  <span className="text-sm font-bold font-mono text-[#E76F51] bg-[#E76F51]/10 px-2 py-1 rounded">Fase 0{index + 1}</span>
                   <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
                   <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
                 </div>
@@ -258,7 +258,7 @@ export default function PrometechLandingPage() {
               { title: "Mejora Continua", image: "/metodologia/mejora_continua.jpg", description: "Monitoreo constante del sistema, optimización de flujos y adición de mejoras funcionales." },
             ].map((step, index) => (
               <div key={index} className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative w-full h-48 bg-slate-100">
+                <div className="relative w-full h-48 bg-[#F1ECE5]">
                   <Image 
                     src={step.image} 
                     alt={`Etapa de ${step.title} para garantizar el control empresarial`} 
@@ -268,7 +268,7 @@ export default function PrometechLandingPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <span className="text-sm font-bold text-[#E76F51] bg-orange-50 px-2 py-1 rounded">Fase 0{index + 4}</span>
+                  <span className="text-sm font-bold font-mono text-[#E76F51] bg-[#E76F51]/10 px-2 py-1 rounded">Fase 0{index + 4}</span>
                   <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
                   <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
                 </div>
@@ -328,6 +328,8 @@ export default function PrometechLandingPage() {
                 <button
                   onClick={() => togglePregunta(faq.id)}
                   aria-expanded={estaAbierto}
+                  aria-controls={`faq-panel-${faq.id}`}
+                  id={`faq-button-${faq.id}`}
                   className="w-full flex items-center justify-between p-6 text-left font-bold text-base sm:text-lg text-[#16324F] hover:bg-[#F7F3EE]/40 transition-colors duration-200"
                 >
                   <span>{faq.pregunta}</span>
@@ -343,12 +345,15 @@ export default function PrometechLandingPage() {
                 <AnimatePresence initial={false}>
                   {estaAbierto && (
                     <motion.div 
+                      id={`faq-panel-${faq.id}`}
+                      role="region"
+                      aria-labelledby={`faq-button-${faq.id}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.2, ease: "easeInOut" }}
                     >
-                      <p className="p-6 pt-0 text-[#5E6B7A] text-sm sm:text-base leading-relaxed border-t border-[#E4DDD4]/40 bg-slate-50/30">
+                      <p className="p-6 pt-0 text-[#5E6B7A] text-sm sm:text-base leading-relaxed border-t border-[#E4DDD4]/40 bg-[#F7F3EE]/30">
                         {faq.respuesta}
                       </p>
                     </motion.div>
