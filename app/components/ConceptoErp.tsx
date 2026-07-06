@@ -88,13 +88,15 @@ export default function ConceptoErp() {
             Especialización Operativa
           </p>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[#16324F] tracking-tight mb-8 leading-[1.15]">
-            ¿Qué es un ERP para empresas que trabajan por proyectos y por qué lo necesitas?
+            No desarrollamos un ERP tradicional. Diseñamos una plataforma alrededor de cómo realmente trabajan tus proyectos.
           </h2>
           <p className="text-[#5E6B7A] text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
             A diferencia de las empresas comerciales de venta masiva, los negocios basados en proyectos no venden productos genéricos de un estante; venden <strong>presupuestos, hitos, entregables y horas de alta especialización</strong>. 
           </p>
           <p className="text-[#5E6B7A] text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mt-4">
-            Un ERP por proyectos es un software modular diseñado específicamente para entrelazar las finanzas, las compras y la logística directamente con la estructura de costos de cada obra o contrato. No mide la salud de la empresa a nivel global una vez al mes; la mide proyecto por proyecto, en tiempo real, resguardando el margen de ganancia operativa desde el primer requerimiento.
+            La mayoría de ERP fueron diseñados para empresas comerciales que compran, almacenan y venden productos. Las empresas que trabajan por proyectos tienen una realidad completamente distinta: presupuestos, valorizaciones, requerimientos, compras por obra, contratos y costos que cambian todos los días.
+
+Prometech nace desde esa realidad. No es un ERP genérico con módulos adicionales, sino una plataforma diseñada para controlar la operación completa de empresas que viven de ejecutar proyectos.
           </p>
         </div>
 

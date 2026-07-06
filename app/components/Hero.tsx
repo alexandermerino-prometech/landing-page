@@ -11,15 +11,16 @@ export default function Hero() {
         {/* Bloque Izquierdo: Textos y Acciones */}
         <div className="lg:col-span-6 flex flex-col justify-center">
           <div className="inline-flex items-center w-fit rounded-full border border-[#16324F]/10 bg-[#16324F]/5 px-4 py-1.5 text-xs font-medium text-[#16324F] mb-6 self-start">
-            ERP modular para empresas por proyectos
+            Control operativo en tiempo real
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[46px] font-extrabold leading-[1.15] tracking-tight mb-5 text-[#16324F]">
-            Software de gestión de proyectos, compras, logística y facturación electrónica.
+            La plataforma que conecta toda la operación de tus proyectos.
           </h1>
 
           <p className="text-[#5E6B7A] text-lg leading-relaxed mb-8 max-w-xl">
-            Desde el requerimiento de materiales hasta la facturación electrónica, integra todo el flujo operativo de tus proyectos en una plataforma modular en la nube para mejorar el control y tomar decisiones con información en tiempo real.
+            Mientras un ERP tradicional administra áreas independientes, Prometech conecta requerimientos, compras, almacenes, presupuestos y 
+            facturación alrededor de cada proyecto. Así obtienes control operativo y financiero en tiempo real, sin depender de hojas de cálculo.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]">
