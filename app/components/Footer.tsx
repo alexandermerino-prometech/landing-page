@@ -8,10 +8,8 @@ import {
 
 import {
   FaFacebookF,
-  FaYoutube,
   FaInstagram,
   FaLinkedinIn,
-  FaTiktok,
 } from "react-icons/fa";
 
 const socialLinks = [
@@ -21,11 +19,6 @@ const socialLinks = [
     href: "https://facebook.com/",
   },
   {
-    name: "YouTube",
-    icon: FaYoutube,
-    href: "https://youtube.com/",
-  },
-  {
     name: "Instagram",
     icon: FaInstagram,
     href: "https://instagram.com/",
@@ -33,31 +26,26 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: FaLinkedinIn,
-    href: "https://linkedin.com/",
-  },
-  {
-    name: "TikTok",
-    icon: FaTiktok,
-    href: "https://tiktok.com/",
+    href: "https://www.linkedin.com/company/prometech-peru",
   },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-[#E4DDD4] bg-[#F1ECE5]/40">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-12">
 
         {/* Contenido principal */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
 
           {/* Marca */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-3 mb-5 h-12 w-auto">
               <Image
                 src="/Logo1.png"
                 alt="Logo Prometech"
-                width={42}
-                height={42}
+                width={52}
+                height={52}
                 className="h-10 w-auto"
               />
 
@@ -67,9 +55,9 @@ export default function Footer() {
             </div>
 
             <p className="text-sm leading-7 text-[#5E6B7A]">
-              ERP modular para empresas que gestionan proyectos,
-              compras, inventarios, logística y facturación
-              electrónica desde una sola plataforma.
+              Software ERP diseñado para empresas que gestionan proyectos.
+                Centraliza compras, costos, inventarios, valorizaciones y facturación
+            en una sola plataforma.
             </p>
           </div>
 
@@ -169,10 +157,10 @@ export default function Footer() {
           </div>
 
           {/* Redes */}
-            <div className="text-center">
+            <div className="text-center border-l border-[#E4DDD4] pl-10">
 
-                <h3 className="text-3xl font-bold text-white mb-8">
-                    Síguenos
+                <h3 className="text-3xl font-bold text-[#B8C2CC] mb-8">
+                    Conecta con nosotros
                 </h3>
 
                 <div className="flex flex-wrap justify-center gap-6">
@@ -185,33 +173,33 @@ export default function Footer() {
                         aria-label={name}
                         className="
                         group
-                        w-16
-                        h-16
+                        w-12
+                        h-12
                         rounded-full
                         border-2
-                        border-white/10
-                        bg-white/5
+                        border-[#2E425A]
+                        bg-[#1A2431]
                         backdrop-blur-sm
                         flex
                         items-center
                         justify-center
                         transition-all
                         duration-300
-                        hover:bg-[#16324F]
                         hover:border-[#E9C46A]
+                        hover:bg-[#1E3A5C]
                         hover:-translate-y-1
                         hover:shadow-xl
                         hover:shadow-[#16324F]/40
                         "
                     >
                         <Icon
-                        className="
-                            text-3xl
-                            text-white
-                            transition-colors
-                            duration-300
-                            group-hover:text-[#E9C46A]
-                        "
+                            className="
+                                text-xl
+                                text-[#B8C2CC]
+                                transition-all
+                                duration-300
+                                group-hover:text-[#E9C46A]
+                            "
                         />
                     </a>
                     ))}
