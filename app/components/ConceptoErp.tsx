@@ -121,7 +121,7 @@ export default function ConceptoErp() {
         </div>
 
         {/* CONTENIDO ESTRATÉGICO DINÁMICO */}
-        <div className="bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm lg:min-h-[500px]"">
+        <div className="bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-8 md:p-12 shadow-sm lg:min-h-[500px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={sectorActivo.id}
