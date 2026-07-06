@@ -91,7 +91,7 @@ export default function ConceptoErp() {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* BLOQUE INTRODUCTORIO (SEO Target: Qué es un ERP por proyectos) */}
-        <div className="max-w-5xl mx-auto text-center mb-20">
+        <div id="introduccion" className="max-w-5xl mx-auto text-center mb-20">
             <span className="uppercase tracking-widest text-xs text-[#E9C46A] font-semibold">
               Nuestra filosofía
             </span>
@@ -131,7 +131,7 @@ export default function ConceptoErp() {
           Enfoque
         </span>
 
-        <div className="mb-24 grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-stretch bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-10 shadow-sm">
+        <div id="comparacion" className="mb-24 grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-stretch bg-[#F7F3EE]/60 border border-[#E4DDD4] rounded-[32px] p-10 shadow-sm">
           <div className="rounded-3xl border border-[#E4DDD4] p-8 bg-white">
             <h3 className="font-bold text-xl mb-4">
               ERP tradicional
@@ -215,7 +215,7 @@ export default function ConceptoErp() {
         </div>
 
         {/* ESTRUCTURA DE PESTAÑAS INTERACTIVAS (TABS) */}
-        <div role="tablist" className="mb-16 flex flex-wrap justify-center gap-4" aria-label="Sectores empresariales">
+        <div id="contenido" role="tablist" className="mb-16 flex flex-wrap justify-center gap-4" aria-label="Sectores empresariales">
           {sectores.map((sec) => {
             const Icon = sec.icon;
             const esActivo = sectorActivo.id === sec.id;

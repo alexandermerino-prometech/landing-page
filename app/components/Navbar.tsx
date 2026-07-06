@@ -7,6 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const sections = [
+  "introduccion",
+  "comparacion",
+  "contenido",
   "flujo",
   "soluciones",
   "metodologia",
@@ -19,7 +22,7 @@ const sections = [
 export default function Navbar() {
     const [menuMovilAbierto, setMenuMovilAbierto] = useState(false);
 
-    const [activeSection, setActiveSection] = useState("flujo");
+    const [activeSection, setActiveSection] = useState("introduccion");
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -101,6 +104,13 @@ export default function Navbar() {
                   </Link>
         
                   <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5E6B7A]">
+                    <a href="#introduccion" className={`transition-colors duration-200 ${
+                            activeSection === "introduccion"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Introducción</a>
+                    <a href="#comparacion" className={`transition-colors duration-200 ${
+                            activeSection === "comparacion"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Comparación con ERP</a>
+                    <a href="#contenido" className={`transition-colors duration-200 ${
+                            activeSection === "contenido"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Contenido</a>
+                    
                     <a href="#flujo" className={`transition-colors duration-200 ${
                             activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Flujo</a>
                     <a href="#soluciones" className={`transition-colors duration-200 ${
@@ -134,6 +144,9 @@ export default function Navbar() {
                         transition={{ duration: 0.2, ease: "easeInOut" }}
                       className="md:hidden border-b border-[#E4DDD4] bg-[#F7F3EE] px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-semibold text-[#5E6B7A]"
                     >
+                      <a href="#introduccion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Introducción</a>
+                      <a href="#comparacion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Comparación con ERP</a>
+                      <a href="#contenido" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Contenido</a>
                       <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Flujo</a>
                       <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Soluciones</a>
                       <a href="#metodologia" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Metodología</a>
