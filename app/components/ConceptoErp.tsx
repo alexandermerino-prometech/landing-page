@@ -113,7 +113,7 @@ export default function ConceptoErp() {
           
         </div>
 
-        <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E9C46A] font-semibold">
+        <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E76F51] font-semibold">
           Diferencias
         </span>
 
@@ -182,6 +182,9 @@ export default function ConceptoErp() {
 
         </div>
 
+        <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E76F51] font-semibold">
+          Diferencias
+        </span>
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h3 className="text-2xl font-bold text-[#16324F]">
               Cada industria ejecuta proyectos de manera diferente.
@@ -195,9 +198,6 @@ export default function ConceptoErp() {
 
         {/* ESTRUCTURA DE PESTAÑAS INTERACTIVAS (TABS) */}
         <div id="contenido" role="tablist" className="mb-16 flex flex-wrap justify-center gap-4" aria-label="Sectores empresariales">
-          <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E9C46A] font-semibold">
-            Contenido
-          </span>
           {sectores.map((sec) => {
             const Icon = sec.icon;
             const esActivo = sectorActivo.id === sec.id;
