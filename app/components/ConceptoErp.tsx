@@ -26,7 +26,7 @@ const sectores = [
       "Falta de control centralizado en requerimientos de materiales, propiciando compras duplicadas o de emergencia.",
       "Retrasos severos en la aprobación de valorizaciones y gestión manual ineficiente de subcontratistas."
     ],
-    porqueExcel: "Una hoja de cálculo no se sincroniza en tiempo real con el almacén de la obra. Cuando el ingeniero de campo actualiza un saldo manual, el área de compras ya emitió una orden desfasada, sepultando el margen de ganancia del proyecto.",
+    porqueExcel: "Los ERP tradicionales siguen pensando en productos,almacenes y ventas. Las empresas por proyectos necesitan controlar presupuestos, requerimientos, costos, compras, valorizaciones y rentabilidad de cada proyecto en tiempo real.",
     comoAyuda: "Prometech centraliza los requerimientos vinculándolos directamente a la Estructura Desglosada de Trabajo (EDT). Cada sol gastado se contrasta automáticamente contra la línea base del proyecto, bloqueando sobrecostos antes de que ocurran."
   },
   {
@@ -84,20 +84,25 @@ export default function ConceptoErp() {
         
         {/* BLOQUE INTRODUCTORIO (SEO Target: Qué es un ERP por proyectos) */}
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <p className="text-[#E76F51] font-bold uppercase text-xs tracking-widest mb-4">
-            Especialización Operativa
-          </p>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#16324F] tracking-tight mb-8 leading-[1.15]">
-            No desarrollamos un ERP tradicional. Diseñamos una plataforma alrededor de cómo realmente trabajan tus proyectos.
-          </h2>
-          <p className="text-[#5E6B7A] text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
-            A diferencia de las empresas comerciales de venta masiva, los negocios basados en proyectos no venden productos genéricos de un estante; venden <strong>presupuestos, hitos, entregables y horas de alta especialización</strong>. 
-          </p>
-          <p className="text-[#5E6B7A] text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mt-4">
-            La mayoría de ERP fueron diseñados para empresas comerciales que compran, almacenan y venden productos. Las empresas que trabajan por proyectos tienen una realidad completamente distinta: presupuestos, valorizaciones, requerimientos, compras por obra, contratos y costos que cambian todos los días.
+          <div className="max-w-5xl mx-auto text-center mb-20">
+            <span className="inline-flex rounded-full bg-[#16324F]/5 text-[#16324F] px-4 py-2 text-xs font-semibold uppercase tracking-wider">
+              Nuestra filosofía
+            </span>
 
-Prometech nace desde esa realidad. No es un ERP genérico con módulos adicionales, sino una plataforma diseñada para controlar la operación completa de empresas que viven de ejecutar proyectos.
-          </p>
+            <h2 className="mt-6 text-3xl sm:text-5xl font-extrabold text-[#16324F] leading-tight">
+              Dejamos de pensar en un ERP y empezamos a pensar en cómo realmente opera una empresa por proyectos.
+            </h2>
+
+            <p className="mt-8 text-lg text-[#5E6B7A] leading-relaxed max-w-3xl mx-auto">
+              Muchas soluciones obligan a adaptar la empresa al software. Nosotros hicimos lo contrario.
+            </p>
+
+            <p className="mt-5 text-base sm:text-lg text-[#5E6B7A] leading-relaxed max-w-4xl mx-auto">
+              Prometech fue diseñado alrededor del flujo operativo de constructoras, ingenierías,
+              consultoras y empresas de servicios. Cada módulo nace de cómo se planifica,
+              compra, ejecuta, controla y factura un proyecto.
+            </p>
+          </div>
         </div>
 
         {/* ESTRUCTURA DE PESTAÑAS INTERACTIVAS (TABS) */}
@@ -144,10 +149,10 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
               <div className="lg:col-span-5 flex flex-col justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#E76F51]/10 text-[#E76F51] mb-4">
-                    Desafíos Sectoriales
+                    Cada sector tiene una operación distinta
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-[#16324F] tracking-tight leading-snug mb-4">
-                    Enfoque crítico en {sectorActivo.label}
+                    Lo que realmente necesita controlar una {sectorActivo.label}
                   </h3>
                   <p className="text-[#5E6B7A] text-base leading-relaxed mb-8">
                     {sectorActivo.subtitulo}
@@ -157,7 +162,7 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
                 <div className="bg-[#FFFDF9] rounded-2xl border border-[#E4DDD4] p-6">
                   <div className="flex items-center gap-2 text-[#E76F51] font-bold text-sm mb-4">
                     <AlertTriangle className="w-4 h-4" />
-                    <span>Problemas Operativos Comunes</span>
+                    <span>Lo que ocurre cuando todo se controla en Excel</span>
                   </div>
                   <ul className="space-y-4">
                     {sectorActivo.problemas.map((prob) => (
@@ -181,7 +186,7 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
                     <TrendingDown className="w-5 h-5" />
                     <div className="flex items-center gap-1.5">
                       <FileSpreadsheet className="w-4 h-4 text-[#7C8794]" />
-                      <h4>El gran punto de quiebre de Excel</h4>
+                      <h4>Por qué un ERP tradicional tampoco resuelve este problema</h4>
                     </div>
                   </div>
                   <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
@@ -195,7 +200,7 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
                   
                   <div className="flex items-center gap-3 text-[#E9C46A] font-bold text-base mb-3">
                     <CheckCircle2 className="w-5 h-5" />
-                    <h4>La Solución: El poder de Prometech ERP</h4>
+                    <h4>Cómo lo resuelve Prometech</h4>
                   </div>
                   <p className="text-white/80 text-sm sm:text-base leading-relaxed">
                     {sectorActivo.comoAyuda}
@@ -213,9 +218,9 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <Layers className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">1. Trazabilidad Financiera Única</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">1. Proyecto primero</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              En lugar de cruzar estados de cuenta bancarios y carpetas de compras offline, un ERP por proyectos asocia de forma nativa cada factura electrónica emitida y recibida a un hito contractual específico. Sabes exactamente qué componente operativo está consumiendo tu liquidez.
+              Cada compra, requerimiento, valorización y factura pertenece a un proyecto específico. Nunca pierdes el contexto de dónde se está generando el costo.
             </p>
           </div>
 
@@ -223,9 +228,9 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <FileSpreadsheet className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">2. Eliminación de Silos de Información</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">2. Una sola fuente de información</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              Cuando el equipo técnico trabaja en Excel, administración trabaja en otro, y gerencia comercial en un tercero, la empresa está ciega. Prometech unifica los datos: el requerimiento visado en campo se transforma instantáneamente en una propuesta de cotización para compras, eliminando llamadas y correos redundantes.
+              Ingeniería, logística, almacén, compras y administración trabajan sobre los mismos datos en tiempo real.
             </p>
           </div>
 
@@ -233,11 +238,45 @@ Prometech nace desde esa realidad. No es un ERP genérico con módulos adicional
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <LineChart className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">3. Indicadores de Rentabilidad (KPIs)</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">3. Control antes que reportes</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              Conoce el estatus financiero real (Costo Esperado vs Costo Real Ejecutado) sin tener que esperar al cierre contable del mes siguiente. Toma decisiones correctivas inmediatas mientras los proyectos siguen en marcha y las desviaciones presupuestarias aún son perfectamente reversibles.
+              No esperas al cierre del mes para descubrir sobrecostos. Detectas desviaciones mientras el proyecto sigue en ejecución.
             </p>
           </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-20">
+
+          <div className="rounded-3xl border border-[#E4DDD4] p-8 bg-white">
+            <h3 className="font-bold text-xl mb-4">
+              ERP tradicional
+            </h3>
+
+            <ul className="space-y-3 text-[#5E6B7A]">
+              <li>• Ventas</li>
+              <li>• Clientes</li>
+              <li>• Inventario</li>
+              <li>• Contabilidad</li>
+              <li>• Productos</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl bg-[#16324F] text-white p-8">
+            <h3 className="font-bold text-xl mb-4">
+              Prometech
+            </h3>
+
+            <ul className="space-y-3 text-white/90">
+              <li>• Presupuestos</li>
+              <li>• Requerimientos</li>
+              <li>• Compras</li>
+              <li>• Ejecución</li>
+              <li>• Costos del proyecto</li>
+              <li>• Valorizaciones</li>
+              <li>• Facturación</li>
+            </ul>
+          </div>
+
         </div>
 
       </div>
