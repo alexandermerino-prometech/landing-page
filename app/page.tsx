@@ -6,6 +6,7 @@ import { motion, Variants, AnimatePresence } from "framer-motion";
 import Hero from "./components/Hero";
 import ConceptoErp from "./components/ConceptoErp";
 import Footer from "./components/Footer";
+import Modulos from "./components/Modulos";
 
 import { 
   FolderKanban, 
@@ -168,52 +169,7 @@ export default function PrometechLandingPage() {
       </section>
 
       {/* Sección: Soluciones Modulares */}
-      <section id="soluciones" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <div className="max-w-3xl mb-16">
-            <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Arquitectura Modular</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
-              Módulos especializados para el control financiero e integral de proyectos
-            </h2>
-            <p className="text-[#5E6B7A] text-lg leading-relaxed">
-              Explora las herramientas modulares diseñadas para mitigar riesgos y eliminar reprocesos. Activa solo lo que tu negocio necesita en cada etapa.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { titulo: "Gestión de Proyectos", estado: "Disponible", colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20", iconoEstado: "✅", features: ["Estructura Desglosada de Trabajo (EDT)", "Diagramas de Gantt interactivos", "Control de Hitos y Entregables", "Paneles de Control Automatizados"] },
-              { titulo: "Compras y Logística", estado: "Disponible", colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20", iconoEstado: "✅", features: ["Catálogo Centralizado de Materiales", "Solicitudes de Requerimiento digitales", "Órdenes de Compra automatizadas", "Trazabilidad de Órdenes de Servicio"] },
-              { titulo: "Recepción e Inventario", estado: "Disponible", colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/30", iconoEstado: "✅", features: ["Validación Física de Recepción", "Kárdex Automatizado por Proyecto", "Logística y Guías de Despacho"] },
-              { titulo: "Facturación Electrónica", estado: "En desarrollo", colorEstado: "bg-[#E9C46A]/10 text-[#D4A316] border-[#E9C46A]/30", iconoEstado: "🚧", features: ["Emisión de Facturas y Boletas Sunat", "Notas de Crédito y Débito integradas", "Conciliación Bancaria nativa"] },
-              { titulo: "Rentabilidad Operativa", estado: "Próximamente", colorEstado: "bg-[#5E6B7A]/10 text-[#5E6B7A] border-[#5E6B7A]/20", iconoEstado: "⏳", features: ["Presupuestos Estáticos vs Dinámicos", "Análisis Financiero Esperado vs Real", "Alertas Automáticas de Desviación"] },
-            ].map((modulo, index) => (
-              <div key={index} className="rounded-3xl border border-[#E4DDD4] bg-[#FFFDF9] p-8 flex flex-col justify-between hover:shadow-xl hover:border-[#16324F]/30 transition-all duration-300">
-                <div>
-                  <div className="flex items-start justify-between gap-4 mb-6">
-                    <h3 className="text-2xl font-bold text-[#16324F] leading-snug tracking-tight">{modulo.titulo}</h3>
-                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${modulo.colorEstado} whitespace-nowrap`}>
-                      <span>{modulo.iconoEstado}</span>{modulo.estado}
-                    </span>
-                  </div>
-                  <ul className="space-y-3.5" aria-label={`Características del módulo de ${modulo.titulo}`}>
-                    {modulo.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-[#5E6B7A]">
-                        <div className="flex-shrink-0 w-5 h-5 rounded-md bg-[#16324F]/5 flex items-center justify-center text-[#2D6A4F] text-xs font-bold mt-0.5">✓</div>
-                        <span className="text-[15px] leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-8 pt-4 border-t border-[#F7F3EE] flex justify-between items-center text-xs text-[#7C8794] font-medium">
-                  <span>Prometech Software</span>
-                  <span className="font-mono bg-[#F1ECE5] px-2 py-0.5 rounded">MOD-{index + 1}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Modulos />
 
       {/* Sección: Beneficios */}
       <section id="beneficios" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
