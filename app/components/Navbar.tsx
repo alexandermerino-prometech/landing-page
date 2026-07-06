@@ -38,7 +38,8 @@ export default function Navbar() {
             });
             },
             {
-            threshold: 0.5,
+            threshold: 0.3,
+            rootMargin: "-10% 0px -60% 0px"
             }
         );
 
@@ -54,7 +55,7 @@ export default function Navbar() {
         }, []);
 
     return (
-            <section className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur-md">
+            <header className="sticky top-0 z-50 border-b border-[#E4DDD4] bg-[#F7F3EE]/90 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                   <Link href="/" className="flex items-center gap-3">
                   
@@ -75,13 +76,13 @@ export default function Navbar() {
                     <Link href="#flujo" className={`transition-colors duration-200 ${
                             activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Flujo</Link>
                     <Link href="#soluciones" className={`transition-colors duration-200 ${
-                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Soluciones</Link>
+                            activeSection === "soluciones"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Soluciones</Link>
                     <Link href="#metodologia" className={`transition-colors duration-200 ${
-                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Metodología</Link>
+                            activeSection === "metodologia"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Metodología</Link>
                     <Link href="#beneficios" className={`transition-colors duration-200 ${
-                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Beneficios</Link>
+                            activeSection === "beneficios"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Beneficios</Link>
                     <Link href="#faq" className={`transition-colors duration-200 ${
-                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>FAQ</Link>
+                            activeSection === "faq"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>FAQ</Link>
                     <Link href="#contacto" className="bg-[#16324F] text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-[#1d436a] hover:-translate-y-0.5 transition-all duration-300 shadow-sm shadow-[#16324F]/10">
                       Solicitar Demo
                     </Link>
@@ -115,7 +116,7 @@ export default function Navbar() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-            </section>
+            </header>
             
     );
 }
