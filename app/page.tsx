@@ -5,7 +5,6 @@ import { motion, Variants, AnimatePresence } from "framer-motion";
 
 import Hero from "./components/Hero";
 import ConceptoErp from "./components/ConceptoErp";
-import Navbar from "./components/Navbar";
 
 import { 
   FolderKanban, 
@@ -85,9 +84,6 @@ export default function PrometechLandingPage() {
 
   return (
     <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] antialiased">
-      
-      {/* Navbar Section*/}
-      <Navbar />
 
       {/* Hero Sección */}
       <Hero />

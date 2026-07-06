@@ -22,7 +22,7 @@ export default function Hero() {
             Desde el requerimiento de materiales hasta la facturación electrónica, integra todo el flujo operativo de tus proyectos en una plataforma modular en la nube para mejorar el control y tomar decisiones con información en tiempo real.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]">
             <a
               href="https://wa.me/51902041529?text=Hola,%20solicito%20una%20demostración%20del%20software%20Prometech."
               target="_blank"
@@ -38,7 +38,7 @@ export default function Hero() {
 
             <a
               href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
-              className="bg-white border border-slate-200 hover:border-[#16324F] text-[#16324F] text-sm font-semibold px-5 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
+              className="bg-white border border-[#E4DDD4] hover:border-[#16324F] text-[#16324F] text-sm font-semibold px-5 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
             >
               <span>Agendar por correo</span>
             </a>
@@ -47,7 +47,7 @@ export default function Hero() {
               href="https://www.youtube.com/@Prometech-Peru"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm font-medium text-[#5E6B7A] hover:text-[#16324F] transition-all px-3 py-2 rounded-lg hover:bg-slate-50"
+              className="flex items-center gap-1.5 text-sm font-medium text-[#5E6B7A] hover:text-[#16324F] transition-all px-3 py-2 rounded-lg hover:bg-[#F7F3EE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
             >
               {/* Ícono Oficial de YouTube */}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-red-600">
