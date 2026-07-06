@@ -84,7 +84,7 @@ export default function PrometechLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] scroll-smooth antialiased">
+    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] antialiased">
       
       {/* Navbar Section*/}
       <Navbar />
@@ -194,7 +194,7 @@ export default function PrometechLandingPage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#F7F3EE] flex justify-between items-center text-xs text-[#7C8794] font-medium">
                   <span>Prometech Software</span>
-                  <span className="font-mono bg-slate-100 px-2 py-0.5 rounded">MOD-{index + 1}</span>
+                  <span className="font-mono bg-[#F1ECE5] px-2 py-0.5 rounded">MOD-{index + 1}</span>
                 </div>
               </div>
             ))}
@@ -230,7 +230,7 @@ export default function PrometechLandingPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <span className="text-sm font-bold text-[#E76F51] bg-orange-50 px-2 py-1 rounded">Fase 0{index + 1}</span>
+                  <span className="text-sm font-bold font-mono text-[#E76F51] bg-orange-50 px-2 py-1 rounded">Fase 0{index + 1}</span>
                   <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
                   <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
                 </div>
