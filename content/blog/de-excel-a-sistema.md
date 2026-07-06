@@ -68,15 +68,79 @@ A medida que la empresa crece, el problema deja de ser la herramienta y pasa a s
 
 Si tu empresa presenta alguno de los siguientes escenarios de forma frecuente, probablemente haya llegado el momento de digitalizar sus procesos.
 
-| Situación | Riesgo |
-|------------|---------|
-| Existen varias versiones del mismo archivo de Excel | Información inconsistente |
-| Las aprobaciones llegan por WhatsApp o correo | Falta de trazabilidad |
-| Se copian datos manualmente entre archivos | Errores humanos |
-| Los reportes tardan horas o días en prepararse | Decisiones con información desactualizada |
-| El inventario se actualiza manualmente | Diferencias de stock |
-| No existe un historial de quién realizó cada cambio | Pérdida de control |
-| La información depende de una sola persona | Riesgo operativo |
+<div class="grid md:grid-cols-2 gap-6 my-8">
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 📄 Existen varias versiones del mismo archivo de Excel
+
+**Riesgo**
+
+Información inconsistente y pérdida de tiempo conciliando datos.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 📱 Las aprobaciones llegan por WhatsApp o correo
+
+**Riesgo**
+
+No existe trazabilidad ni historial de aprobaciones.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 🔄 Se copian datos manualmente entre archivos
+
+**Riesgo**
+
+Errores humanos y duplicidad de información.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 📊 Los reportes tardan horas o días
+
+**Riesgo**
+
+Las decisiones se toman con información desactualizada.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 📦 El inventario se actualiza manualmente
+
+**Riesgo**
+
+Diferencias de stock y pérdida de control.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 🔐 No existe un historial de cambios
+
+**Riesgo**
+
+No es posible saber quién modificó la información.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] p-6 bg-[#FFFDF9]">
+
+## 👤 La información depende de una sola persona
+
+**Riesgo**
+
+Alto riesgo operativo cuando esa persona no está disponible.
+
+</div>
+
+</div>
 
 Estos problemas suelen aparecer de forma gradual y muchas empresas terminan acostumbrándose a ellos, sin darse cuenta del tiempo y dinero que representan.
 
@@ -122,19 +186,62 @@ Implementar la digitalización por etapas permite que los usuarios adopten el si
 
 # 5. Antes y después de la digitalización
 
+
 La transformación digital no consiste únicamente en reemplazar Excel.
 
 Consiste en cambiar la forma en que la información circula dentro de la empresa.
 
-| Antes | Después |
-|---------|----------|
-| Archivos de Excel | Sistema web centralizado |
-| Correos electrónicos | Flujos de aprobación |
-| WhatsApp para autorizar compras | Aprobaciones digitales |
-| Reportes manuales | Dashboards en tiempo real |
-| Archivos duplicados | Base de datos única |
-| Información dispersa | Información centralizada |
-| Procesos manuales | Automatización de tareas |
+<div class="space-y-5 my-8">
+
+<div class="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] p-6">
+
+## 📁 Archivos de Excel → 🌐 Sistema web centralizado
+
+Toda la información se almacena en un único lugar accesible por las personas autorizadas.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] p-6">
+
+## 📧 Correos electrónicos → ✅ Flujos de aprobación
+
+Las aprobaciones quedan registradas automáticamente dentro del sistema.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] p-6">
+
+## 💬 WhatsApp → 🔒 Aprobaciones digitales
+
+Cada decisión queda registrada con fecha, usuario y hora.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] p-6">
+
+## 📊 Reportes manuales → 📈 Dashboard en tiempo real
+
+Los indicadores se actualizan automáticamente conforme avanza la operación.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] p-6">
+
+## 📂 Archivos duplicados → 🗄️ Base de datos centralizada
+
+Se elimina la duplicidad de información y todos trabajan sobre una única versión.
+
+</div>
+
+<div class="rounded-2xl border border-[#E4DDD4] bg-[#FFFDF9] p-6">
+
+## ⚙️ Procesos manuales → 🤖 Automatización
+
+Las tareas repetitivas se ejecutan automáticamente, reduciendo errores y tiempo operativo.
+
+</div>
+
+</div>
 
 El objetivo es que toda la organización trabaje sobre una única fuente de información.
 
