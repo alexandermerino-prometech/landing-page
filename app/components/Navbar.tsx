@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const sections = [
   "introduccion",
@@ -25,20 +26,27 @@ export default function Navbar() {
 
     const [activeSection, setActiveSection] = useState("introduccion");
 
-    const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const pathname = usePathname();
+
+    const isBlog = pathname.startsWith("/blog");
+
+    const handleLogoClick = (
+      e: React.MouseEvent<HTMLAnchorElement>
+    ) => {
+      setMenuMovilAbierto(false);
+
+      if (pathname === "/") {
         e.preventDefault();
 
         setActiveSection("");
-        setMenuMovilAbierto(false);
 
         window.scrollTo({
-            top: 0,
-            behavior: "smooth",
+          top: 0,
+          behavior: "smooth",
         });
 
-        // Elimina el #flujo, #faq, etc.
-        window.history.replaceState(null, "", window.location.pathname);
-
+        window.history.replaceState(null, "", "/");
+      }
     };
 
     useEffect(() => {
@@ -159,27 +167,56 @@ export default function Navbar() {
                   </Link>
         
                   <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5E6B7A]">
-                    <a href="#introduccion" className={`transition-colors duration-200 ${
-                            activeSection === "introduccion"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Introducción</a>
-                    <a href="#comparacion" className={`transition-colors duration-200 ${
-                            activeSection === "comparacion"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Comparación con ERP</a>
-                    <a href="#contenido" className={`transition-colors duration-200 ${
-                            activeSection === "contenido"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Contenido</a>
-                    
-                    <a href="#flujo" className={`transition-colors duration-200 ${
-                            activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Flujo</a>
-                    <a href="#soluciones" className={`transition-colors duration-200 ${
-                            activeSection === "soluciones"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Soluciones</a>
-                    <a href="#beneficios" className={`transition-colors duration-200 ${
-                            activeSection === "beneficios"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Beneficios</a>
-                    <a href="#faq" className={`transition-colors duration-200 ${
-                            activeSection === "faq"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>FAQ</a>
-                    <Link href="/blog" className="transition-colors duration-200 text-[#5E6B7A] hover:text-[#16324F]">
-                      Blog
-                    </Link>
-                    <a href="#contacto" className="bg-[#16324F] text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-[#1d436a] hover:-translate-y-0.5 transition-all duration-300 shadow-sm shadow-[#16324F]/10">
-                      Solicitar Demo
-                    </a>
+
+                    {isBlog ? (
+                      <>
+                        <Link
+                          href="/"
+                          className="hover:text-[#16324F] transition-colors"
+                        >
+                          Inicio
+                        </Link>
+                        <Link
+                          href="/blog"
+                          className="text-[#16324F] font-bold"
+                        >
+                          Blog
+                        </Link>
+                      </>
+                    ) : (
+                      <>
+                        <a
+                          href="#introduccion"
+                          className={activeSection==="introduccion"
+                            ? "text-[#16324F] font-bold"
+                            : "hover:text-[#16324F]"}
+                        >
+                          Introducción
+                        </a>
+
+                        <a href="#comparacion">Comparación con ERP</a>
+
+                        <a href="#contenido">Contenido</a>
+
+                        <a href="#flujo">Flujo</a>
+
+                        <a href="#soluciones">Soluciones</a>
+
+                        <a href="#beneficios">Beneficios</a>
+
+                        <a href="#faq">FAQ</a>
+
+                        <Link href="/blog">
+                          Blog
+                        </Link>
+                        <a
+                          href="#contacto"
+                          className="bg-[#16324F] text-white px-5 py-2.5 rounded-xl text-xs font-bold"
+                        >
+                          Solicitar Demo
+                        </a>
+                      </>
+                    )}
                   </nav>
         
                   <button 
@@ -193,23 +230,84 @@ export default function Navbar() {
         
                 <AnimatePresence>
                   {menuMovilAbierto && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
                       className="md:hidden border-b border-[#E4DDD4] bg-[#F7F3EE] px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-semibold text-[#5E6B7A]"
                     >
-                      <a href="#introduccion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Introducción</a>
-                      <a href="#comparacion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Comparación con ERP</a>
-                      <a href="#contenido" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Contenido</a>
-                      <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Flujo</a>
-                      <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Soluciones</a>
-                      <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Beneficios</a>
-                      <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">FAQ</a>
-                      <a href="#contacto" onClick={() => setMenuMovilAbierto(false)} className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md">
-                        Contacto Directo
-                      </a>
+
+                      {isBlog ? (
+
+                        <>
+                          <Link
+                            href="/"
+                            onClick={() => setMenuMovilAbierto(false)}
+                            className="hover:text-[#16324F] py-1"
+                          >
+                            Inicio
+                          </Link>
+
+                          <Link
+                            href="/blog"
+                            onClick={() => setMenuMovilAbierto(false)}
+                            className="text-[#16324F] py-1 font-bold"
+                          >
+                            Blog
+                          </Link>
+                        </>
+
+                      ) : (
+
+                        <>
+                          <a href="#introduccion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            Introducción
+                          </a>
+
+                          <a href="#comparacion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            Comparación con ERP
+                          </a>
+
+                          <a href="#contenido" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            Contenido
+                          </a>
+
+                          <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            Flujo
+                          </a>
+
+                          <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            Soluciones
+                          </a>
+
+                          <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            Beneficios
+                          </a>
+
+                          <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                            FAQ
+                          </a>
+
+                          <Link
+                            href="/blog"
+                            onClick={() => setMenuMovilAbierto(false)}
+                            className="hover:text-[#16324F] py-1"
+                          >
+                            Blog
+                          </Link>
+
+                          <a
+                            href="#contacto"
+                            onClick={() => setMenuMovilAbierto(false)}
+                            className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md"
+                          >
+                            Contacto Directo
+                          </a>
+                        </>
+
+                      )}
+
                     </motion.div>
                   )}
                 </AnimatePresence>
