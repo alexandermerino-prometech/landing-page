@@ -131,10 +131,6 @@ export default function ConceptoErp() {
 
           </div>
 
-
-          <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E76F51] font-semibold">
-          Dos formas completamente distintas de gestionar una empresa
-          </span>
           <div className="grid lg:grid-cols-2 gap-8">
 
             {/* ERP */}
