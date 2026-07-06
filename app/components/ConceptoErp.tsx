@@ -113,18 +113,6 @@ export default function ConceptoErp() {
           
         </div>
 
-        <div className="text-center mb-28 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-[#16324F]">
-              La diferencia no está en los módulos.
-          </h3>
-
-          <p className="mt-4 text-[#5E6B7A] leading-relaxed">
-              La diferencia está en el punto de partida.
-              Un ERP tradicional organiza una empresa alrededor de productos.
-              Prometech organiza toda la operación alrededor de cada proyecto.
-          </p>
-        </div>
-
         <span className="uppercase uppercase text-xs tracking-wider mb-3 text-[#E9C46A] font-semibold">
           Diferencias
         </span>
@@ -174,7 +162,6 @@ export default function ConceptoErp() {
             </h3>
 
             <li className="flex gap-3">
-              <span className="text-[#E9C46A] font-bold">✓</span>
               <div>
                 <li>
                 Proyecto inicia el proceso
@@ -189,30 +176,6 @@ export default function ConceptoErp() {
                 Cada documento pertenece al proyecto
                 </li>
               </div>
-
-              <ul className="mt-6 space-y-3">
-
-                <li className="flex gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#E9C46A]" />
-                <span>
-                Control de costos en tiempo real
-                </span>
-                </li>
-
-                <li className="flex gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#E9C46A]" />
-                <span>
-                Compras vinculadas al proyecto
-                </span>
-                </li>
-                
-                <li className="flex gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#E9C46A]" />
-                <span>
-                Rentabilidad por obra
-                </span>
-                </li>
-              </ul>
 
             </li>
           </div>
@@ -280,7 +243,7 @@ export default function ConceptoErp() {
                     ¿Cómo cambia la operación según tu empresa?
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-[#16324F] tracking-tight leading-snug mb-4">
-                    Lo que realmente necesita controlar una {sectorActivo.label}
+                    ¿Cómo operan las {sectorActivo.label}?
                   </h3>
                   <p className="text-[#5E6B7A] text-base leading-relaxed mb-8">
                     {sectorActivo.subtitulo}
@@ -321,7 +284,7 @@ export default function ConceptoErp() {
                     <div className="flex items-center gap-2">
                         <FileSpreadsheet className="w-5 h-5 text-[#7C8794]" />
                         <h4 className="text-xl font-bold text-[#16324F]">
-                            ¿Dónde fallan los ERP tradicionales?
+                            ¿Por qué aparece este problema?
                         </h4>
                     </div>
                   </div>
@@ -345,6 +308,9 @@ export default function ConceptoErp() {
                         Cómo lo resuelve Prometech
                     </h4>
                 </div>
+                <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+                    {sectorActivo.enfoquePrometech}
+                </p>
                 </div>
               </div>
             </motion.div>
@@ -359,9 +325,10 @@ export default function ConceptoErp() {
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <Layers className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">Todo gira alrededor del proyecto</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">
+              Mayor trazabilidad</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
-              Cada compra, requerimiento, orden de servicio, valorización y factura mantiene su relación con el proyecto desde el primer día.
+              Cada documento conserva su relación con el proyecto durante todo su ciclo de vida.
             </p>
           </div>
 
@@ -369,7 +336,8 @@ export default function ConceptoErp() {
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <FileSpreadsheet className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">Todos trabajan la misma información</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">
+              Una sola fuente de información</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
               Ingeniería, logística, compras, almacén, administración y gerencia consultan exactamente los mismos datos en tiempo real.
             </p>
@@ -379,7 +347,8 @@ export default function ConceptoErp() {
             <div className="w-12 h-12 bg-[#16324F]/5 rounded-xl flex items-center justify-center text-[#16324F]">
               <LineChart className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#16324F]">Controlas por todo el tiempo de duración del proyecto</h3>
+            <h3 className="text-xl font-bold text-[#16324F]">
+              Decisiones con información en tiempo real</h3>
             <p className="text-[#5E6B7A] text-sm sm:text-base leading-relaxed">
               Las desviaciones de costo aparecen cuando todavía puedes corregirlas, no semanas después del cierre contable. Detectas desviaciones mientras el proyecto sigue en ejecución.
             </p>
@@ -392,7 +361,9 @@ export default function ConceptoErp() {
           </span>
 
           <h3 className="mt-4 text-3xl font-bold text-[#16324F]">
-              Una plataforma diseñada para controlar proyectos, no solo procesos administrativos.
+              Resultado
+              
+              Una operación conectada de principio a fin.
           </h3>
 
         </div>
