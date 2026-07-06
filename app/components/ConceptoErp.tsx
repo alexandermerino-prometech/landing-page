@@ -114,103 +114,124 @@ export default function ConceptoErp() {
           Dos formas completamente distintas de gestionar una empresa
         </span>
 
-        <div id="comparacion" className="mb-24">
+        <div id="comparacion" className="mb-28">
 
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl font-bold text-[#E76F51]">
-              Dos formas completamente distintas de gestionar una empresa
+          <div className="text-center max-w-4xl mx-auto mb-14">
+
+            <span className="uppercase tracking-widest text-xs font-semibold text-[#E76F51]">
+              Un cambio de enfoque
+            </span>
+
+            <h2 className="mt-4 text-4xl font-extrabold text-[#16324F]">
+              El problema no es el ERP.
+              <br />
+              Es el punto desde donde empieza.
             </h2>
 
-            <p className="mt-4 text-[#5E6B7A] leading-relaxed">
-              La diferencia no está en tener más módulos, sino en el punto de partida.
-              Mientras un ERP tradicional organiza la empresa alrededor de procesos comerciales,
-              Prometech organiza toda la operación alrededor de cada proyecto.
+            <p className="mt-6 text-lg text-[#5E6B7A] leading-relaxed">
+              Los ERP tradicionales organizan la empresa alrededor de la venta.
+              Prometech organiza toda la operación alrededor del proyecto.
             </p>
+
           </div>
 
-          <div className="overflow-hidden rounded-[32px] border border-[#E4DDD4] bg-white shadow-sm">
 
-            {/* Encabezado */}
-            <div className="grid grid-cols-2">
+          <div className="grid lg:grid-cols-2 gap-8">
 
-              <div className="border-r border-[#E4DDD4] bg-[#F7F3EE] p-8">
-                <span className="uppercase tracking-widest text-xs text-[#7C8794]">
-                  Modelo tradicional
-                </span>
+            {/* ERP */}
 
-                <h3 className="mt-2 text-2xl font-bold text-[#16324F]">
-                  ERP tradicional
-                </h3>
-              </div>
+            <div className="rounded-[32px] border border-[#E4DDD4] bg-white p-10 shadow-sm">
 
-              <div className="bg-[#16324F] p-8">
-                <span className="uppercase tracking-widest text-xs text-[#E9C46A]">
-                  Nuestra propuesta
-                </span>
+              <span className="uppercase tracking-widest text-xs text-[#7C8794]">
+                Modelo tradicional
+              </span>
 
-                <h3 className="mt-2 text-2xl font-bold text-white">
-                  Prometech
-                </h3>
+              <h3 className="mt-3 text-3xl font-bold text-[#16324F]">
+                ERP Tradicional
+              </h3>
+
+              <p className="mt-3 text-[#5E6B7A]">
+                Diseñado para empresas cuyo proceso gira alrededor de la venta.
+              </p>
+
+              <div className="mt-10 space-y-6">
+
+                <div className="flex gap-4">
+                  <span className="text-red-500 text-xl">✕</span>
+                  <span>La venta inicia el proceso</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-red-500 text-xl">✕</span>
+                  <span>El proyecto es información secundaria</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-red-500 text-xl">✕</span>
+                  <span>Cada área trabaja por separado</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-red-500 text-xl">✕</span>
+                  <span>Información distribuida</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-red-500 text-xl">✕</span>
+                  <span>Los costos aparecen al cierre</span>
+                </div>
+
               </div>
 
             </div>
 
-            {/* Filas */}
-            <div className="divide-y divide-[#E4DDD4]">
 
-              {[
-                [
-                  "La venta inicia el proceso",
-                  "El proyecto inicia el proceso"
-                ],
-                [
-                  "El proyecto es un dato adicional",
-                  "El proyecto es el eje de toda la operación"
-                ],
-                [
-                  "Información distribuida entre áreas",
-                  "Información centralizada"
-                ],
-                [
-                  "Los costos aparecen al cierre",
-                  "Costos en tiempo real"
-                ],
-                [
-                  "Cada área trabaja por separado",
-                  "Todos trabajan sobre la misma información"
-                ],
-              ].map(([tradicional, prometech], index) => (
+            {/* PROMETECH */}
 
-                <div
-                  key={index}
-                  className="grid grid-cols-2"
-                >
+            <div className="rounded-[32px] bg-gradient-to-br from-[#16324F] to-[#21486E] p-10 text-white shadow-xl relative overflow-hidden">
 
-                  <div className="border-r border-[#E4DDD4] p-6 flex items-center gap-3">
+              <div className="absolute top-0 right-0 w-60 h-60 bg-[#E9C46A]/10 rounded-full blur-3xl"></div>
 
-                    <span className="text-red-500 font-bold text-xl">
-                      ✕
-                    </span>
+              <span className="uppercase tracking-widest text-xs text-[#E9C46A] relative">
+                Nuestra propuesta
+              </span>
 
-                    <span className="text-[#16324F]">
-                      {tradicional}
-                    </span>
+              <h3 className="mt-3 text-3xl font-bold relative">
+                Prometech
+              </h3>
 
-                  </div>
+              <p className="mt-3 text-white/80 relative">
+                Diseñado para empresas cuya operación gira alrededor de proyectos.
+              </p>
 
-                  <div className="p-6 flex items-center gap-3 bg-[#16324F]/[0.02]">
+              <div className="mt-10 space-y-6 relative">
 
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-
-                    <span className="text-[#16324F] font-medium">
-                      {prometech}
-                    </span>
-
-                  </div>
-
+                <div className="flex gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#E9C46A] flex-shrink-0" />
+                  <span>El proyecto inicia el proceso</span>
                 </div>
 
-              ))}
+                <div className="flex gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#E9C46A] flex-shrink-0" />
+                  <span>El proyecto es el centro de la operación</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#E9C46A] flex-shrink-0" />
+                  <span>Todas las áreas trabajan sobre la misma información</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#E9C46A] flex-shrink-0" />
+                  <span>Información completamente centralizada</span>
+                </div>
+
+                <div className="flex gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#E9C46A] flex-shrink-0" />
+                  <span>Costos y rentabilidad en tiempo real</span>
+                </div>
+
+              </div>
 
             </div>
 
