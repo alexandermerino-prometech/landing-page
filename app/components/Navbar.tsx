@@ -100,7 +100,41 @@ export default function Navbar() {
         document.addEventListener("keydown", handleEsc);
         return () => document.removeEventListener("keydown", handleEsc);
         }, []);
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+            // Si estamos cerca del top de la página, no hay sección activa
+            if (window.scrollY < 100) {
+                setActiveSection("");
+                return;
+            }
 
+            const visibles = entries.filter((entry) => entry.isIntersecting);
+
+            if (visibles.length > 0) {
+                const masVisible = visibles.reduce((prev, curr) =>
+                curr.intersectionRatio > prev.intersectionRatio ? curr : prev
+                );
+                setActiveSection(masVisible.target.id);
+            }
+            },
+            {
+            threshold: [0.1, 0.25, 0.5, 0.75],
+            rootMargin: "-15% 0px -55% 0px",
+            }
+        );
+        sections.forEach((id) => {
+            const section = document.getElementById(id);
+            if (section) {
+            observer.observe(section);
+            } else if (process.env.NODE_ENV === "development") {
+            console.warn(`Navbar: no se encontró la sección con id="${id}"`);
+            }
+        });
+
+        return () => observer.disconnect();
+    }, []);
     
 
     return (
