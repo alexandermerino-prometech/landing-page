@@ -145,17 +145,6 @@ export default function Footer() {
 
                 <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
                 <a
-                  href="#metodologia"
-                  className="hover:text-[#16324F] transition-colors"
-                >
-                  Metodología
-                </a>
-              </li>
-
-              <li className="flex items-center gap-2">
-
-                <ChevronRight className="w-3 h-3 text-[#B8C2CC]" />
-                <a
                   href="#beneficios"
                   className="hover:text-[#16324F] transition-colors"
                 >

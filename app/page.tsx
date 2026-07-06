@@ -215,69 +215,6 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* Sección: Metodología (Optimizada con Atributos Sizes para un LCP óptimo) */}
-      <section id="metodologia" className="max-w-7xl mx-auto px-6 py-24">
-        <div className="max-w-3xl mb-16">
-          <p className="text-[#E76F51] font-semibold uppercase text-xs tracking-wider mb-3">Implementación Ágil</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight">
-            Un enfoque moderno, flexible y orientado a la maduración digital
-          </h2>
-        </div>
-      
-        <div className="max-w-7xl mx-auto">
-          {/* Fila Superior (3 Columnas) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {[
-              { title: "Análisis de Procesos", image: "/metodologia/analisis.png", description: "Evaluamos el ecosistema operativo actual de tu negocio y detectamos cuellos de botella." },
-              { title: "Diseño Funcional", image: "/metodologia/diseno.png", description: "Estructuramos flujos de datos automatizados y configuramos vistas de usuario intuitivas." },
-              { title: "Desarrollo y Ajustes", image: "/metodologia/desarrollo.webp", description: "Configuramos los módulos nativos en entornos seguros garantizando la integridad de datos." },
-            ].map((step, index) => (
-              <div key={index} className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative w-full h-48 bg-[#F1ECE5]">
-                  <Image 
-                    src={step.image} 
-                    alt={`Etapa de ${step.title} en la metodología Prometech`} 
-                    fill 
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                    className="object-cover" 
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="text-sm font-bold font-mono text-[#E76F51] bg-[#E76F51]/10 px-2 py-1 rounded">Fase 0{index + 1}</span>
-                  <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
-                  <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Fila Inferior (2 Columnas Centradas) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              { title: "Despliegue de Sistema", image: "/metodologia/dimplementacion.webp", description: "Puesta en marcha del software dentro de la operación activa junto a capacitaciones intensivas." },
-              { title: "Mejora Continua", image: "/metodologia/mejora_continua.jpg", description: "Monitoreo constante del sistema, optimización de flujos y adición de mejoras funcionales." },
-            ].map((step, index) => (
-              <div key={index} className="bg-white rounded-3xl overflow-hidden border border-[#E4DDD4] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative w-full h-48 bg-[#F1ECE5]">
-                  <Image 
-                    src={step.image} 
-                    alt={`Etapa de ${step.title} para garantizar el control empresarial`} 
-                    fill 
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
-                    className="object-cover" 
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="text-sm font-bold font-mono text-[#E76F51] bg-[#E76F51]/10 px-2 py-1 rounded">Fase 0{index + 4}</span>
-                  <h3 className="text-xl font-bold text-[#16324F] mt-4 mb-2.5 tracking-tight">{step.title}</h3>
-                  <p className="text-[#5E6B7A] text-sm leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Sección: Beneficios */}
       <section id="beneficios" className="bg-[#F1ECE5] border-y border-[#E4DDD4]">
         <div className="max-w-7xl mx-auto px-6 py-24">

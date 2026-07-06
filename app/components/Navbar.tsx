@@ -12,7 +12,6 @@ const sections = [
   "contenido",
   "flujo",
   "soluciones",
-  "metodologia",
   "beneficios",
   "faq",
   "contacto",
@@ -171,8 +170,6 @@ export default function Navbar() {
                             activeSection === "flujo"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Flujo</a>
                     <a href="#soluciones" className={`transition-colors duration-200 ${
                             activeSection === "soluciones"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Soluciones</a>
-                    <a href="#metodologia" className={`transition-colors duration-200 ${
-                            activeSection === "metodologia"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Metodología</a>
                     <a href="#beneficios" className={`transition-colors duration-200 ${
                             activeSection === "beneficios"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Beneficios</a>
                     <a href="#faq" className={`transition-colors duration-200 ${
@@ -205,7 +202,6 @@ export default function Navbar() {
                       <a href="#contenido" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Contenido</a>
                       <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Flujo</a>
                       <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Soluciones</a>
-                      <a href="#metodologia" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Metodología</a>
                       <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">Beneficios</a>
                       <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">FAQ</a>
                       <a href="#contacto" onClick={() => setMenuMovilAbierto(false)} className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md">
