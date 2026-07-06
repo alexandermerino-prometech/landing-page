@@ -5,6 +5,7 @@ import { motion, Variants, AnimatePresence } from "framer-motion";
 
 import Hero from "./components/Hero";
 import ConceptoErp from "./components/ConceptoErp";
+import Footer from "./components/Footer";
 
 import { 
   FolderKanban, 
@@ -83,7 +84,7 @@ export default function PrometechLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F3EE] text-[#16324F] antialiased">
+    <main  className="min-h-screen bg-[#F7F3EE] text-[#16324F] antialiased">
 
       {/* Hero Sección */}
       <Hero />
@@ -390,18 +391,9 @@ export default function PrometechLandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-[#E4DDD4] bg-[#F1ECE5]/40">
-        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-[#7C8794] text-xs sm:text-sm font-medium">
-          <p>© 2026 PROMETECH. Todos los derechos reservados.</p>
-          <div className="flex items-center gap-6">
-            <span>Lima, Perú</span>
-            <span className="text-[#16324F]/40">•</span>
-            <span>Software ERP basado en Proyectos</span>
-          </div>
-        </div>
-      </footer>
+      {/* seccion Footer */}
+      <Footer />
       
-    </div>
+    </main>
   );
 }
