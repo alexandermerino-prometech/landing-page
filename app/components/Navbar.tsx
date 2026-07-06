@@ -174,6 +174,9 @@ export default function Navbar() {
                             activeSection === "beneficios"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>Beneficios</a>
                     <a href="#faq" className={`transition-colors duration-200 ${
                             activeSection === "faq"? "text-[#16324F] font-bold": "text-[#5E6B7A] hover:text-[#16324F]"}`}>FAQ</a>
+                    <Link href="/blog" className="transition-colors duration-200 text-[#5E6B7A] hover:text-[#16324F]">
+                      Blog
+                    </Link>
                     <a href="#contacto" className="bg-[#16324F] text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-[#1d436a] hover:-translate-y-0.5 transition-all duration-300 shadow-sm shadow-[#16324F]/10">
                       Solicitar Demo
                     </a>
