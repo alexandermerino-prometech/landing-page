@@ -303,3 +303,11 @@ body {
     border-right-color: var(--primary);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
