@@ -19,7 +19,19 @@ categoria: "Gestión de Proyectos"
 
 Muchas empresas comienzan gestionando compras, inventarios, logística y proyectos mediante hojas de cálculo de Excel. Sin embargo, conforme la operación crece, aparecen problemas de trazabilidad, duplicidad de información y falta de control que pueden resolverse mediante un sistema ERP.
 
-En esta guía aprenderás cuándo dejar de utilizar Excel como herramienta principal de gestión, cómo implementar un ERP paso a paso y qué beneficios obtiene una empresa al digitalizar sus procesos.
+---
+
+<div class="rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] p-6 my-8">
+
+<strong>Resumen</strong>
+
+<p class="mt-3">
+
+En este artículo descubrirás cuándo Excel deja de ser suficiente para gestionar compras, proyectos e inventario, cuáles son las señales de que tu empresa necesita un ERP y cómo realizar la transición paso a paso sin afectar la operación.
+
+</p>
+
+</div>
 
 ---
 
@@ -27,11 +39,11 @@ En esta guía aprenderás cuándo dejar de utilizar Excel como herramienta princ
 
 1. [Introducción](#1-introducción)
 2. [¿Por qué Excel deja de ser suficiente?](#2-por-qué-excel-deja-de-ser-suficiente)
-3. [Señales de que necesitas un ERP](#3-señales-de-que-tu-empresa-necesita-un-sistema)
-4. [Qué procesos digitalizar primero](#4-qué-procesos-conviene-digitalizar-primero)
-5. [Antes y después de implementar un ERP](#5-antes-y-después-de-la-digitalización)
+3. [Señales de que tu empresa necesita un sistema](#3-señales-de-que-tu-empresa-necesita-un-sistema)
+4. [Qué procesos conviene digitalizar primero](#4-qué-procesos-conviene-digitalizar-primero)
+5. [Antes y después de la digitalización](#5-antes-y-después-de-la-digitalización)
 6. [Un ejemplo práctico](#6-un-ejemplo-práctico)
-7. [Beneficios](#7-beneficios-de-digitalizar-los-procesos)
+7. [Beneficios de digitalizar los procesos](#7-beneficios-de-digitalizar-los-procesos)
 8. [¿Cuánto cuesta seguir utilizando Excel?](#8-cuánto-cuesta-seguir-utilizando-excel)
 9. [Conclusión](#9-conclusión)
 10. [Preguntas frecuentes](#10-preguntas-frecuentes)
@@ -533,7 +545,8 @@ Si tu empresa está evaluando cómo pasar de Excel a un sistema ERP, comenzar co
 
 Si estás evaluando implementar un sistema ERP para compras, logística, inventario o control de proyectos, en Prometech podemos ayudarte a digitalizar tus procesos sin afectar la operación diaria.
 
-<a href="[/#contacto](https://www.prometech.com.pe/#contacto)"
+<a
+href="https://www.prometech.com.pe/#contacto"
 class="inline-block mt-6 rounded-lg bg-white px-6 py-3 font-semibold text-[#16324F] no-underline">
 Agenda una demostración gratuita
 </a>
