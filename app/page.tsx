@@ -346,9 +346,6 @@ export default function PrometechLandingPage() {
               <MessageCircle className="w-5 h-5"/>
               Solicitar diagnóstico gratuito
             </a>
-            <div className="text-sm text-[#5E6B7A] mt-3">
-            Respuesta normalmente en menos de 24 horas.
-            </div>
 
           </div>
         </div>

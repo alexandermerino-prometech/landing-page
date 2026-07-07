@@ -604,7 +604,7 @@ La mejor estrategia consiste en implementar el sistema por etapas. Muchas empres
 
 <div class="not-prose rounded-xl border border-[#E4DDD4] bg-[#F1ECE5] p-6 my-6">
 
-<h3 class="mt-0">
+<h3 class="mt-0 text-[#16324F] font-bold">
 
 ¿Un ERP reemplaza completamente a Excel?
 
