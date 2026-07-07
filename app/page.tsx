@@ -20,7 +20,8 @@ import {
   Truck, 
   Receipt, 
   LayoutDashboard,
-  Mail
+  Mail,
+  MessageCircle
 } from "lucide-react";
 
 const preguntasFrecuentes = [
@@ -316,7 +317,20 @@ export default function PrometechLandingPage() {
             Estamos seleccionando un grupo reducido de empresas para implementar Prometech con atención directa y personalizada. Agenda un diagnóstico gratuito de 30 minutos.
           </p>
 
-          {/* resto de botones igual */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/51902041529?text=Hola%20Prometech,%20quisiera%20agendar%20una%20demostración."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-xl border border-[#25D366] bg-white px-8 py-4 font-semibold text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Escribir por WhatsApp
+            </a>
+
+          </div>
         </div>
       </section>
 
