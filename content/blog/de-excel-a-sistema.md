@@ -533,7 +533,7 @@ Si tu empresa está evaluando cómo pasar de Excel a un sistema ERP, comenzar co
 
 Si estás evaluando implementar un sistema ERP para compras, logística, inventario o control de proyectos, en Prometech podemos ayudarte a digitalizar tus procesos sin afectar la operación diaria.
 
-<a href="/#contacto"
+<a href="[/#contacto](https://www.prometech.com.pe/#contacto)"
 class="inline-block mt-6 rounded-lg bg-white px-6 py-3 font-semibold text-[#16324F] no-underline">
 Agenda una demostración gratuita
 </a>
