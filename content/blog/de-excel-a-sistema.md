@@ -625,33 +625,11 @@ La implementación se realiza de forma progresiva, permitiendo digitalizar prime
 Si tu empresa está evaluando cómo pasar de Excel a un sistema ERP, comenzar con una estrategia por etapas suele ser la forma más segura y eficiente de hacerlo.
 
 
-
 <div class="rounded-2xl bg-[#16324F] text-white p-10 my-12 text-center">
-
-<h2 class="text-white mt-0">
-¿Tu empresa todavía gestiona proyectos con Excel?
-</h2>
-
-<p class="text-lg mt-4">
-
-Digitaliza compras, inventario, logística y proyectos mediante un ERP diseñado para empresas que trabajan por proyectos.
-
-</p>
-
-<a
-href="https://www.prometech.com.pe/#contacto"
-class="inline-block mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-[#16324F] no-underline">
-
-Solicitar una demostración
-
-</a>
-
-<p class="mt-5 text-sm text-slate-300">
-
-Sin compromiso • Implementación por etapas • Asesoría personalizada
-
-</p>
-
+<h2 class="text-white mt-0">¿Tu empresa todavía gestiona proyectos con Excel?</h2>
+<p class="text-lg mt-4">Digitaliza compras, inventario, logística y proyectos mediante un ERP diseñado para empresas que trabajan por proyectos.</p>
+<a href="https://www.prometech.com.pe/#contacto" class="inline-block mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-[#16324F] no-underline">Solicitar una demostración</a>
+<p class="mt-5 text-sm text-slate-300">Sin compromiso • Implementación por etapas • Asesoría personalizada</p>
 </div>
 
 ---
