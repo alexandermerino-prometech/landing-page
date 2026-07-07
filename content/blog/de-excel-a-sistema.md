@@ -97,7 +97,7 @@ Excel no fue diseñado para:
 
 A medida que la empresa crece, el problema deja de ser la herramienta y pasa a ser la cantidad de procesos que dependen de ella.
 
-<div class="rounded-xl bg-[#16324F] text-white p-8 my-10">
+<div class="not-prose rounded-xl bg-[#16324F] text-white p-8 my-10">
 
 ### Idea clave
 
@@ -111,9 +111,7 @@ Sin embargo, cuando la empresa comienza a gestionar compras, inventario, proyect
 
 Muchas empresas creen que un ERP simplemente reemplaza a Excel. En realidad, ambas herramientas cumplen funciones diferentes.
 
-<h3>Excel vs ERP: principales diferencias</h3>
-
-<div class="overflow-x-auto my-8">
+<div class="not-prose overflow-x-auto my-8">
 
 <table class="w-full border-collapse rounded-xl overflow-hidden">
 
@@ -625,7 +623,7 @@ La implementación se realiza de forma progresiva, permitiendo digitalizar prime
 Si tu empresa está evaluando cómo pasar de Excel a un sistema ERP, comenzar con una estrategia por etapas suele ser la forma más segura y eficiente de hacerlo.
 
 
-<div class="rounded-2xl bg-[#16324F] text-white p-10 my-12 text-center">
+<div class="not-prose rounded-2xl bg-[#16324F] text-white p-10 my-12 text-center">
 <h2 class="text-white mt-0">¿Tu empresa todavía gestiona proyectos con Excel?</h2>
 <p class="text-lg mt-4">Digitaliza compras, inventario, logística y proyectos mediante un ERP diseñado para empresas que trabajan por proyectos.</p>
 <a href="https://www.prometech.com.pe/#contacto" class="inline-block mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-[#16324F] no-underline">Solicitar una demostración</a>
