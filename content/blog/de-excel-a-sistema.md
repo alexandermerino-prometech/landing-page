@@ -35,22 +35,6 @@ En este artículo descubrirás cuándo Excel deja de ser suficiente para gestion
 
 ---
 
-## Índice
-
-1. [Introducción](#1-introducción)
-2. [¿Por qué Excel deja de ser suficiente?](#2-por-qué-excel-deja-de-ser-suficiente)
-3. [Señales de que tu empresa necesita un sistema](#3-señales-de-que-tu-empresa-necesita-un-sistema)
-4. [Qué procesos conviene digitalizar primero](#4-qué-procesos-conviene-digitalizar-primero)
-5. [Antes y después de la digitalización](#5-antes-y-después-de-la-digitalización)
-6. [Un ejemplo práctico](#6-un-ejemplo-práctico)
-7. [Beneficios de digitalizar los procesos](#7-beneficios-de-digitalizar-los-procesos)
-8. [¿Cuánto cuesta seguir utilizando Excel?](#8-cuánto-cuesta-seguir-utilizando-excel)
-9. [Conclusión](#9-conclusión)
-10. [Preguntas frecuentes](#10-preguntas-frecuentes)
-11. [Cómo puede ayudarte Prometech](#11-cómo-puede-ayudarte-prometech)
-
----
-
 # 1. Introducción
 
 Son las cinco de la tarde.
@@ -69,19 +53,21 @@ El verdadero problema es que la información está distribuida entre múltiples 
 
 Esta situación es mucho más común de lo que parece y suele ser el primer indicador de que la empresa necesita evolucionar hacia un sistema que centralice la información y automatice sus procesos.
 
-<div class="rounded-xl border border-[#D6E4F0] bg-[#F8FBFF] p-6 my-10">
+<div class="rounded-xl border border-[#E9C46A] bg-[#FFF8E6] p-6 my-10">
 
-### En este artículo aprenderás
+    <h3 class="mt-0 text-[#16324F]">📌 En este artículo aprenderás</h3>
 
-- Cuándo Excel deja de ser suficiente.
-- Cómo identificar si tu empresa necesita un ERP.
-- Qué procesos digitalizar primero.
-- Cómo implementar un ERP sin detener la operación.
-- Qué beneficios obtiene una empresa al centralizar su información.
+    <ul class="mt-4 space-y-2">
+    <li>Cuándo Excel deja de ser suficiente.</li>
+    <li>Cómo identificar si tu empresa necesita un ERP.</li>
+    <li>Qué procesos digitalizar primero.</li>
+    <li>Cómo implementar un ERP sin detener la operación.</li>
+    <li>Qué beneficios obtiene una empresa al centralizar su información.</li>
+    </ul>
 
 </div>
 
----
+
 
 # 2. ¿Por qué Excel deja de ser suficiente?
 
@@ -125,99 +111,63 @@ Sin embargo, cuando la empresa comienza a gestionar compras, inventario, proyect
 
 Muchas empresas creen que un ERP simplemente reemplaza a Excel. En realidad, ambas herramientas cumplen funciones diferentes.
 
-<div class="grid md:grid-cols-2 gap-4 my-8">
+<h3>Excel vs ERP: principales diferencias</h3>
 
-<div class="rounded-xl border p-5">
+<div class="overflow-x-auto my-8">
 
-### Gestión de compras
+<table class="w-full border-collapse rounded-xl overflow-hidden">
 
-**Excel**
+<thead class="bg-[#16324F] text-white">
 
-- Manual
-- Depende de archivos
+<tr>
+<th class="p-4 text-left">Proceso</th>
+<th class="p-4 text-center">Excel</th>
+<th class="p-4 text-center">ERP</th>
+</tr>
 
-**ERP**
+</thead>
 
-- Automatizada
-- Flujo de aprobaciones
+<tbody>
 
-</div>
+<tr class="border-b">
+<td class="p-4">Gestión de compras</td>
+<td class="p-4 text-center">⚠️ Manual</td>
+<td class="p-4 text-center">✅ Automatizada</td>
+</tr>
 
-<div class="rounded-xl border p-5">
+<tr class="border-b bg-slate-50">
+<td class="p-4">Inventario</td>
+<td class="p-4 text-center">⚠️ Manual</td>
+<td class="p-4 text-center">✅ Tiempo real</td>
+</tr>
 
-### Inventario
+<tr class="border-b">
+<td class="p-4">Reportes</td>
+<td class="p-4 text-center">⚠️ Manuales</td>
+<td class="p-4 text-center">✅ Automáticos</td>
+</tr>
 
-**Excel**
+<tr class="border-b bg-slate-50">
+<td class="p-4">Usuarios</td>
+<td class="p-4 text-center">⚠️ Limitados</td>
+<td class="p-4 text-center">✅ Simultáneos</td>
+</tr>
 
-- Actualización manual
+<tr>
+<td class="p-4">Trazabilidad</td>
+<td class="p-4 text-center">⚠️ Limitada</td>
+<td class="p-4 text-center">✅ Completa</td>
+</tr>
 
-**ERP**
+</tbody>
 
-- Tiempo real
-
-</div>
-
-<div class="rounded-xl border p-5">
-
-### Reportes
-
-**Excel**
-
-- Elaboración manual
-
-**ERP**
-
-- Automáticos
-
-</div>
-
-<div class="rounded-xl border p-5">
-
-### Trazabilidad
-
-**Excel**
-
-- Limitada
-
-**ERP**
-
-- Completa
-
-</div>
-
-<div class="rounded-xl border p-5">
-
-### Usuarios simultáneos
-
-**Excel**
-
-- Limitados
-
-**ERP**
-
-- Sin conflictos de versiones
-
-</div>
-
-<div class="rounded-xl border p-5">
-
-### Información
-
-**Excel**
-
-- Archivos separados
-
-**ERP**
-
-- Base de datos centralizada
-
-</div>
+</table>
 
 </div>
 
 Como puede observarse, Excel sigue siendo una excelente herramienta para realizar análisis y reportes, mientras que un sistema ERP está diseñado para gestionar la operación diaria de la empresa de forma integrada.
 
----
+
 
 # 3. Señales de que tu empresa necesita un sistema
 
@@ -308,7 +258,7 @@ Antes de decidir implementar un ERP, vale la pena visualizar cómo cambia la for
 *Comparación entre una operación basada en archivos de Excel y una operación centralizada mediante un sistema ERP.*
 
 
----
+
 
 # 4. ¿Qué procesos conviene digitalizar primero?
 
@@ -366,7 +316,7 @@ La mejor estrategia es implementar un sistema por etapas.
 
 Implementar la digitalización por etapas permite que los usuarios adopten el sistema de forma natural y reduce significativamente el impacto sobre la operación.
 
----
+
 
 # 5. Antes y después de la digitalización
 
@@ -429,7 +379,7 @@ Las tareas repetitivas se ejecutan automáticamente, reduciendo errores y tiempo
 
 El objetivo es que toda la organización trabaje sobre una única fuente de información.
 
----
+
 
 # 6. Un ejemplo práctico
 
@@ -473,17 +423,21 @@ Imaginemos una empresa de ingeniería que desarrolla varios proyectos simultáne
 
 El proceso es exactamente el mismo desde el punto de vista del negocio, pero mucho más rápido, seguro y trazable.
 
-<div class="rounded-xl border-l-4 border-[#16324F] bg-[#F8FBFF] p-5 my-8">
+<h3 class="mt-0">📊 Dato interesante</h3>
 
-### Dato interesante
+<p>
 
-Diversos estudios sobre transformación digital muestran que los empleados pueden dedicar hasta un **20 % de su tiempo** buscando información distribuida entre archivos, correos electrónicos y distintas aplicaciones.
+Diversos estudios sobre transformación digital muestran que los empleados pueden dedicar hasta un <strong>20 % de su tiempo</strong> buscando información distribuida entre archivos, correos electrónicos y distintas aplicaciones.
 
-Centralizar la información mediante un ERP reduce ese tiempo y mejora la toma de decisiones.
+</p>
 
-</div>
+<p>
 
----
+Centralizar la información mediante un ERP permite reducir esos tiempos y tomar decisiones con información confiable.
+
+</p>
+
+
 
 # 7. Beneficios de digitalizar los procesos
 
@@ -533,11 +487,19 @@ El sistema acompaña el crecimiento de la empresa sin depender de más archivos 
 
 </div>
 
+<div class="rounded-xl border p-5">
+
+### Mayor trazabilidad
+
+Cada movimiento queda registrado con usuario, fecha y hora, facilitando auditorías y el seguimiento de procesos.
+
+</div>
+
 </div>
 
 La digitalización permite que las personas dediquen menos tiempo a buscar información y más tiempo a generar valor para la empresa.
 
----
+
 
 # 8. ¿Cuánto cuesta seguir utilizando Excel?
 
@@ -552,7 +514,7 @@ Aunque Excel no tiene un costo elevado, gestionar una empresa únicamente median
 
 En muchas empresas, estos costos terminan siendo muy superiores al valor de implementar un sistema ERP.
 
----
+
 
 # 9. Conclusión
 
@@ -570,41 +532,87 @@ Consiste en centralizar la información, automatizar tareas repetitivas y propor
 
 En otras palabras, el objetivo no es dejar de utilizar Excel, sino permitir que cada herramienta cumpla la función para la que fue diseñada: el ERP para gestionar la operación y Excel para analizar la información.
 
----
+
 
 # 10. Preguntas frecuentes
 
-## ¿Excel puede reemplazar un sistema ERP?
+<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-No.
+    <h3 class="mt-0">
 
-Excel es una excelente herramienta para analizar información, elaborar presupuestos y generar reportes personalizados. Sin embargo, no fue diseñado para gestionar procesos empresariales, controlar aprobaciones, mantener trazabilidad o permitir que múltiples usuarios trabajen simultáneamente sobre la misma información.
+    ¿Excel puede reemplazar un sistema ERP?
 
-## ¿Cuándo una empresa necesita implementar un ERP?
+    </h3>
 
-Generalmente cuando comienzan a aparecer problemas como:
+    <p>
 
-- Múltiples versiones del mismo archivo.
-- Información duplicada.
-- Procesos manuales.
-- Errores frecuentes.
-- Retrasos en los reportes.
-- Falta de trazabilidad.
-- Crecimiento de la operación.
+    No. Excel es una excelente herramienta para analizar información, elaborar presupuestos y generar reportes personalizados, pero no fue diseñado para gestionar procesos empresariales completos.
 
-## ¿Es necesario reemplazar todos los procesos al mismo tiempo?
+    </p>
 
-No.
+</div>
 
-La mejor estrategia consiste en implementar el sistema por etapas. Muchas empresas comienzan digitalizando el proceso de compras, luego incorporan inventario, control de proyectos y finalmente módulos financieros.
 
-## ¿Un ERP reemplaza completamente a Excel?
+<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-Tampoco.
+    <h3 class="mt-0">
 
-La mayoría de empresas continúa utilizando Excel para realizar análisis específicos o elaborar reportes personalizados. Lo recomendable es utilizar un ERP para gestionar la operación diaria y Excel como herramienta de análisis cuando sea necesario.
+    ¿Cuándo una empresa necesita implementar un ERP?
 
----
+    </h3>
+
+    <p>
+
+    Generalmente cuando comienzan a aparecer problemas como:
+
+    - Múltiples versiones del mismo archivo.
+    - Información duplicada.
+    - Procesos manuales.
+    - Errores frecuentes.
+    - Retrasos en los reportes.
+    - Falta de trazabilidad.
+    - Crecimiento de la operación.
+
+    </p>
+
+</div>
+
+<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+
+    <h3 class="mt-0">
+
+    ¿Es necesario reemplazar todos los procesos al mismo tiempo?
+
+    </h3>
+
+    <p>
+
+    No.
+
+    La mejor estrategia consiste en implementar el sistema por etapas. Muchas empresas comienzan digitalizando el proceso de compras, luego incorporan inventario, control de proyectos y finalmente módulos financieros.
+
+    </p>
+
+</div>
+
+<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+
+    <h3 class="mt-0">
+
+    ¿Un ERP reemplaza completamente a Excel?
+
+    </h3>
+
+    <p>
+
+    Tampoco.
+
+    La mayoría de empresas continúa utilizando Excel para realizar análisis específicos o elaborar reportes personalizados. Lo recomendable es utilizar un ERP para gestionar la operación diaria y Excel como herramienta de análisis cuando sea necesario.
+
+    </p>
+
+</div>
+
 
 # 11. ¿Cómo puede ayudar Prometech en este proceso?
 
@@ -616,23 +624,33 @@ La implementación se realiza de forma progresiva, permitiendo digitalizar prime
 
 Si tu empresa está evaluando cómo pasar de Excel a un sistema ERP, comenzar con una estrategia por etapas suele ser la forma más segura y eficiente de hacerlo.
 
----
 
-<div class="rounded-2xl bg-[#16324F] text-white p-10 my-12">
 
-# ¿Tu empresa todavía gestiona proyectos con Excel?
+<div class="rounded-2xl bg-[#16324F] text-white p-10 my-12 text-center">
 
-Si estás evaluando implementar un sistema ERP para compras, logística, inventario o control de proyectos, en Prometech podemos ayudarte a digitalizar tus procesos sin afectar la operación diaria.
+<h2 class="text-white mt-0">
+¿Tu empresa todavía gestiona proyectos con Excel?
+</h2>
+
+<p class="text-lg mt-4">
+
+Digitaliza compras, inventario, logística y proyectos mediante un ERP diseñado para empresas que trabajan por proyectos.
+
+</p>
 
 <a
 href="https://www.prometech.com.pe/#contacto"
-class="inline-block mt-6 rounded-lg bg-white px-6 py-3 font-semibold text-[#16324F] no-underline">
-Agenda una demostración gratuita
+class="inline-block mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-[#16324F] no-underline">
+
+Solicitar una demostración
+
 </a>
 
-<div style="background:red;color:white;padding:20px">
-Esto es una prueba
-</div>
+<p class="mt-5 text-sm text-slate-300">
+
+Sin compromiso • Implementación por etapas • Asesoría personalizada
+
+</p>
 
 </div>
 
