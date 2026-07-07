@@ -630,6 +630,10 @@ class="inline-block mt-6 rounded-lg bg-white px-6 py-3 font-semibold text-[#1632
 Agenda una demostración gratuita
 </a>
 
+<div style="background:red;color:white;padding:20px">
+Esto es una prueba
+</div>
+
 </div>
 
 ---
