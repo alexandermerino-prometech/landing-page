@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 
 import Hero from "./components/Hero";
