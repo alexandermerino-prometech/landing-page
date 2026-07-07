@@ -55,15 +55,15 @@ Esta situación es mucho más común de lo que parece y suele ser el primer indi
 
 <div class="rounded-xl border border-[#E9C46A] bg-[#FFF8E6] p-6 my-10">
 
-    <h3 class="mt-0 text-[#16324F]">📌 En este artículo aprenderás</h3>
+<h3 class="mt-0 text-[#16324F]">📌 En este artículo aprenderás</h3>
 
-    <ul class="mt-4 space-y-2">
-    <li>Cuándo Excel deja de ser suficiente.</li>
-    <li>Cómo identificar si tu empresa necesita un ERP.</li>
-    <li>Qué procesos digitalizar primero.</li>
-    <li>Cómo implementar un ERP sin detener la operación.</li>
-    <li>Qué beneficios obtiene una empresa al centralizar su información.</li>
-    </ul>
+<ul class="mt-4 space-y-2">
+<li>Cuándo Excel deja de ser suficiente.</li>
+<li>Cómo identificar si tu empresa necesita un ERP.</li>
+<li>Qué procesos digitalizar primero.</li>
+<li>Cómo implementar un ERP sin detener la operación.</li>
+<li>Qué beneficios obtiene una empresa al centralizar su información.</li>
+</ul>
 
 </div>
 
@@ -538,78 +538,78 @@ En otras palabras, el objetivo no es dejar de utilizar Excel, sino permitir que 
 
 <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-    <h3 class="mt-0">
+<h3 class="mt-0">
 
-    ¿Excel puede reemplazar un sistema ERP?
+¿Excel puede reemplazar un sistema ERP?
 
-    </h3>
+</h3>
 
-    <p>
+<p>
 
-    No. Excel es una excelente herramienta para analizar información, elaborar presupuestos y generar reportes personalizados, pero no fue diseñado para gestionar procesos empresariales completos.
+No. Excel es una excelente herramienta para analizar información, elaborar presupuestos y generar reportes personalizados, pero no fue diseñado para gestionar procesos empresariales completos.
 
-    </p>
+</p>
 
 </div>
 
 
 <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-    <h3 class="mt-0">
+<h3 class="mt-0">
 
-    ¿Cuándo una empresa necesita implementar un ERP?
+¿Cuándo una empresa necesita implementar un ERP?
 
-    </h3>
+</h3>
 
-    <p>
+<p>
 
-    Generalmente cuando comienzan a aparecer problemas como:
+Generalmente cuando comienzan a aparecer problemas como:
 
-    - Múltiples versiones del mismo archivo.
-    - Información duplicada.
-    - Procesos manuales.
-    - Errores frecuentes.
-    - Retrasos en los reportes.
-    - Falta de trazabilidad.
-    - Crecimiento de la operación.
+- Múltiples versiones del mismo archivo.
+- Información duplicada.
+- Procesos manuales.
+- Errores frecuentes.
+- Retrasos en los reportes.
+- Falta de trazabilidad.
+- Crecimiento de la operación.
 
-    </p>
-
-</div>
-
-<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
-
-    <h3 class="mt-0">
-
-    ¿Es necesario reemplazar todos los procesos al mismo tiempo?
-
-    </h3>
-
-    <p>
-
-    No.
-
-    La mejor estrategia consiste en implementar el sistema por etapas. Muchas empresas comienzan digitalizando el proceso de compras, luego incorporan inventario, control de proyectos y finalmente módulos financieros.
-
-    </p>
+</p>
 
 </div>
 
 <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-    <h3 class="mt-0">
+<h3 class="mt-0">
 
-    ¿Un ERP reemplaza completamente a Excel?
+¿Es necesario reemplazar todos los procesos al mismo tiempo?
 
-    </h3>
+</h3>
 
-    <p>
+<p>
 
-    Tampoco.
+No.
 
-    La mayoría de empresas continúa utilizando Excel para realizar análisis específicos o elaborar reportes personalizados. Lo recomendable es utilizar un ERP para gestionar la operación diaria y Excel como herramienta de análisis cuando sea necesario.
+La mejor estrategia consiste en implementar el sistema por etapas. Muchas empresas comienzan digitalizando el proceso de compras, luego incorporan inventario, control de proyectos y finalmente módulos financieros.
 
-    </p>
+</p>
+
+</div>
+
+<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+
+<h3 class="mt-0">
+
+¿Un ERP reemplaza completamente a Excel?
+
+</h3>
+
+<p>
+
+Tampoco.
+
+La mayoría de empresas continúa utilizando Excel para realizar análisis específicos o elaborar reportes personalizados. Lo recomendable es utilizar un ERP para gestionar la operación diaria y Excel como herramienta de análisis cuando sea necesario.
+
+</p>
 
 </div>
 
