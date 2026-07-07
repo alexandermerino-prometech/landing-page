@@ -4,7 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import {
-  Mail
+  Mail,
+  MessageCircle
 } from "lucide-react";
 
 export default function Hero() {
@@ -35,15 +36,13 @@ export default function Hero() {
               className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/20 hover:-translate-y-0.5"
             >
               {/* Ícono de WhatsApp / Mensaje */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
+              <MessageCircle className="w-5 h-5" />
               <span>Solicitar Demo vía WhatsApp</span>
             </a>
 
             <a
               href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
-              className="bg-white border border-[#E4DDD4] hover:border-[#16324F] text-[#16324F] text-sm font-semibold px-5 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
+              className="flex items-center gap-2 bg-white border border-[#E4DDD4] hover:border-[#16324F] hover:bg-[#F7F3EE] text-[#16324F] text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
             >
               <Mail className="w-4 h-4" />
               <span>Agendar por correo</span>
@@ -116,6 +115,22 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
+      </div>
+
+      <div className="mt-6 flex flex-wrap gap-4 text-sm text-[#5E6B7A]">
+
+        <span className="flex items-center gap-2">
+          ✅ Diagnóstico gratuito
+        </span>
+
+        <span className="flex items-center gap-2">
+          ✅ Sin compromiso
+        </span>
+
+        <span className="flex items-center gap-2">
+          ✅ Implementación por etapas
+        </span>
+
       </div>
     </section>
   );

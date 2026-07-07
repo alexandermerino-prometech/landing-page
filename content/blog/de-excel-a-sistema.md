@@ -602,7 +602,7 @@ La mejor estrategia consiste en implementar el sistema por etapas. Muchas empres
 
 </div>
 
-<div class="not-prose rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+<div class="not-prose rounded-xl border border-[#E4DDD4] bg-[#F1ECE5] p-6 my-6">
 
 <h3 class="mt-0">
 

@@ -310,7 +310,7 @@ export default function PrometechLandingPage() {
           </span>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-5 text-[#16324F] tracking-tight max-w-3xl mx-auto leading-[1.2]">
-            ¿Listo para centralizar tu operación y dejar atrás las hojas de Excel?
+            Descubre cómo digitalizar tus procesos sin detener la operación
           </h2>
 
           <p className="text-[#5E6B7A] text-base sm:text-lg max-w-xl mx-auto mb-6 leading-relaxed">
@@ -324,11 +324,31 @@ export default function PrometechLandingPage() {
               href="https://wa.me/51902041529?text=Hola%20Prometech,%20quisiera%20agendar%20una%20demostración."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl border border-[#25D366] bg-white px-8 py-4 font-semibold text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Escribir por WhatsApp
+              className="
+                inline-flex
+                items-center
+                justify-center
+                gap-2
+                rounded-xl
+                bg-[#16324F]
+                px-8
+                py-4
+                font-semibold
+                text-white
+                hover:bg-[#1d436a]
+                shadow-lg
+                shadow-[#16324F]/20
+                transition-all
+                hover:-translate-y-0.5
+              "
+              >
+
+              <MessageCircle className="w-5 h-5"/>
+              Solicitar diagnóstico gratuito
             </a>
+            <div className="text-sm text-[#5E6B7A] mt-3">
+            Respuesta normalmente en menos de 24 horas.
+            </div>
 
           </div>
         </div>
