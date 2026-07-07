@@ -19,8 +19,6 @@ categoria: "Gestión de Proyectos"
 
 Muchas empresas comienzan gestionando compras, inventarios, logística y proyectos mediante hojas de cálculo de Excel. Sin embargo, conforme la operación crece, aparecen problemas de trazabilidad, duplicidad de información y falta de control que pueden resolverse mediante un sistema ERP.
 
----
-
 <div class="rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] p-6 my-8">
 
 <strong>Resumen</strong>
