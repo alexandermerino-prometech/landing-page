@@ -99,12 +99,27 @@ A medida que la empresa crece, el problema deja de ser la herramienta y pasa a s
 
 <div class="not-prose rounded-xl bg-[#16324F] text-white p-8 my-10">
 
-### Idea clave
+<div class="flex items-center gap-4 mb-5">
 
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E9C46A] text-2xl">
+💡
+</div>
+
+<div>
+<h3 class="m-0 text-white text-xl font-bold">
+Idea clave
+</h3>
+<p class="m-0 text-sm text-slate-300">
+Lo más importante de esta sección
+</p>
+</div>
+
+</div>
+<p class="text-white leading-8">
 Excel sigue siendo una excelente herramienta para analizar información.
 
 Sin embargo, cuando la empresa comienza a gestionar compras, inventario, proyectos y aprobaciones desde múltiples archivos, un sistema ERP permite centralizar la información, reducir errores y mejorar el control operativo.
-
+</p>
 </div>
 
 ### Excel vs ERP: principales diferencias
@@ -624,10 +639,33 @@ Si tu empresa está evaluando cómo pasar de Excel a un sistema ERP, comenzar co
 
 
 <div class="not-prose rounded-2xl bg-[#16324F] text-white p-10 my-12 text-center">
-<h2 class="text-white mt-0">¿Tu empresa todavía gestiona proyectos con Excel?</h2>
-<p class="text-lg mt-4">Digitaliza compras, inventario, logística y proyectos mediante un ERP diseñado para empresas que trabajan por proyectos.</p>
-<a href="https://www.prometech.com.pe/#contacto" class="inline-block mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-[#16324F] no-underline">Solicitar una demostración</a>
-<p class="mt-5 text-sm text-slate-300">Sin compromiso • Implementación por etapas • Asesoría personalizada</p>
+
+<div class="flex justify-center mb-6">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-white text-4xl">
+🚀
+</div>
+</div>
+
+<h2 class="text-white mt-0 text-3xl font-bold">
+¿Tu empresa todavía gestiona proyectos con Excel?
+</h2>
+
+<p class="mt-5 text-lg text-slate-200 leading-8">
+Digitaliza compras, inventario, logística y proyectos mediante un ERP diseñado para empresas que trabajan por proyectos.
+</p>
+
+<a
+href="https://www.prometech.com.pe/#contacto"
+class="inline-block mt-8 rounded-xl bg-white px-8 py-4 text-lg font-bold text-[#16324F] no-underline hover:scale-105 transition">
+Solicitar una demostración
+</a>
+
+<p class="mt-6 text-sm text-slate-300">
+✓ Sin compromiso &nbsp;&nbsp; • &nbsp;&nbsp;
+✓ Implementación por etapas &nbsp;&nbsp; • &nbsp;&nbsp;
+✓ Asesoría personalizada
+</p>
+
 </div>
 
 ---
