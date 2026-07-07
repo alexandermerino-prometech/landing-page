@@ -125,16 +125,95 @@ Sin embargo, cuando la empresa comienza a gestionar compras, inventario, proyect
 
 Muchas empresas creen que un ERP simplemente reemplaza a Excel. En realidad, ambas herramientas cumplen funciones diferentes.
 
-| Característica | Excel | Sistema ERP |
-|---------------|:------:|:-----------:|
-| Gestión de compras | ⚠️ Manual | ✅ Automatizada |
-| Inventario | ⚠️ Actualización manual | ✅ Tiempo real |
-| Múltiples usuarios | ⚠️ Limitado | ✅ Sí |
-| Control de proyectos | ⚠️ Parcial | ✅ Integrado |
-| Flujos de aprobación | ❌ No | ✅ Sí |
-| Reportes | ⚠️ Manuales | ✅ Automáticos |
-| Trazabilidad | ⚠️ Limitada | ✅ Completa |
-| Información centralizada | ❌ No | ✅ Sí |
+<div class="grid md:grid-cols-2 gap-4 my-8">
+
+<div class="rounded-xl border p-5">
+
+### Gestión de compras
+
+**Excel**
+
+- Manual
+- Depende de archivos
+
+**ERP**
+
+- Automatizada
+- Flujo de aprobaciones
+
+</div>
+
+<div class="rounded-xl border p-5">
+
+### Inventario
+
+**Excel**
+
+- Actualización manual
+
+**ERP**
+
+- Tiempo real
+
+</div>
+
+<div class="rounded-xl border p-5">
+
+### Reportes
+
+**Excel**
+
+- Elaboración manual
+
+**ERP**
+
+- Automáticos
+
+</div>
+
+<div class="rounded-xl border p-5">
+
+### Trazabilidad
+
+**Excel**
+
+- Limitada
+
+**ERP**
+
+- Completa
+
+</div>
+
+<div class="rounded-xl border p-5">
+
+### Usuarios simultáneos
+
+**Excel**
+
+- Limitados
+
+**ERP**
+
+- Sin conflictos de versiones
+
+</div>
+
+<div class="rounded-xl border p-5">
+
+### Información
+
+**Excel**
+
+- Archivos separados
+
+**ERP**
+
+- Base de datos centralizada
+
+</div>
+
+</div>
 
 Como puede observarse, Excel sigue siendo una excelente herramienta para realizar análisis y reportes, mientras que un sistema ERP está diseñado para gestionar la operación diaria de la empresa de forma integrada.
 
