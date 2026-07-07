@@ -53,7 +53,7 @@ El verdadero problema es que la información está distribuida entre múltiples 
 
 Esta situación es mucho más común de lo que parece y suele ser el primer indicador de que la empresa necesita evolucionar hacia un sistema que centralice la información y automatice sus procesos.
 
-<div class="rounded-xl border border-[#E9C46A] bg-[#FFF8E6] p-6 my-10">
+<div class="not-prose rounded-xl border border-[#E9C46A] bg-[#FFF8E6] p-6 my-10">
 
 <h3 class="mt-0 text-[#16324F]">📌 En este artículo aprenderás</h3>
 
@@ -186,7 +186,7 @@ Como puede observarse, Excel sigue siendo una excelente herramienta para realiza
 
 Si tu empresa presenta alguno de los siguientes escenarios de forma frecuente, probablemente haya llegado el momento de digitalizar sus procesos.
 
-<div class="grid md:grid-cols-2 gap-6 my-8">
+<div class="not-prose grid md:grid-cols-2 gap-6 my-8">
 
 <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
 
@@ -279,7 +279,7 @@ Uno de los errores más comunes consiste en intentar reemplazar todos los proces
 
 La mejor estrategia es implementar un sistema por etapas.
 
-<div class="grid md:grid-cols-2 gap-6 my-8">
+<div class="not-prose grid md:grid-cols-2 gap-6 my-8">
 
 <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
 
@@ -338,7 +338,7 @@ La transformación digital no consiste únicamente en reemplazar Excel.
 
 Consiste en cambiar la forma en que la información circula dentro de la empresa.
 
-<div class="space-y-5 my-8">
+<div class="not-prose space-y-5 my-8">
 
 <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
 
@@ -398,9 +398,9 @@ El objetivo es que toda la organización trabaje sobre una única fuente de info
 
 Imaginemos una empresa de ingeniería que desarrolla varios proyectos simultáneamente.
 
-<div class="grid md:grid-cols-2 gap-8 my-10">
+<div class="not-prose grid md:grid-cols-2 gap-8 my-10">
 
-<div class="rounded-xl border border-red-200 bg-red-50 p-6">
+<div class="not-prose rounded-xl border border-[#E76F51]/30 bg-[#E76F51]/5 p-6">
 
 ### Antes
 
@@ -416,7 +416,7 @@ Imaginemos una empresa de ingeniería que desarrolla varios proyectos simultáne
 
 </div>
 
-<div class="rounded-xl border border-green-200 bg-green-50 p-6">
+<div class="not-prose rounded-xl border border-[#2D6A4F]/30 bg-[#2D6A4F]/5 p-6">
 
 ### Después
 
@@ -436,19 +436,19 @@ Imaginemos una empresa de ingeniería que desarrolla varios proyectos simultáne
 
 El proceso es exactamente el mismo desde el punto de vista del negocio, pero mucho más rápido, seguro y trazable.
 
-<h3 class="mt-0">📊 Dato interesante</h3>
+<div class="not-prose rounded-xl border border-[#E4DDD4] bg-[#F1ECE5] p-6 my-8">
 
-<p>
+<h3 class="mt-0 text-[#16324F] font-bold">📊 Dato interesante</h3>
 
-Diversos estudios sobre transformación digital muestran que los empleados pueden dedicar hasta un <strong>20 % de su tiempo</strong> buscando información distribuida entre archivos, correos electrónicos y distintas aplicaciones.
-
+<p class="text-[#5E6B7A] leading-7 mt-3">
+Diversos estudios sobre transformación digital muestran que los empleados pueden dedicar hasta un <strong class="text-[#16324F]">20% de su tiempo</strong> buscando información distribuida entre archivos, correos electrónicos y distintas aplicaciones.
 </p>
 
-<p>
-
+<p class="text-[#5E6B7A] leading-7 mt-3">
 Centralizar la información mediante un ERP permite reducir esos tiempos y tomar decisiones con información confiable.
-
 </p>
+
+</div>
 
 
 
@@ -458,7 +458,7 @@ La transformación digital no solo reduce tiempos.
 
 También mejora el control de toda la organización.
 
-<div class="grid md:grid-cols-2 gap-5 my-8">
+<div class="not-prose grid md:grid-cols-2 gap-5 my-8">
 
 <div class="rounded-xl border p-5">
 
@@ -549,7 +549,7 @@ En otras palabras, el objetivo no es dejar de utilizar Excel, sino permitir que 
 
 # 10. Preguntas frecuentes
 
-<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+<div class="not-prose rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
 <h3 class="mt-0">
 
@@ -566,31 +566,25 @@ No. Excel es una excelente herramienta para analizar información, elaborar pres
 </div>
 
 
-<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+<div class="not-prose rounded-xl border border-[#E4DDD4] bg-[#F1ECE5] p-6 my-6">
 
-<h3 class="mt-0">
+<h3 class="mt-0 text-[#16324F] font-bold">¿Cuándo una empresa necesita implementar un ERP?</h3>
 
-¿Cuándo una empresa necesita implementar un ERP?
+<p class="text-[#5E6B7A]">Generalmente cuando comienzan a aparecer problemas como:</p>
 
-</h3>
-
-<p>
-
-Generalmente cuando comienzan a aparecer problemas como:
-
-- Múltiples versiones del mismo archivo.
-- Información duplicada.
-- Procesos manuales.
-- Errores frecuentes.
-- Retrasos en los reportes.
-- Falta de trazabilidad.
-- Crecimiento de la operación.
-
-</p>
+<ul class="mt-3 space-y-2 text-[#5E6B7A]">
+<li>Múltiples versiones del mismo archivo.</li>
+<li>Información duplicada.</li>
+<li>Procesos manuales.</li>
+<li>Errores frecuentes.</li>
+<li>Retrasos en los reportes.</li>
+<li>Falta de trazabilidad.</li>
+<li>Crecimiento de la operación.</li>
+</ul>
 
 </div>
 
-<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+<div class="not-prose rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
 <h3 class="mt-0">
 
@@ -608,7 +602,7 @@ La mejor estrategia consiste en implementar el sistema por etapas. Muchas empres
 
 </div>
 
-<div class="rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
+<div class="not-prose rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
 <h3 class="mt-0">
 
