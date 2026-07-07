@@ -17,8 +17,6 @@ autor: "Alexander Merino"
 categoria: "Gestión de Proyectos"
 ---
 
-# Cómo reemplazar Excel por un sistema ERP sin detener la operación de tu empresa
-
 Muchas empresas comienzan gestionando compras, inventarios, logística y proyectos mediante hojas de cálculo de Excel. Sin embargo, conforme la operación crece, aparecen problemas de trazabilidad, duplicidad de información y falta de control que pueden resolverse mediante un sistema ERP.
 
 En esta guía aprenderás cuándo dejar de utilizar Excel como herramienta principal de gestión, cómo implementar un ERP paso a paso y qué beneficios obtiene una empresa al digitalizar sus procesos.
@@ -27,17 +25,17 @@ En esta guía aprenderás cuándo dejar de utilizar Excel como herramienta princ
 
 ## Índice
 
-1. Introducción
-2. ¿Por qué Excel deja de ser suficiente?
-3. Señales de que necesitas un ERP
-4. Qué procesos digitalizar primero
-5. Antes y después de implementar un ERP
-6. Un ejemplo práctico
-7. Beneficios para la empresa
-8. ¿Cuánto cuesta seguir utilizando Excel?
-9. Conclusión
-10. Preguntas frecuentes
-11. Cómo puede ayudarte Prometech
+1. [Introducción](#1-introducción)
+2. [¿Por qué Excel deja de ser suficiente?](#2-por-qué-excel-deja-de-ser-suficiente)
+3. [Señales de que necesitas un ERP](#3-señales-de-que-tu-empresa-necesita-un-sistema)
+4. [Qué procesos digitalizar primero](#4-qué-procesos-conviene-digitalizar-primero)
+5. [Antes y después de implementar un ERP](#5-antes-y-después-de-la-digitalización)
+6. [Un ejemplo práctico](#6-un-ejemplo-práctico)
+7. [Beneficios](#7-beneficios-de-digitalizar-los-procesos)
+8. [¿Cuánto cuesta seguir utilizando Excel?](#8-cuánto-cuesta-seguir-utilizando-excel)
+9. [Conclusión](#9-conclusión)
+10. [Preguntas frecuentes](#10-preguntas-frecuentes)
+11. [Cómo puede ayudarte Prometech](#11-cómo-puede-ayudarte-prometech)
 
 ---
 
@@ -210,9 +208,11 @@ Alto riesgo operativo cuando esa persona no está disponible.
 
 Estos problemas suelen aparecer de forma gradual y muchas empresas terminan acostumbrándose a ellos, sin darse cuenta del tiempo y dinero que representan.
 
+Antes de decidir implementar un ERP, vale la pena visualizar cómo cambia la forma en que la información circula dentro de la empresa.
+
 ## ¿Cómo cambia la operación al implementar un ERP?
 
-![Cómo un ERP centraliza compras, inventario, logística y proyectos](/blog/antes-despues-prometech.png)
+![Cómo un ERP centraliza compras, inventario, logística y proyectos](/blog/erp-centralizacion.png)
 
 *Comparación entre una operación basada en archivos de Excel y una operación centralizada mediante un sistema ERP.*
 
@@ -382,8 +382,15 @@ Imaginemos una empresa de ingeniería que desarrolla varios proyectos simultáne
 
 El proceso es exactamente el mismo desde el punto de vista del negocio, pero mucho más rápido, seguro y trazable.
 
-### Importante: 
-Según diversos estudios sobre transformación digital, los empleados pueden dedicar hasta un 20 % de su tiempo únicamente a buscar información distribuida entre diferentes archivos, correos electrónicos y aplicaciones. Centralizar la información reduce tiempos administrativos y mejora la toma de decisiones.
+<div class="rounded-xl border-l-4 border-[#16324F] bg-[#F8FBFF] p-5 my-8">
+
+### Dato interesante
+
+Diversos estudios sobre transformación digital muestran que los empleados pueden dedicar hasta un **20 % de su tiempo** buscando información distribuida entre archivos, correos electrónicos y distintas aplicaciones.
+
+Centralizar la información mediante un ERP reduce ese tiempo y mejora la toma de decisiones.
+
+</div>
 
 ---
 
@@ -427,6 +434,14 @@ El equipo dedica menos tiempo a tareas repetitivas.
 
 </div>
 
+<div class="rounded-xl border p-5">
+
+### Escalabilidad
+
+El sistema acompaña el crecimiento de la empresa sin depender de más archivos de Excel o procesos manuales.
+
+</div>
+
 </div>
 
 La digitalización permite que las personas dediquen menos tiempo a buscar información y más tiempo a generar valor para la empresa.
@@ -462,7 +477,7 @@ La transformación digital no consiste en reemplazar una hoja de cálculo por ot
 
 Consiste en centralizar la información, automatizar tareas repetitivas y proporcionar a cada área acceso a datos confiables en el momento en que los necesita.
 
-Cuando todos trabajan sobre la misma información, las decisiones son más rápidas, los errores disminuyen y la empresa está preparada para seguir creciendo.
+En otras palabras, el objetivo no es dejar de utilizar Excel, sino permitir que cada herramienta cumpla la función para la que fue diseñada: el ERP para gestionar la operación y Excel para analizar la información.
 
 ---
 
