@@ -551,7 +551,7 @@ En otras palabras, el objetivo no es dejar de utilizar Excel, sino permitir que 
 
 <div class="not-prose rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-<h3 class="mt-0">
+<h3 class="mt-0 text-[#16324F] font-bold"">
 
 ¿Excel puede reemplazar un sistema ERP?
 
@@ -586,7 +586,7 @@ No. Excel es una excelente herramienta para analizar información, elaborar pres
 
 <div class="not-prose rounded-xl border border-slate-200 bg-slate-50 p-6 my-6">
 
-<h3 class="mt-0">
+<h3 class="mt-0 text-[#16324F] font-bold"">
 
 ¿Es necesario reemplazar todos los procesos al mismo tiempo?
 
