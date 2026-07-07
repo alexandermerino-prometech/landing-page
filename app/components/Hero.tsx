@@ -28,19 +28,6 @@ export default function Hero() {
             facturación alrededor de cada proyecto. Así obtienes control operativo y financiero en tiempo real, sin depender de hojas de cálculo.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-4 text-sm text-[#5E6B7A]">
-            <span className="flex items-center gap-2">
-              ✅ Diagnóstico gratuito
-            </span>
-            <span className="flex items-center gap-2">
-              ✅ Sin compromiso
-            </span>
-            <span className="flex items-center gap-2">
-              ✅ Implementación por etapas
-            </span>
-          </div>
-
-
           <div className="flex flex-wrap items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]">
             <a
               href="https://wa.me/51902041529?text=Hola,%20solicito%20una%20demostración%20del%20software%20Prometech."
@@ -74,6 +61,19 @@ export default function Hero() {
               <span>Ver video de módulos</span>
             </a>
           </div>
+
+          <div className="mt-6 flex flex-wrap gap-4 text-sm text-[#5E6B7A]">
+            <span className="flex items-center gap-2">
+              ✅ Diagnóstico gratuito
+            </span>
+            <span className="flex items-center gap-2">
+              ✅ Sin compromiso
+            </span>
+            <span className="flex items-center gap-2">
+              ✅ Implementación por etapas
+            </span>
+          </div>
+          
         </div>
 
         {/* Dashboard Real del Sistema */}
