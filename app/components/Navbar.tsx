@@ -30,6 +30,24 @@ export default function Navbar() {
 
     const isBlog = pathname.startsWith("/blog");
 
+    const linkClass = (id: string) =>
+    `transition-colors duration-200 ${
+      activeSection === id ? "text-[#16324F] font-bold" : "text-[#5E6B7A] hover:text-[#16324F]"
+    }`;
+
+    const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        setMenuMovilAbierto(false);
+
+        // Espera a que la animación de cierre del menú termine (200ms) antes de saltar
+        setTimeout(() => {
+            const el = document.getElementById(targetId);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }, 220); // un poco más que la duración de la animación (200ms)
+    };
+
     const handleLogoClick = (
       e: React.MouseEvent<HTMLAnchorElement>
     ) => {
@@ -48,36 +66,6 @@ export default function Navbar() {
         window.history.replaceState(null, "", "/");
       }
     };
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-            const visibles = entries.filter((entry) => entry.isIntersecting);
-
-            if (visibles.length > 0) {
-                // nos quedamos con la sección MÁS visible, no la última del loop
-                const masVisible = visibles.reduce((prev, curr) =>
-                curr.intersectionRatio > prev.intersectionRatio ? curr : prev
-                );
-                setActiveSection(masVisible.target.id);
-            }
-            },
-            {
-            threshold: [0.1, 0.25, 0.5, 0.75],
-            rootMargin: "-15% 0px -55% 0px",
-            }
-        );
-        sections.forEach((id) => {
-            const section = document.getElementById(id);
-            if (section) {
-            observer.observe(section);
-            } else if (process.env.NODE_ENV === "development") {
-            console.warn(`Navbar: no se encontró la sección con id="${id}"`);
-            }
-        });
-
-        return () => observer.disconnect();
-        }, []);
 
     useEffect(() => {
         if (!menuMovilAbierto) return;
@@ -185,26 +173,13 @@ export default function Navbar() {
                       </>
                     ) : (
                       <>
-                        <a
-                          href="#introduccion"
-                          className={activeSection==="introduccion"
-                            ? "text-[#16324F] font-bold"
-                            : "hover:text-[#16324F]"}
-                        >
-                          Introducción
-                        </a>
-
-                        <a href="#comparacion">Comparación con ERP</a>
-
-                        <a href="#contenido">Contenido</a>
-
-                        <a href="#flujo">Flujo</a>
-
-                        <a href="#soluciones">Soluciones</a>
-
-                        <a href="#beneficios">Beneficios</a>
-
-                        <a href="#faq">FAQ</a>
+                        <a href="#introduccion" className={linkClass("introduccion")}>Introducción</a>
+                        <a href="#comparacion" className={linkClass("comparacion")}>Comparación con ERP</a>
+                        <a href="#contenido" className={linkClass("contenido")}>Contenido</a>
+                        <a href="#flujo" className={linkClass("flujo")}>Flujo</a>
+                        <a href="#soluciones" className={linkClass("soluciones")}>Soluciones</a>
+                        <a href="#beneficios" className={linkClass("beneficios")}>Beneficios</a>
+                        <a href="#faq" className={linkClass("faq")}>FAQ</a>
 
                         <Link href="/blog">
                           Blog
@@ -261,31 +236,31 @@ export default function Navbar() {
                       ) : (
 
                         <>
-                          <a href="#introduccion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#introduccion" onClick={(e) => handleMobileNavClick(e, "introduccion")} className="hover:text-[#16324F] py-1">
                             Introducción
                           </a>
 
-                          <a href="#comparacion" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#comparacion" onClick={(e) => handleMobileNavClick(e, "comparacion")} className="hover:text-[#16324F] py-1">
                             Comparación con ERP
                           </a>
 
-                          <a href="#contenido" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#contenido" onClick={(e) => handleMobileNavClick(e, "contenido")} className="hover:text-[#16324F] py-1">
                             Contenido
                           </a>
 
-                          <a href="#flujo" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#flujo" onClick={(e) => handleMobileNavClick(e, "flujo")} className="hover:text-[#16324F] py-1">
                             Flujo
                           </a>
 
-                          <a href="#soluciones" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#soluciones" onClick={(e) => handleMobileNavClick(e, "soluciones")} className="hover:text-[#16324F] py-1">
                             Soluciones
                           </a>
 
-                          <a href="#beneficios" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#beneficios" onClick={(e) => handleMobileNavClick(e, "beneficios")} className="hover:text-[#16324F] py-1">
                             Beneficios
                           </a>
 
-                          <a href="#faq" onClick={() => setMenuMovilAbierto(false)} className="hover:text-[#16324F] py-1">
+                          <a href="#faq" onClick={(e) => handleMobileNavClick(e, "faq")} className="hover:text-[#16324F] py-1">
                             FAQ
                           </a>
 
@@ -298,8 +273,7 @@ export default function Navbar() {
                           </Link>
 
                           <a
-                            href="#contacto"
-                            onClick={() => setMenuMovilAbierto(false)}
+                            href="#contacto" onClick={(e) => handleMobileNavClick(e, "contacto")} className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md">
                             className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md"
                           >
                             Contacto Directo
