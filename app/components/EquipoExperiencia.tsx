@@ -75,7 +75,7 @@ export default function EquipoExperiencia() {
               </p>
 
               {persona.linkedin && (
-                
+                <a
                   href={persona.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
