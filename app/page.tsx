@@ -296,7 +296,7 @@ export default function PrometechLandingPage() {
       </section>
 
       {/* Sección: Equipo */}
-      {/*<EquipoExperiencia />*/}
+      <EquipoExperiencia />
 
       {/* Sección: Conversión CTA Final */}
       <section id="contacto" className="max-w-5xl mx-auto px-6 py-12 md:py-24">

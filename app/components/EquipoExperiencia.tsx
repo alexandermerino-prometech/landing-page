@@ -1,32 +1,39 @@
 "use client";
 
-import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa";
 
 interface Persona {
   nombre: string;
   rol: string;
   experiencia: string;
-  foto: string;
-  linkedin?: string; // opcional — solo si quieres mostrarlo
+  linkedin?: string;
 }
 
 const equipo: Persona[] = [
   {
     nombre: "Alexander Merino",
     rol: "Fundador / CEO",
-    experiencia: "8 años liderando proyectos de construcción e implementación de sistemas de control de costos.",
-    foto: "/equipo/persona1.jpg",
+    experiencia:
+      "Ingeniero de Software con experiencia internacional en el desarrollo de soluciones tecnológicas para organizaciones en Perú y Estados Unidos. Ha participado en proyectos de arquitectura de software, plataformas cloud, automatización de procesos y analítica de datos, colaborando con empresas de gran escala. Actualmente lidera la estrategia tecnológica de PROMETECH y el desarrollo de un ERP modular orientado a empresas que trabajan por proyectos.",
     linkedin: "https://www.linkedin.com/in/alexander-merino/",
   },
   {
     nombre: "Aaron Alejos",
     rol: "CFO / Director de Ventas",
-    experiencia: "10 años en consultoría de gestión de proyectos para empresas de ingeniería.",
-    foto: "/equipo/persona2.jpg",
+    experiencia:
+      "Especialista en estrategia empresarial, finanzas e innovación, con más de diez años de experiencia en organizaciones de distintos sectores. Ha participado en iniciativas de transformación digital, planeamiento estratégico y desarrollo de negocios, además de colaborar como mentor en programas de emprendimiento e innovación. En PROMETECH lidera la estrategia financiera y participa en el diseño funcional de los procesos de negocio, asegurando que la plataforma responda a las necesidades operativas y regulatorias de las empresas peruanas.",
     linkedin: "https://www.linkedin.com/in/aaron-alejos-flores/",
   },
 ];
+
+function obtenerIniciales(nombre: string): string {
+  return nombre
+    .split(" ")
+    .map((parte) => parte[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 export default function EquipoExperiencia() {
   return (
@@ -50,14 +57,14 @@ export default function EquipoExperiencia() {
               key={persona.nombre}
               className="bg-[#FFFDF9] rounded-3xl border border-[#E4DDD4] p-8 flex flex-col items-center text-center hover:shadow-md hover:border-[#16324F]/20 transition-all duration-300"
             >
-              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-[#E4DDD4] mb-5">
-                <Image
-                  src={persona.foto}
-                  alt={`Foto de ${persona.nombre}`}
-                  fill
-                  sizes="96px"
-                  className="object-cover"
-                />
+              {/* Avatar con iniciales, sin foto */}
+              <div
+                className="w-20 h-20 rounded-full bg-[#16324F] flex items-center justify-center mb-5 flex-shrink-0"
+                aria-hidden="true"
+              >
+                <span className="text-white text-xl font-bold tracking-wide">
+                  {obtenerIniciales(persona.nombre)}
+                </span>
               </div>
 
               <h3 className="text-lg font-bold text-[#16324F]">{persona.nombre}</h3>
@@ -67,16 +74,15 @@ export default function EquipoExperiencia() {
                 {persona.experiencia}
               </p>
 
-              {/* Solo se muestra si la persona tiene linkedin definido */}
               {persona.linkedin && (
-                <a
+                
                   href={persona.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`LinkedIn de ${persona.nombre}`}
                   className="mt-auto inline-flex items-center gap-2 text-xs font-semibold text-[#16324F] border border-[#E4DDD4] rounded-full px-4 py-2 hover:bg-[#16324F] hover:text-white hover:border-[#16324F] transition-all duration-300"
                 >
-                  <FaLinkedinIn className="w-3.5 h-3.5" />
+                  <FaLinkedinIn className="w-3.5 h-3.5" aria-hidden="true" />
                   Ver LinkedIn
                 </a>
               )}
