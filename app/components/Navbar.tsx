@@ -273,7 +273,7 @@ export default function Navbar() {
                           </Link>
 
                           <a
-                            href="#contacto" onClick={(e) => handleMobileNavClick(e, "contacto")} className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md">
+                            href="#contacto" onClick={(e) => handleMobileNavClick(e, "contacto")}
                             className="bg-[#16324F] text-white text-center px-4 py-3 rounded-xl text-xs font-bold shadow-md"
                           >
                             Contacto Directo
