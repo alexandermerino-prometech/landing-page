@@ -12,16 +12,16 @@ interface Persona {
 const equipo: Persona[] = [
   {
     nombre: "Alexander Merino",
-    rol: "Fundador / CEO",
+    rol: "Co-Founder | Producto y Tecnología",
     experiencia:
-      "Ingeniero de Software con experiencia internacional en el desarrollo de soluciones tecnológicas para organizaciones en Perú y Estados Unidos. Ha participado en proyectos de arquitectura de software, plataformas cloud, automatización de procesos y analítica de datos, colaborando con empresas de gran escala. Actualmente lidera la estrategia tecnológica de PROMETECH y el desarrollo de un ERP modular orientado a empresas que trabajan por proyectos.",
+      "Ingeniero de Software y cofundador de PROMETECH, con experiencia desarrollando soluciones tecnológicas para organizaciones en Perú y Estados Unidos. Ha liderado proyectos de arquitectura de software, automatización de procesos y transformación digital, combinando experiencia técnica con una visión orientada al negocio. Actualmente participa directamente en el diseño funcional del ERP, las reuniones con clientes y la definición de soluciones que respondan a los procesos reales de cada empresa.",
     linkedin: "https://www.linkedin.com/in/alexander-merino/",
   },
   {
     nombre: "Aaron Alejos",
-    rol: "CFO / Director de Ventas",
+    rol: "Co-Founder | Estrategia y Desarrollo Comercial",
     experiencia:
-      "Especialista en estrategia empresarial, finanzas e innovación, con más de diez años de experiencia en organizaciones de distintos sectores. Ha participado en iniciativas de transformación digital, planeamiento estratégico y desarrollo de negocios, además de colaborar como mentor en programas de emprendimiento e innovación. En PROMETECH lidera la estrategia financiera y participa en el diseño funcional de los procesos de negocio, asegurando que la plataforma responda a las necesidades operativas y regulatorias de las empresas peruanas.",
+      "Especialista en estrategia empresarial, desarrollo de negocios y transformación digital, con experiencia acompañando organizaciones en la mejora de sus procesos y la adopción de nuevas tecnologías. Como cofundador de PROMETECH participa activamente en el análisis de los procesos de cada cliente, el diseño de la solución, la estrategia comercial y el acompañamiento durante la implementación, asegurando que la plataforma genere valor desde el primer día.",
     linkedin: "https://www.linkedin.com/in/aaron-alejos-flores/",
   },
 ];
@@ -47,7 +47,7 @@ export default function EquipoExperiencia() {
             Un equipo con experiencia real en múltiples industrias
           </h2>
           <p className="text-[#5E6B7A] text-lg leading-relaxed">
-            Prometech nace de la experiencia directa en construcción, ingeniería y desarrollo de software empresarial — no de una idea genérica de lo que necesita una empresa por proyectos.
+            En PROMETECH creemos que una implementación exitosa comienza entendiendo el negocio del cliente. Por eso, nuestros fundadores participan directamente en las reuniones de diagnóstico, el diseño de la solución y el acompañamiento durante la implementación. No delegamos el conocimiento del negocio
           </p>
         </div>
 
