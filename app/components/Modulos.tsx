@@ -31,7 +31,7 @@ const modulos = [
   {
     titulo: "Recepción e Inventario",
     estado: "Disponible",
-    colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/30",
+    colorEstado: "bg-[#2D6A4F]/10 text-[#2D6A4F] border-[#2D6A4F]/20",
     iconoEstado: "✅",
     features: [
       "Validación Física de Recepción",
@@ -42,7 +42,7 @@ const modulos = [
   {
     titulo: "Facturación Electrónica",
     estado: "En desarrollo",
-    colorEstado: "bg-[#E9C46A]/10 text-[#D4A316] border-[#E9C46A]/30",
+    colorEstado: "bg-[#E9C46A]/10 text-[#D4A316] border-[#E9C46A]/20",
     iconoEstado: "🚧",
     features: [
       "Emisión de Facturas y Boletas Sunat",
@@ -113,15 +113,10 @@ export default function SolucionesAcordeon() {
                     <span
                       className={`hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border whitespace-nowrap ${modulo.colorEstado}`}
                     >
-                      <span>{modulo.iconoEstado}</span>
-                      {modulo.estado}
+                      <span aria-hidden="true">{modulo.iconoEstado}</span>
+                        {modulo.estado}
                     </span>
-                    <motion.span
-                      animate={{ rotate: estaAbierto ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ChevronDown className="w-5 h-5 text-[#5E6B7A]" />
-                    </motion.span>
+                    <ChevronDown className="w-5 h-5 text-[#5E6B7A]" aria-hidden="true" />
                   </div>
                 </button>
 
@@ -141,8 +136,8 @@ export default function SolucionesAcordeon() {
                         <span
                           className={`sm:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border whitespace-nowrap mt-4 mb-4 ${modulo.colorEstado}`}
                         >
-                          <span>{modulo.iconoEstado}</span>
-                          {modulo.estado}
+                          <span aria-hidden="true">{modulo.iconoEstado}</span>
+                            {modulo.estado}
                         </span>
 
                         <ul className="space-y-3 pt-4" aria-label={`Características del módulo de ${modulo.titulo}`}>

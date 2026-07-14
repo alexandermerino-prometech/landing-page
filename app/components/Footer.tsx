@@ -17,7 +17,7 @@ const socialLinks = [
   {
     name: "Facebook",
     icon: FaFacebookF,
-    href: "https://facebook.com/",
+    href: "https://facebook.com/prometech.com.pe",
   },
   {
     name: "Instagram",

@@ -28,21 +28,20 @@ export default function Hero() {
             facturación alrededor de cada proyecto. Así obtienes control operativo y financiero en tiempo real, sin depender de hojas de cálculo.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]">
+          <div className="flex flex-wrap items-center gap-3">
             <a
               href="https://wa.me/51902041529?text=Hola,%20solicito%20una%20demostración%20del%20software%20Prometech."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/20 hover:-translate-y-0.5"
+              className="flex items-center gap-2 bg-[#16324F] hover:bg-[#1d436a] text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-[#16324F]/20 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
             >
-              {/* Ícono de WhatsApp / Mensaje */}
               <MessageCircle className="w-5 h-5" />
               <span>Solicitar Demo vía WhatsApp</span>
             </a>
 
             <a
               href="mailto:contacto@prometech.com.pe?subject=Solicitud%20de%20Demostración%20ERP%20-%20Prometech"
-              className="flex items-center gap-2 bg-white border border-[#E4DDD4] hover:border-[#16324F] hover:bg-[#F7F3EE] text-[#16324F] text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
+              className="flex items-center gap-2 bg-white border border-[#E4DDD4] hover:border-[#16324F] hover:bg-[#F7F3EE] text-[#16324F] text-sm font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
             >
               <Mail className="w-4 h-4" />
               <span>Agendar por correo</span>
@@ -54,7 +53,6 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-sm font-medium text-[#5E6B7A] hover:text-[#16324F] transition-all px-3 py-2 rounded-lg hover:bg-[#F7F3EE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#16324F]"
             >
-              {/* Ícono Oficial de YouTube */}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-red-600">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
@@ -64,13 +62,16 @@ export default function Hero() {
 
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-[#5E6B7A]">
             <span className="flex items-center gap-2">
-              ✅ Diagnóstico gratuito
+              <span className="flex-shrink-0 w-4 h-4 rounded-full bg-[#2D6A4F]/10 flex items-center justify-center text-[#2D6A4F] text-[10px] font-bold" aria-hidden="true">✓</span>
+              Diagnóstico gratuito
             </span>
             <span className="flex items-center gap-2">
-              ✅ Sin compromiso
+              <span className="flex-shrink-0 w-4 h-4 rounded-full bg-[#2D6A4F]/10 flex items-center justify-center text-[#2D6A4F] text-[10px] font-bold" aria-hidden="true">✓</span>
+              Sin compromiso
             </span>
             <span className="flex items-center gap-2">
-              ✅ Implementación por etapas
+              <span className="flex-shrink-0 w-4 h-4 rounded-full bg-[#2D6A4F]/10 flex items-center justify-center text-[#2D6A4F] text-[10px] font-bold" aria-hidden="true">✓</span>
+              Implementación por etapas
             </span>
           </div>
           
