@@ -1,5 +1,7 @@
 import type { Metadata,Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import Schema from "./components/Schema";
@@ -130,6 +132,9 @@ export default function RootLayout({
         <Schema />
         <Navbar />
         <main className="flex-1">{children}</main>
+
+        <Analytics />
+         <SpeedInsights />
       </body>
     </html>
   );
