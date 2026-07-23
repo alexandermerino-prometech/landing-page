@@ -2,12 +2,14 @@
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { Globe2, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 interface Persona {
   nombre: string;
   rol: string;
   bio: string;
   highlights: string[];
+  foto: string,
   linkedin?: string;
 }
 
@@ -17,6 +19,7 @@ const equipo: Persona[] = [
     rol: "Co-Founder | Producto y Tecnología",
     bio: "Ingeniero de Software con experiencia desarrollando soluciones tecnológicas para organizaciones en Perú y Estados Unidos. Lidera el diseño funcional del ERP y la relación directa con cada cliente.",
     highlights: ["Experiencia en EE.UU.", "Arquitectura de software"],
+    foto: "/equipo/alexander-merino.jpg",
     linkedin: "https://www.linkedin.com/in/alexander-merino/",
   },
   {
@@ -24,6 +27,7 @@ const equipo: Persona[] = [
     rol: "Co-Founder | Estrategia y Desarrollo Comercial",
     bio: "Especialista en estrategia empresarial y transformación digital, con experiencia acompañando organizaciones en la adopción de nuevas tecnologías y mejora de procesos.",
     highlights: ["+10 años en estrategia", "Transformación digital"],
+    foto: "/equipo/aaron-alejos.jpg",
     linkedin: "https://www.linkedin.com/in/aaron-alejos-flores/",
   },
 ];
@@ -59,13 +63,14 @@ export default function EquipoExperiencia() {
               key={persona.nombre}
               className="bg-[#FFFDF9] rounded-3xl border border-[#E4DDD4] p-8 flex flex-col items-center text-center hover:shadow-md hover:border-[#16324F]/20 transition-all duration-300"
             >
-              <div
-                className="w-20 h-20 rounded-full bg-[#16324F] flex items-center justify-center mb-5 flex-shrink-0"
-                aria-hidden="true"
-              >
-                <span className="text-white text-xl font-bold tracking-wide">
-                  {obtenerIniciales(persona.nombre)}
-                </span>
+              <div className="relative w-24 h-24 mb-5">
+                <Image
+                  src={persona.foto}
+                  alt={persona.nombre}
+                  fill
+                  className="rounded-full object-cover border-4 border-white shadow-md"
+                  sizes="96px"
+                />
               </div>
 
               <h3 className="text-lg font-bold text-[#16324F]">{persona.nombre}</h3>
