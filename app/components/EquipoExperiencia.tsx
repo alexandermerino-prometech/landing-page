@@ -50,7 +50,7 @@ export default function EquipoExperiencia() {
             Quiénes están detrás
           </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#16324F] tracking-tight mb-5">
-            Un equipo con experiencia real en múltiples industrias
+            Un equipo con experiencia real en múltiples industrias.
           </h2>
           <p className="text-[#5E6B7A] text-lg leading-relaxed">
             Prometech nace de la experiencia directa en tecnología, negocios y transformación digital — combinando visión internacional con conocimiento del mercado peruano.
