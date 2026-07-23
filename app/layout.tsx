@@ -2,9 +2,10 @@ import type { Metadata,Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 // para analytics
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import GoogleAnalytics from "./components/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/next"; //mismo vercel
+import { SpeedInsights } from "@vercel/speed-insights/next"; // mismo vercel
+import GoogleAnalytics from "./components/GoogleAnalytics"; //contacto @prome
+import Clarity from "./components/Clarity"; //contacto @prome
 
 import "./globals.css";
 import Schema from "./components/Schema";
@@ -133,6 +134,7 @@ export default function RootLayout({
 
       <body className="min-h-full flex flex-col">
         <GoogleAnalytics />
+        <Clarity />
 
         <Schema />
         <Navbar />
