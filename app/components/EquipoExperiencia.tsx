@@ -68,7 +68,7 @@ export default function EquipoExperiencia() {
                   src={persona.foto}
                   alt={persona.nombre}
                   fill
-                  className="object-cover object-[center_15%] scale-150"
+                  className="object-cover object-[center_15%] scale-200"
                 />
               </div>
 
