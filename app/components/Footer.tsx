@@ -22,7 +22,7 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: FaInstagram,
-    href: "https://instagram.com/",
+    href: "https://www.instagram.com/prometech.peru/",
   },
   {
     name: "LinkedIn",
