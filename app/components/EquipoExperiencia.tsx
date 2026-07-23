@@ -68,8 +68,8 @@ export default function EquipoExperiencia() {
                   src={persona.foto}
                   alt={persona.nombre}
                   fill
-                  className="rounded-full object-cover border-4 border-white shadow-md"
-                  sizes="96px"
+                  sizes="128px"
+                  className="rounded-full object-cover border-[5px] border-white shadow-lg"
                 />
               </div>
 
