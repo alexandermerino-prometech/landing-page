@@ -1,7 +1,10 @@
 import type { Metadata,Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+// para analytics
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 import "./globals.css";
 import Schema from "./components/Schema";
@@ -129,12 +132,14 @@ export default function RootLayout({
     >
 
       <body className="min-h-full flex flex-col">
+        <GoogleAnalytics />
+
         <Schema />
         <Navbar />
         <main className="flex-1">{children}</main>
 
         <Analytics />
-         <SpeedInsights />
+        <SpeedInsights />
       </body>
     </html>
   );
