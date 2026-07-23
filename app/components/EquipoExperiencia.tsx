@@ -63,13 +63,12 @@ export default function EquipoExperiencia() {
               key={persona.nombre}
               className="bg-[#FFFDF9] rounded-3xl border border-[#E4DDD4] p-8 flex flex-col items-center text-center hover:shadow-md hover:border-[#16324F]/20 transition-all duration-300"
             >
-              <div className="relative w-38 h-38 mb-6">
+              <div className="relative w-32 h-32 mb-6 overflow-hidden rounded-full">
                 <Image
                   src={persona.foto}
                   alt={persona.nombre}
-                  width={130}
-                  height={130}
-                  className="rounded-full object-cover"
+                  fill
+                  className="object-cover object-top scale-110"
                 />
               </div>
 
