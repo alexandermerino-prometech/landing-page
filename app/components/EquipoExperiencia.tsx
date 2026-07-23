@@ -67,8 +67,8 @@ export default function EquipoExperiencia() {
                 <Image
                   src={persona.foto}
                   alt={persona.nombre}
-                  width={80}
-                  height={80}
+                  width={200}
+                  height={200}
                   className="rounded-full object-cover"
                 />
               </div>
